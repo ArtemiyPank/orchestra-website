@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaPlay } from 'react-icons/fa'; // Иконка Play
+import { FaPlay } from 'react-icons/fa';
 
 const CardProgram = ({ 
   title, 
@@ -17,9 +17,9 @@ const CardProgram = ({
   return (
     <div className="card bg-white rounded-lg shadow-lg overflow-hidden mb-8 flex flex-col">
       
-      <div className="flex flex-col md:flex-row">
+      <div className="flex flex-col md:flex-row md:flex-row-reverse rtl:md:flex-row">
         
-        {/* Секция с фотографиями слева */}
+        {/* Секция с фотографиями */}
         <div className="flex-none w-full md:w-1/2 h-64 md:h-auto relative grid grid-cols-2 gap-2 p-4">
           {photos.map((photo, index) => (
             <div key={index} className="relative w-full h-32 md:h-40">
@@ -33,13 +33,12 @@ const CardProgram = ({
           ))}
         </div>
 
-        {/* Секция с описанием программы справа */}
-        <div className="flex-auto p-4 md:p-6 flex flex-col justify-between">
+        {/* Описание программы */}
+        <div className="flex-auto p-4 md:p-6 flex flex-col justify-between text-start rtl:text-end">
           <div>
             <h2 className="text-3xl font-semibold mb-2">{title}</h2>
             <p className="text-gray-700 mb-4">{description}</p>
 
-            {/* Красивая кнопка для просмотра видео */}
             {videoLink && (
               <motion.a 
                 href={videoLink} 
@@ -49,7 +48,7 @@ const CardProgram = ({
                 whileTap={{ scale: 0.95 }}
                 className="inline-flex items-center bg-gradient-to-r from-[#D48166] to-[#BF6C4F] text-white font-semibold px-4 py-2 rounded-lg shadow-md transition-all duration-300 hover:shadow-lg"
               >
-                <FaPlay className="mr-2" />
+                <FaPlay className="mr-2 rtl:ml-2 rtl:mr-0" />
                 Watch Video
               </motion.a>
             )}
@@ -69,7 +68,7 @@ const CardProgram = ({
         <AnimatePresence>
           {isOpen && (
             <motion.ul
-              className="list-disc pl-5 space-y-1 mt-2 text-gray-600"
+              className="list-disc pl-5 pr-0 rtl:pl-0 rtl:pr-5 space-y-1 mt-2 text-gray-600"
               initial={{ height: 0, opacity: 0 }}
               animate={{ height: 'auto', opacity: 1 }}
               exit={{ height: 0, opacity: 0 }}

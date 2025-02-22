@@ -2,18 +2,44 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --primary-color: #D48166; /* Приглушённый голубой */
+  --dark-color: #373A36;     /* Тёмно-серый */
+  --light-color: #E6E2DD;    /* Светло-серый */
+  --text-color: #2C2C2C;     /* Спокойный цвет текста */
+}
+
 body {
-  @apply bg-gray-100 text-gray-800 font-sans;
+  background-color: var(--light-color);
+  color: var(--text-color);
+  font-family: 'Poppins', Arial, sans-serif;
+  overflow-x: hidden;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  @apply font-bold text-gray-900;
+h1, h2, h3, h4 {
+  color: var(--dark-color);
 }
 
-a {
-  @apply text-blue-500 hover:underline;
-}
-
+/* Кнопки */
 button {
-  @apply bg-gray-200 p-2 rounded hover:bg-gray-300;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: none;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+  transform: scale(1.05);
+  background-color: #bf6c4f;
+}
+
+.card {
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
 }

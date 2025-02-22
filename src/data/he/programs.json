@@ -1,0 +1,10 @@
+[
+    {
+      "title": "ערב קלאסי",
+      "description": "מבחר יפה של יצירות מוזיקה קלאסיות.",
+      "songs": ["סימפוניה מס' 5 מאת בטהובן", "ארבע העונות מאת ויואלדי", "קנון ברה מז'ור מאת פכלבל"],
+      "photos": ["/images/classical1.jpg", "/images/classical2.jpg"],
+      "videoLink": "https://www.youtube.com/watch?v=example"
+    }
+  ]
+  

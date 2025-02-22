@@ -10,6 +10,11 @@
   --accent-color: #bf6c4f;    /* Акцентный цвет */
   --gradient: linear-gradient(135deg, #D48166 0%, #E6E2DD 100%);
   --shadow-color: rgba(0, 0, 0, 0.1);
+  --shadow-strong: rgba(0, 0, 0, 0.2);
+}
+
+html {
+  overflow-y: auto; /* ✅ Исправляем прокрутку */
 }
 
 /* 🖥️ Базовые стили */
@@ -17,38 +22,142 @@ body {
   background-color: var(--light-color);
   color: var(--dark-color);
   font-family: 'Poppins', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
   overflow-x: hidden;
   transition: background-color 0.3s, color 0.3s, direction 0.3s;
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+  color: var(--dark-color);
+  font-weight: 700;
+  margin: 1rem 0;
+}
+
+p {
+  margin: 0.5rem 0;
+}
+
+/* 🎨 Кнопки */
+button {
+  background: var(--gradient);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.3s, box-shadow 0.2s;
+  box-shadow: 0 4px 8px var(--shadow-color);
+}
+
+button:hover {
+  transform: translateY(-2px);
+  background: var(--accent-color);
+  box-shadow: 0 8px 16px var(--shadow-strong);
+}
+
+button:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 8px var(--shadow-color);
+}
+
+/* 🎴 Карточки */
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 8px var(--shadow-color);
+  transition: transform 0.3s, box-shadow 0.3s;
+  overflow: hidden;
+}
+
+.card img {
+  border-radius: 8px;
+  width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+  object-fit: cover;
+}
+
+.card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: var(--dark-color);
+  margin-bottom: 10px;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px var(--shadow-strong);
 }
 
 /* 🧭 Навигация */
 nav {
   background-color: white;
   box-shadow: 0 4px 8px var(--shadow-color);
-  padding: 8px 16px;
+  padding: 10px 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
-/* Стили ссылок */
 nav a {
   padding: 8px 16px;
   font-size: 1rem;
   font-weight: 500;
   transition: color 0.3s, text-decoration 0.3s;
-}
-
-nav a.underline {
-  text-decoration: underline;
-  text-underline-offset: 4px;
+  color: var(--dark-color);
+  text-decoration: none;
 }
 
 nav a:hover {
   color: var(--primary-color);
+  text-decoration: underline;
 }
 
-/* RTL поддержка */
+nav .active {
+  color: var(--primary-color);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* 🎛️ Переключатель языков */
+.language-switcher button {
+  margin-left: 8px;
+  padding: 8px 12px;
+  border: 2px solid var(--primary-color);
+  background: transparent;
+  color: var(--dark-color);
+  border-radius: 8px;
+  transition: all 0.3s;
+}
+
+.language-switcher button.active {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.language-switcher button:hover {
+  transform: scale(1.1);
+}
+
+/* 🌀 Загрузка данных */
+.loading-placeholder {
+  color: var(--dark-color);
+  font-size: 1.5rem;
+  padding: 20px;
+  text-align: center;
+}
+
+/* 🌍 Поддержка RTL и LTR */
 html[dir='rtl'] {
   direction: rtl;
 }
@@ -57,11 +166,15 @@ html[dir='ltr'] {
   direction: ltr;
 }
 
-/* Зеркалирование интерфейса */
-.rtl {
+body.rtl {
   direction: rtl;
 }
 
+body.ltr {
+  direction: ltr;
+}
+
+/* Зеркалирование Flexbox */
 .rtl .flex {
   flex-direction: row-reverse;
 }
@@ -84,9 +197,18 @@ html[dir='ltr'] {
   --tw-space-x-reverse: 1;
 }
 
-/* Flexbox и отступы в RTL */
-.flex-1 {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+/* 📱 Адаптивность */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .card {
+    padding: 15px;
+  }
+
+  button {
+    padding: 8px 16px;
+  }
 }

@@ -2,84 +2,91 @@
 @tailwind components;
 @tailwind utilities;
 
+/* 🎨 Цветовая палитра */
 :root {
-  --primary-color: #D48166; /* Приглушённый голубой */
-  --dark-color: #373A36;     /* Тёмно-серый */
-  --light-color: #E6E2DD;    /* Светло-серый */
-  --text-color: #2C2C2C;     /* Спокойный цвет текста */
+  --primary-color: #D48166;  /* Приглушённый голубой */
+  --dark-color: #373A36;      /* Тёмно-серый */
+  --light-color: #E6E2DD;     /* Светло-серый */
+  --accent-color: #bf6c4f;    /* Акцентный цвет */
+  --gradient: linear-gradient(135deg, #D48166 0%, #E6E2DD 100%);
+  --shadow-color: rgba(0, 0, 0, 0.1);
 }
 
+/* 🖥️ Базовые стили */
 body {
   background-color: var(--light-color);
-  color: var(--text-color);
+  color: var(--dark-color);
   font-family: 'Poppins', Arial, sans-serif;
   overflow-x: hidden;
+  transition: background-color 0.3s, color 0.3s, direction 0.3s;
 }
 
-h1, h2, h3, h4 {
-  color: var(--dark-color);
-}
-
-/* Кнопки */
-/* button {
-  background-color: var(--primary-color);
-  color: white;
+/* 🧭 Навигация */
+nav {
+  background-color: white;
+  box-shadow: 0 4px 8px var(--shadow-color);
   padding: 8px 16px;
-  border-radius: 6px;
-  border: none;
-  transition: background-color 0.3s, transform 0.2s;
-} */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 
-button {
-  background: none;
-  border: none;
-  color: var(--primary-color);
-  cursor: pointer;
-  padding: 0;
+/* Стили ссылок */
+nav a {
+  padding: 8px 16px;
   font-size: 1rem;
-  transition: color 0.3s;
+  font-weight: 500;
+  transition: color 0.3s, text-decoration 0.3s;
 }
 
-/* button:hover {
-  transform: scale(1.05);
-  background-color: #bf6c4f;
-} */
-
-button:hover {
-  color: #bf6c4f;
+nav a.underline {
+  text-decoration: underline;
+  text-underline-offset: 4px;
 }
 
-.card {
-  transition: transform 0.3s, box-shadow 0.3s;
+nav a:hover {
+  color: var(--primary-color);
 }
 
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+/* RTL поддержка */
+html[dir='rtl'] {
+  direction: rtl;
 }
 
-
-.card button {
-    background: none;
-    border: none;
-    color: var(--primary-color);
-    cursor: pointer;
-    padding: 0;
-    font-size: 1rem;
-    transition: color 0.3s;
-  }
-  
-  .card button:hover {
-    color: #bf6c4f;
-  }
-  
-
-  /* Кнопка для просмотра видео */
-a.inline-flex {
-  transition: transform 0.2s, box-shadow 0.2s;
+html[dir='ltr'] {
+  direction: ltr;
 }
 
-a.inline-flex:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+/* Зеркалирование интерфейса */
+.rtl {
+  direction: rtl;
+}
+
+.rtl .flex {
+  flex-direction: row-reverse;
+}
+
+.rtl .text-left {
+  text-align: right;
+}
+
+.rtl .ml-auto {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.rtl .mr-auto {
+  margin-right: auto;
+  margin-left: 0;
+}
+
+.rtl .space-x-reverse > * {
+  --tw-space-x-reverse: 1;
+}
+
+/* Flexbox и отступы в RTL */
+.flex-1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }

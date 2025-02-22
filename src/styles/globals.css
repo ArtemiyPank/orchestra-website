@@ -21,18 +21,32 @@ h1, h2, h3, h4 {
 }
 
 /* Кнопки */
-button {
+/* button {
   background-color: var(--primary-color);
   color: white;
   padding: 8px 16px;
   border-radius: 6px;
   border: none;
   transition: background-color 0.3s, transform 0.2s;
+} */
+
+button {
+  background: none;
+  border: none;
+  color: var(--primary-color);
+  cursor: pointer;
+  padding: 0;
+  font-size: 1rem;
+  transition: color 0.3s;
 }
 
-button:hover {
+/* button:hover {
   transform: scale(1.05);
   background-color: #bf6c4f;
+} */
+
+button:hover {
+  color: #bf6c4f;
 }
 
 .card {
@@ -41,5 +55,31 @@ button:hover {
 
 .card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+.card button {
+    background: none;
+    border: none;
+    color: var(--primary-color);
+    cursor: pointer;
+    padding: 0;
+    font-size: 1rem;
+    transition: color 0.3s;
+  }
+  
+  .card button:hover {
+    color: #bf6c4f;
+  }
+  
+
+  /* Кнопка для просмотра видео */
+a.inline-flex {
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+a.inline-flex:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
 }

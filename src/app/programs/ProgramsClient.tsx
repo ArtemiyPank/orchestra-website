@@ -1,4 +1,3 @@
-// src/app/programs/ProgramsClient.tsx
 "use client";
 
 import { useTranslation } from 'react-i18next';
@@ -15,6 +14,11 @@ const ProgramsClient = ({ programs }: ProgramsClientProps) => {
 
   if (!ready) {
     return <div>Loading...</div>;
+  }
+
+  if (!programs || programs.length === 0) {
+    console.warn("No programs data received");
+    return <div>No programs available</div>;
   }
 
   return (

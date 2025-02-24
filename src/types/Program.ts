@@ -1,9 +1,9 @@
-// src/types/Program.ts
 export type Program = {
-    title: string;
-    description: string;
-    songs: string[];
-    photos: string[];
-    videoLink?: string;
-  };
-  
+  title: string;
+  description: string;
+  songs: string[];
+  videoLink?: string;
+  photoFolder: string;
+  photoGrid?: string; 
+  selectedPhotos?: string[]; 
+};

@@ -212,3 +212,18 @@ body.ltr {
     padding: 8px 16px;
   }
 }
+
+/* Стили для ссылок и списка песен */
+.text-peach-color {
+  color: var(--primary-color);
+  transition: color 0.3s;
+}
+
+.bg-peach-color {
+  background-color: var(--primary-color);
+  transition: background-color 0.3s;
+}
+
+.text-peach-color:hover {
+  color: rgba(212, 129, 102, 0.8);
+}

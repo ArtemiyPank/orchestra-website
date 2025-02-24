@@ -20,7 +20,10 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     document.documentElement.style.overflow = 'auto';
   }, []);
 
-  if (!isClient) return null;
+  if (!isClient) {
+    return <div className="text-center p-4">Loading interface...</div>;
+  }
+  
 
   const currentLang = i18n.language || 'en';
   const isRTL = currentLang === 'he'; // Определяем, нужно ли зеркалить интерфейс

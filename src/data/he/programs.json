@@ -1,10 +1,34 @@
 [
-    {
-      "title": "ערב קלאסי",
-      "description": "מבחר יפה של יצירות מוזיקה קלאסיות.",
-      "songs": ["סימפוניה מס' 5 מאת בטהובן", "ארבע העונות מאת ויואלדי", "קנון ברה מז'ור מאת פכלבל"],
-      "photos": ["/images/classical1.jpg", "/images/classical2.jpg"],
-      "videoLink": "https://www.youtube.com/watch?v=example"
-    }
-  ]
-  
+  {
+    "title": "Вечер классики",
+    "description": "Изящный выбор классических шедевров.",
+    "songs": ["Симфония № 5", "Лунная соната"],
+    "photos": ["/images/MaryBentsianova_kneset.jpg", "/images/orchestra_kneset.jpg"],
+    "videoLink": "https://example.com/classical"
+  },
+  {
+    "title": "Современные мелодии",
+    "description": "Яркая программа с современными хитами и любимыми мелодиями.",
+    "songs": ["Shape of You", "Blinding Lights", "Levitating", "Stay"],
+    "photos": ["/images/orchestra_openingAuditorium.jpg", "/images/violins_openingAuditorium.jpg", "/images/openingAuditorium.jpg"],
+    "videoLink": "https://example.com/modern"
+  },
+  {
+    "title": "Джазовая ночь",
+    "description": "Душевный вечер с джазовыми классиками и импровизациями.",
+    "songs": ["Take Five", "Autumn Leaves", "So What", "Blue in Green", "All of Me", "Feeling Good"],
+    "photos": ["/images/singer_ending2025.jpg", "/images/flutes_ending2025.jpg"],
+    "videoLink": "https://example.com/jazz"
+  },
+  {
+    "title": "Культурный микс",
+    "description": "Погрузитесь в атмосферу разных культур через музыку со всего мира.",
+    "songs": [
+      "Despacito", "Hava Nagila", "Kalinka", "La Vie en Rose", 
+      "Besame Mucho", "O Sole Mio", "Zorba the Greek", 
+      "Moliendo Café", "Con te partirò", "Bamboleo"
+    ],
+    "photos": ["/images/akulina_Beitan2024.jpg", "/images/Beitan2024.jpg"],
+    "videoLink": "https://example.com/cultural"
+  }
+]

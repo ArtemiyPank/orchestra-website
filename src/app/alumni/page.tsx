@@ -4,8 +4,8 @@ import { fetchData } from '@/utils/fetchData';
 import { Alumni } from '@/types/Alumni';
 
 const AlumniPage = async () => {
-  const locale = 'en'; // Можно сделать динамическим через контекст или роутер
-  const alumni: Alumni[] = fetchData('alumni', locale);
+  const locale = 'en';
+  const alumni: Alumni[] = await fetchData('alumni', locale);
 
   return (
     <div className="p-8">

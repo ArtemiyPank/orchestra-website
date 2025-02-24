@@ -1,16 +1,36 @@
 [
-    {
-      "title": "Classical Evening",
-      "description": "A beautiful selection of classical music pieces.",
-      "songs": ["Symphony No. 5 by Beethoven", "The Four Seasons by Vivaldi", "Canon in D by Pachelbel"],
-      "photos": ["/images/classical1.jpg", "/images/classical2.jpg"],
-      "videoLink": "https://www.youtube.com/watch?v=example"
-    },
-    {
-      "title": "Modern Tunes",
-      "description": "Experience modern music with a classical twist.",
-      "songs": ["Shape of You (Classical Cover)", "Billie Jean (Orchestra Version)"],
-      "photos": ["/images/modern1.jpg", "/images/modern2.jpg"]
-    }
-  ]
-  
+  {
+    "title": "Classical Evening",
+    "description": "An elegant selection of classical masterpieces.",
+    "songs": ["Symphony No. 5", "Clair de Lune"],
+    "videoLink": "https://example.com/classical",
+    "photoFolder": "Beitan 2024",
+    "photoGrid": "grid-template-3",
+    "selectedPhotos": ["DSCF6355.jpg", "DSCF6309-Enhanced-NR.jpg", "DSCF6393.jpg", "DSCF6424-Enhanced-NR.jpg"]
+  },
+  {
+    "title": "Modern Melodies",
+    "description": "A vibrant program featuring modern hits and beloved tunes.",
+    "songs": ["Shape of You", "Blinding Lights", "Levitating", "Stay"],
+    "videoLink": "https://example.com/modern",
+    "photoFolder": "Knesset"
+  },
+  {
+    "title": "Jazz Night",
+    "description": "A soulful evening with jazz classics and improvisations.",
+    "songs": ["Take Five", "Autumn Leaves", "So What", "Blue in Green", "All of Me", "Feeling Good"],
+    "videoLink": "https://example.com/jazz",
+    "photoFolder": "Opening auditorium"
+  },
+  {
+    "title": "Cultural Fusion",
+    "description": "Experience a blend of cultures through music from around the world.",
+    "songs": [
+      "Despacito", "Hava Nagila", "Kalinka", "La Vie en Rose", 
+      "Besame Mucho", "O Sole Mio", "Zorba the Greek", 
+      "Moliendo Café", "Con te partirò", "Bamboleo"
+    ],
+    "videoLink": "https://example.com/cultural",
+    "photoFolder": "End of the 2023-2024 school year"
+  }
+]

@@ -4,8 +4,8 @@ import { fetchData } from '@/utils/fetchData';
 import { Program } from '@/types/Program';
 
 const ProgramsPage = async () => {
-  const locale = 'en'; // Можно сделать динамическим, например, через контекст i18next
-  const programs: Program[] = fetchData('programs', locale);
+  const locale = 'en';
+  const programs: Program[] = await fetchData('programs', locale);
 
   return (
     <div className="p-8">

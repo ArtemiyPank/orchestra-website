@@ -1,229 +1,199 @@
+/* stylelint-disable */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* stylelint-enable */
 
-/* 🎨 Цветовая палитра */
-:root {
-  --primary-color: #D48166;  /* Приглушённый голубой */
-  --dark-color: #373A36;      /* Тёмно-серый */
-  --light-color: #E6E2DD;     /* Светло-серый */
-  --accent-color: #bf6c4f;    /* Акцентный цвет */
-  --gradient: linear-gradient(135deg, #D48166 0%, #E6E2DD 100%);
-  --shadow-color: rgba(0, 0, 0, 0.1);
-  --shadow-strong: rgba(0, 0, 0, 0.2);
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 221 83% 53%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 221 83% 53%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 217.2 91.2% 59.8%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 224.3 76.3% 48%;
+  }
 }
 
-html {
-  overflow-y: auto; /* ✅ Исправляем прокрутку */
+@layer base {
+  * {
+    /* Fix for the border-border issue */
+    border-color: hsl(var(--border));
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
 }
 
-/* 🖥️ Базовые стили */
+/* Add custom animations since we removed the plugin */
+@keyframes accordion-down {
+  from {
+    height: 0;
+  }
+  to {
+    height: var(--radix-accordion-content-height);
+  }
+}
+
+@keyframes accordion-up {
+  from {
+    height: var(--radix-accordion-content-height);
+  }
+  to {
+    height: 0;
+  }
+}
+
 body {
-  background-color: var(--light-color);
-  color: var(--dark-color);
-  font-family: 'Poppins', Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-  transition: background-color 0.3s, color 0.3s, direction 0.3s;
-  min-height: 100vh;
-  line-height: 1.6;
+  overflow-y: auto !important;
 }
 
-h1, h2, h3, h4 {
-  color: var(--dark-color);
-  font-weight: 700;
-  margin: 1rem 0;
+.animate-accordion-down {
+  animation: accordion-down 0.2s ease-out;
 }
 
-p {
-  margin: 0.5rem 0;
+.animate-accordion-up {
+  animation: accordion-up 0.2s ease-out;
 }
 
-/* 🎨 Кнопки */
-button {
-  background: var(--gradient);
-  color: white;
-  padding: 10px 20px;
-  border-radius: 8px;
-  border: none;
-  cursor: pointer;
-  transition: transform 0.2s, background 0.3s, box-shadow 0.2s;
-  box-shadow: 0 4px 8px var(--shadow-color);
-}
-
-button:hover {
-  transform: translateY(-2px);
-  background: var(--accent-color);
-  box-shadow: 0 8px 16px var(--shadow-strong);
-}
-
-button:active {
-  transform: translateY(0);
-  box-shadow: 0 4px 8px var(--shadow-color);
-}
-
-/* 🎴 Карточки */
-.card {
-  background: white;
-  border-radius: 12px;
-  padding: 20px;
-  box-shadow: 0 4px 8px var(--shadow-color);
-  transition: transform 0.3s, box-shadow 0.3s;
-  overflow: hidden;
-}
-
-.card img {
-  border-radius: 8px;
+/* Keep the existing photo grid styles */
+.photo-grid-container {
+  display: grid;
+  gap: 0.5rem;
   width: 100%;
-  height: auto;
-  margin-bottom: 15px;
-  object-fit: cover;
+  height: 100%;
+  min-height: 300px;
 }
 
-.card h2 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
+/* Grid templates with improved styling */
+.grid-template-1 {
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
 }
 
-.card p {
-  color: var(--dark-color);
-  margin-bottom: 10px;
+.grid-template-2 {
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
 }
 
-.card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 20px var(--shadow-strong);
+.grid-template-3 {
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
 }
 
-/* 🧭 Навигация */
-nav {
-  background-color: white;
-  box-shadow: 0 4px 8px var(--shadow-color);
-  padding: 10px 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  position: sticky;
-  top: 0;
-  z-index: 10;
+.grid-template-4 {
+  grid-template-columns: 1fr 1fr 2fr;
+  grid-template-rows: 1fr 1fr;
 }
 
-nav a {
-  padding: 8px 16px;
-  font-size: 1rem;
-  font-weight: 500;
-  transition: color 0.3s, text-decoration 0.3s;
-  color: var(--dark-color);
-  text-decoration: none;
+.grid-template-5 {
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: repeat(2, 1fr);
 }
 
-nav a:hover {
-  color: var(--primary-color);
-  text-decoration: underline;
+.grid-template-6 {
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: repeat(2, 1fr);
 }
 
-nav .active {
-  color: var(--primary-color);
-  text-decoration: underline;
-  text-underline-offset: 4px;
+.grid-template-7 {
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
 }
 
-/* 🎛️ Переключатель языков */
-.language-switcher button {
-  margin-left: 8px;
-  padding: 8px 12px;
-  border: 2px solid var(--primary-color);
-  background: transparent;
-  color: var(--dark-color);
-  border-radius: 8px;
-  transition: all 0.3s;
+.grid-template-8 {
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 2fr 1fr;
 }
 
-.language-switcher button.active {
-  background-color: var(--primary-color);
-  color: white;
+.grid-template-9 {
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 2fr;
 }
 
-.language-switcher button:hover {
-  transform: scale(1.1);
+.grid-template-10 {
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
 }
 
-/* 🌀 Загрузка данных */
-.loading-placeholder {
-  color: var(--dark-color);
-  font-size: 1.5rem;
-  padding: 20px;
-  text-align: center;
+.grid-template-11 {
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
 }
 
-/* 🌍 Поддержка RTL и LTR */
-html[dir='rtl'] {
-  direction: rtl;
+.grid-template-12 {
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 1fr;
 }
 
-html[dir='ltr'] {
-  direction: ltr;
+.grid-template-13 {
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 1fr;
 }
 
-body.rtl {
-  direction: rtl;
+.photo-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
 }
 
-body.ltr {
-  direction: ltr;
+.photo-item:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 
-/* Зеркалирование Flexbox */
-.rtl .flex {
-  flex-direction: row-reverse;
-}
-
-.rtl .text-left {
-  text-align: right;
-}
-
-.rtl .ml-auto {
-  margin-left: auto;
-  margin-right: 0;
-}
-
-.rtl .mr-auto {
-  margin-right: auto;
-  margin-left: 0;
-}
-
-.rtl .space-x-reverse > * {
-  --tw-space-x-reverse: 1;
-}
-
-/* 📱 Адаптивность */
-@media (max-width: 768px) {
-  nav {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .card {
-    padding: 15px;
-  }
-
-  button {
-    padding: 8px 16px;
-  }
-}
-
-/* Стили для ссылок и списка песен */
-.text-peach-color {
-  color: var(--primary-color);
-  transition: color 0.3s;
-}
-
-.bg-peach-color {
-  background-color: var(--primary-color);
-  transition: background-color 0.3s;
-}
-
-.text-peach-color:hover {
-  color: rgba(212, 129, 102, 0.8);
-}

@@ -15,7 +15,6 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   useEffect(() => {
     setIsClient(true);
 
-    // Исправляем прокрутку
     document.body.style.overflow = 'auto';
     document.documentElement.style.overflow = 'auto';
   }, []);
@@ -26,7 +25,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   
 
   const currentLang = i18n.language || 'en';
-  const isRTL = currentLang === 'he'; // Определяем, нужно ли зеркалить интерфейс
+  const isRTL = currentLang === 'he';
 
   return (
     <html lang={currentLang} dir={isRTL ? 'rtl' : 'ltr'}>

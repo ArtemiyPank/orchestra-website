@@ -1,39 +1,48 @@
-// src/components/LanguageSwitcher.tsx
-"use client";
+"use client"
 
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from "react-i18next"
+import { Button } from "@/components/ui/button"
+import { cn } from "@/lib/utils"
+import { motion } from "framer-motion"
 
 const LanguageSwitcher = () => {
-  const { i18n } = useTranslation();
+  const { i18n } = useTranslation()
 
   const changeLanguage = (lng: string) => {
-    i18n.changeLanguage(lng);
-  };
+    i18n.changeLanguage(lng)
+  }
 
-  const isRTL = i18n.language === 'he';
+  const isRTL = i18n.language === "he"
+
+  const languages = [
+    { code: "en", label: "EN" },
+    { code: "ru", label: "RU" },
+    { code: "he", label: "HE" },
+  ]
 
   return (
-    <div className={`flex space-x-2 ${isRTL ? 'flex-row-reverse space-x-reverse' : ''}`}>
-      <button
-        onClick={() => changeLanguage('en')}
-        className={`px-4 py-2 mx-2 rounded ${i18n.language === 'en' ? 'bg-primary-color text-white' : 'bg-light-color'}`}
-      >
-        EN
-      </button>
-      <button
-        onClick={() => changeLanguage('ru')}
-        className={`px-4 py-2 rounded ${i18n.language === 'ru' ? 'bg-primary-color text-white' : 'bg-light-color'}`}
-      >
-        RU
-      </button>
-      <button
-        onClick={() => changeLanguage('he')}
-        className={`px-4 py-2 rounded ${i18n.language === 'he' ? 'bg-primary-color text-white' : 'bg-light-color'}`}
-      >
-        HE
-      </button>
-    </div>
-  );
-};
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      className={cn("flex gap-1", isRTL ? "flex-row-reverse" : "")}
+    >
+      {languages.map((lang) => (
+        <Button
+          key={lang.code}
+          onClick={() => changeLanguage(lang.code)}
+          variant={i18n.language === lang.code ? "default" : "outline"}
+          size="sm"
+          className={cn(
+            "rounded-full px-3 font-medium transition-all",
+            i18n.language === lang.code ? "shadow-sm" : "text-foreground/70 hover:text-foreground",
+          )}
+        >
+          {lang.label}
+        </Button>
+      ))}
+    </motion.div>
+  )
+}
 
-export default LanguageSwitcher;
+export default LanguageSwitcher
+

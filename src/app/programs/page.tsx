@@ -1,15 +1,25 @@
-// src/app/programs/page.tsx
-import ProgramsClient from './ProgramsClient';
-import { fetchData } from '@/utils/fetchData';
-import { Program } from '@/types/Program';
+"use client";
 
-const ProgramsPage = async () => {
-  const locale = 'en';
-  const programs: Program[] = await fetchData('programs', locale);
+import { useEffect, useState } from "react";
+import { fetchData } from "@/utils/fetchData";
+import ProgramsClient from "./ProgramsClient";
+import { Program } from "@/types/Program";
+
+const ProgramsPage = () => {
+  const [programs, setPrograms] = useState<Program[]>([]);
+  const locale = "en";
+
+  useEffect(() => {
+    const loadPrograms = async () => {
+      const data = await fetchData("programs", locale);
+      setPrograms(data);
+    };
+    loadPrograms();
+  }, []);
 
   return (
     <div className="p-8">
-      <ProgramsClient programs={programs} />
+      <ProgramsClient initialPrograms={programs} />
     </div>
   );
 };

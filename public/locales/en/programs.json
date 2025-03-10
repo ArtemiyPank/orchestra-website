@@ -1,9 +1,10 @@
 {
-    "title": "Orchestra Programs",
-    "classicalTitle": "Classical Evening",
-    "classicalDescription": "A beautiful selection of classical music pieces.",
-    "modernTitle": "Modern Tunes",
-    "modernDescription": "Experience modern music with a classical twist.",
-    "jazzTitle": "Jazz Night",
-    "jazzDescription": "An evening filled with smooth jazz and improvisation."
-}
+    "title": "Our Programs",
+    "subtitle": "Explore our diverse musical performances and educational initiatives",
+    "upcomingTitle": "Upcoming Performances",
+    "pastTitle": "Past Performances",
+    "viewProgram": "View Program",
+    "buyTickets": "Buy Tickets"
+  }
+  
+  

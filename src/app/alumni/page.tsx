@@ -1,11 +1,21 @@
-// src/app/alumni/page.tsx
-import AlumniClient from './AlumniClient';
-import { fetchData } from '@/utils/fetchData';
-import { Alumni } from '@/types/Alumni';
+"use client";
 
-const AlumniPage = async () => {
-  const locale = 'en';
-  const alumni: Alumni[] = await fetchData('alumni', locale);
+import { useEffect, useState } from "react";
+import { fetchData } from "@/utils/fetchData";
+import AlumniClient from "./AlumniClient";
+import { Alumni } from "@/types/Alumni";
+
+const AlumniPage = () => {
+  const [alumni, setAlumni] = useState<Alumni[]>([]);
+  const locale = "en";
+
+  useEffect(() => {
+    const loadAlumni = async () => {
+      const data = await fetchData("alumni", locale);
+      setAlumni(data);
+    };
+    loadAlumni();
+  }, []);
 
   return (
     <div className="p-8">

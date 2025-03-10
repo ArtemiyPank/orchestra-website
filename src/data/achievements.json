@@ -1,0 +1,129 @@
+{
+  "en": [
+    {
+      "id": "1",
+      "title": "First Prize - International Orchestra Competition",
+      "description": "The orchestra won first place at the prestigious International Orchestra Competition in Vienna",
+      "winner": "Atid Raziel Orchestra",
+      "image": "/images/achievements/vienna-competition-certificate.jpg",
+      "date": "June 2023"
+    },
+    {
+      "id": "2",
+      "title": "Best String Section Award",
+      "description": "Our string section was recognized for exceptional performance at the National Music Festival",
+      "winner": "String Section",
+      "image": "/images/achievements/string-section-award-certificate.jpg",
+      "date": "March 2023"
+    },
+    {
+      "id": "3",
+      "title": "Young Talent Award",
+      "description": "Sarah Cohen won the Young Talent Award for her outstanding violin performance",
+      "winner": "Sarah Cohen",
+      "image": "/images/achievements/sarah-cohen-award-certificate.jpg",
+      "date": "November 2022"
+    },
+    {
+      "id": "4",
+      "title": "Excellence in Classical Performance",
+      "description": "The orchestra received recognition for its interpretation of Mozart's Symphony No. 40",
+      "winner": "Atid Raziel Orchestra",
+      "image": "/images/achievements/mozart-performance-certificate.jpg",
+      "date": "September 2022"
+    },
+    {
+      "id": "5",
+      "title": "Conductor's Award",
+      "description": "Our conductor received special recognition for innovative programming",
+      "winner": "Lev Arshtein",
+      "image": "/images/achievements/conductor-award-certificate.jpg",
+      "date": "May 2022"
+    }
+  ],
+  "ru": [
+    {
+      "id": "1",
+      "title": "Первая премия - Международный конкурс оркестров",
+      "description": "Оркестр занял первое место на престижном Международном конкурсе оркестров в Вене",
+      "winner": "Оркестр Атид Разиэль",
+      "image": "/images/vienna-competition.jpg",
+      "date": "Июнь 2023"
+    },
+    {
+      "id": "2",
+      "title": "Награда за лучшую струнную секцию",
+      "description": "Наша струнная секция была отмечена за исключительное исполнение на Национальном музыкальном фестивале",
+      "winner": "Струнная секция",
+      "image": "/images/string-section-award.jpg",
+      "date": "Март 2023"
+    },
+    {
+      "id": "3",
+      "title": "Награда молодого таланта",
+      "description": "Сара Коэн получила награду молодого таланта за выдающееся исполнение на скрипке",
+      "winner": "Сара Коэн",
+      "image": "/images/sarah-cohen-award.jpg",
+      "date": "Ноябрь 2022"
+    },
+    {
+      "id": "4",
+      "title": "Превосходство в классическом исполнении",
+      "description": "Оркестр получил признание за интерпретацию 40-й симфонии Моцарта",
+      "winner": "Оркестр Атид Разиэль",
+      "image": "/images/mozart-performance.jpg",
+      "date": "Сентябрь 2022"
+    },
+    {
+      "id": "5",
+      "title": "Награда дирижера",
+      "description": "Наш дирижер получил особое признание за инновационную программу",
+      "winner": "Лев Арштейн",
+      "image": "/images/conductor-award.jpg",
+      "date": "Май 2022"
+    }
+  ],
+  "he": [
+    {
+      "id": "1",
+      "title": "פרס ראשון - תחרות תזמורות בינלאומית",
+      "description": "התזמורת זכתה במקום הראשון בתחרות התזמורות הבינלאומית היוקרתית בווינה",
+      "winner": "תזמורת עתיד רזיאל",
+      "image": "/images/vienna-competition.jpg",
+      "date": "יוני 2023"
+    },
+    {
+      "id": "2",
+      "title": "פרס מחלקת המיתרים הטובה ביותר",
+      "description": "מחלקת המיתרים שלנו זכתה להכרה על ביצוע יוצא דופן בפסטיבל המוזיקה הלאומי",
+      "winner": "מחלקת המיתרים",
+      "image": "/images/string-section-award.jpg",
+      "date": "מרץ 2023"
+    },
+    {
+      "id": "3",
+      "title": "פרס הכישרון הצעיר",
+      "description": "שרה כהן זכתה בפרס הכישרון הצעיר על ביצוע הכינור המצוין שלה",
+      "winner": "שרה כהן",
+      "image": "/images/sarah-cohen-award.jpg",
+      "date": "נובמבר 2022"
+    },
+    {
+      "id": "4",
+      "title": "מצוינות בביצוע קלאסי",
+      "description": "התזמורת זכתה להכרה על הפרשנות שלה לסימפוניה מס' 40 של מוצרט",
+      "winner": "תזמורת עתיד רזיאל",
+      "image": "/images/mozart-performance.jpg",
+      "date": "ספטמבר 2022"
+    },
+    {
+      "id": "5",
+      "title": "פרס המנצח",
+      "description": "המנצח שלנו זכה להכרה מיוחדת על תכנות חדשני",
+      "winner": "לב ארשטיין",
+      "image": "/images/conductor-award.jpg",
+      "date": "מאי 2022"
+    }
+  ]
+}
+

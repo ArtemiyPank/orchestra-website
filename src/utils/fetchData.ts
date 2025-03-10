@@ -1,19 +1,27 @@
-import fs from 'fs';
-import path from 'path';
+import programs from "@/data/programs.json";
+import alumni from "@/data/alumni.json";
+import { Program } from "@/types/Program";
+import { Alumni } from "@/types/Alumni";
 
-export const fetchData = (type: 'programs' | 'alumni', locale: string) => {
-  try {
-    // Данные загружаются из src/data, а не из public/locales
-    const filePath = path.join(process.cwd(), `src/data/${locale}/${type}.json`);
-    
-    if (!fs.existsSync(filePath)) {
-      throw new Error(`File not found: ${filePath}`);
-    }
+const availableLocales = ["en", "ru", "he"] as const;
+type Locale = (typeof availableLocales)[number]; // "en" | "ru" | "he"
 
-    const data = fs.readFileSync(filePath, 'utf-8');
-    return JSON.parse(data);
-  } catch (error) {
-    console.error(`Failed to load ${type} data:`, error);
-    return [];
+export const fetchData = <T extends "programs" | "alumni">(
+  type: T,
+  locale: Locale
+): T extends "programs" ? Program[] : Alumni[] => {
+  if (!availableLocales.includes(locale)) {
+    console.warn(`Unsupported locale: ${locale}, defaulting to "en"`);
+    locale = "en";
   }
+
+  if (type === "programs") {
+    return programs[locale] as never;
+  }
+
+  if (type === "alumni") {
+    return alumni[locale] as never;
+  }
+
+  return [] as never;
 };

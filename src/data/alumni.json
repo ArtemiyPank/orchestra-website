@@ -1,0 +1,58 @@
+{
+    "en": [
+      {
+        "id": "1",
+        "name": "Sarah Cohen",
+        "instrument": "Violin",
+        "image": "/images/sarah-cohen.jpg",
+        "description": "Sarah Cohen, a former first violinist in our orchestra, has gone on to become a soloist with the Israel Philharmonic Orchestra.",
+        "story": "Sarah joined Atid Raziel Orchestra at the age of 14 and quickly became a standout performer. Her dedication and talent led her to win several national competitions before joining the Israel Philharmonic Orchestra at 23. Sarah credits her time with Atid Raziel for developing her passion for orchestral music and her technical skills."
+      },
+      {
+        "id": "2",
+        "name": "David Levy",
+        "instrument": "Cello",
+        "image": "/images/david-levy.jpg",
+        "description": "David Levy, our former principal cellist, now teaches at the Jerusalem Academy of Music and Dance.",
+        "story": "David's journey with Atid Raziel Orchestra began when he was 16. His exceptional talent and leadership skills made him principal cellist within two years. After graduating, David pursued further studies at Juilliard before returning to Israel to teach. He remains closely connected to Atid Raziel, often returning as a guest instructor."
+      }
+    ],
+    "ru": [
+      {
+        "id": "1",
+        "name": "Сара Коэн",
+        "instrument": "Скрипка",
+        "image": "/images/sarah-cohen.jpg",
+        "description": "Сара Коэн, бывшая первая скрипка нашего оркестра, стала солисткой Израильского филармонического оркестра.",
+        "story": "Сара присоединилась к оркестру Атид Разиэль в возрасте 14 лет и быстро стала выдающейся исполнительницей. Ее преданность и талант привели ее к победе в нескольких национальных конкурсах, прежде чем она присоединилась к Израильскому филармоническому оркестру в 23 года. Сара считает, что время, проведенное в Атид Разиэль, развило ее страсть к оркестровой музыке и технические навыки."
+      },
+      {
+        "id": "2",
+        "name": "Давид Леви",
+        "instrument": "Виолончель",
+        "image": "/images/david-levy.jpg",
+        "description": "Давид Леви, наш бывший концертмейстер виолончелей, теперь преподает в Иерусалимской академии музыки и танца.",
+        "story": "Путь Давида в оркестре Атид Разиэль начался, когда ему было 16 лет. Его исключительный талант и лидерские качества сделали его концертмейстером виолончелей всего через два года. После выпуска Давид продолжил обучение в Джульярде, прежде чем вернуться в Израиль для преподавания. Он остается тесно связанным с Атид Разиэль, часто возвращаясь в качестве приглашенного преподавателя."
+      }
+    ],
+    "he": [
+      {
+        "id": "1",
+        "name": "שרה כהן",
+        "instrument": "כינור",
+        "image": "/images/sarah-cohen.jpg",
+        "description": "שרה כהן, כנרת ראשונה לשעבר בתזמורת שלנו, הפכה לסולנית בתזמורת הפילהרמונית הישראלית.",
+        "story": "שרה הצטרפה לתזמורת עתיד רזיאל בגיל 14 ובמהרה הפכה למבצעת בולטת. המסירות והכישרון שלה הובילו אותה לזכייה במספר תחרויות ארציות לפני שהצטרפה לתזמורת הפילהרמונית הישראלית בגיל 23. שרה מייחסת את הזמן שלה בעתיד רזיאל לפיתוח התשוקה שלה למוזיקה תזמורתית ואת כישוריה הטכניים."
+      },
+      {
+        "id": "2",
+        "name": "דוד לוי",
+        "instrument": "צ'לו",
+        "image": "/images/david-levy.jpg",
+        "description": "דוד לוי, הצ'לן הראשי שלנו לשעבר, מלמד כעת באקדמיה למוסיקה ולמחול בירושלים.",
+        "story": "מסעו של דוד עם תזמורת עתיד רזיאל החל כשהיה בן 16. הכישרון יוצא הדופן וכישורי המנהיגות שלו הפכו אותו לצ'לן ראשי תוך שנתיים. לאחר סיום לימודיו, דוד המשיך ללמוד בג'וליארד לפני שחזר לישראל ללמד. הוא נשאר קשור מאוד לעתיד רזיאל, וחוזר לעתים קרובות כמדריך אורח."
+      }
+    ]
+  }
+  
+  

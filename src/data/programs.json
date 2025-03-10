@@ -1,0 +1,95 @@
+{
+  "en": [
+    {
+      "id": "1",
+      "title": "Spring Symphony",
+      "date": "2023-05-15",
+      "time": "19:30",
+      "venue": "Jerusalem Concert Hall",
+      "description": "A celebration of spring featuring Vivaldi's Four Seasons and Beethoven's 6th Symphony.",
+      "photoFolder": "/images/programs/spring-symphony/",
+      "cardPhotos": ["main.jpg", "rehearsal1.jpg", "conductor.jpg"],
+      "image": "/images/spring-symphony.jpg",
+      "program": ["Vivaldi: The Four Seasons", "Beethoven: Symphony No. 6 'Pastoral'"],
+      "ticketLink": "https://example.com/tickets/spring-symphony"
+    },
+    {
+      "id": "2",
+      "title": "Mozart Gala",
+      "date": "2023-07-10",
+      "time": "20:00",
+      "venue": "Tel Aviv Opera House",
+      "description": "An evening dedicated to the genius of Wolfgang Amadeus Mozart.",
+      "photoFolder": "/images/programs/mozart-gala/",
+      "cardPhotos": ["poster.jpg", "orchestra.jpg"],
+      "image": "/images/mozart-gala.jpg",
+      "program": [
+        "Mozart: Overture to The Marriage of Figaro",
+        "Mozart: Piano Concerto No. 21",
+        "Mozart: Symphony No. 41 'Jupiter'"
+      ],
+      "ticketLink": "https://example.com/tickets/mozart-gala"
+    }
+  ],
+  "ru": [
+    {
+      "id": "1",
+      "title": "Весенняя симфония",
+      "date": "2023-05-15",
+      "time": "19:30",
+      "venue": "Иерусалимский концертный зал",
+      "description": "Празднование весны с исполнением 'Времен года' Вивальди и 6-й симфонии Бетховена.",
+      "photoFolder": "/images/programs/spring-symphony/",
+      "cardPhotos": ["main.jpg", "rehearsal1.jpg", "conductor.jpg"],
+      "image": "/images/spring-symphony.jpg",
+      "program": ["Вивальди: Времена года", "Бетховен: Симфония №6 'Пасторальная'"],
+      "ticketLink": "https://example.com/tickets/spring-symphony"
+    },
+    {
+      "id": "2",
+      "title": "Гала-концерт Моцарта",
+      "date": "2023-07-10",
+      "time": "20:00",
+      "venue": "Тель-Авивский оперный театр",
+      "description": "Вечер, посвященный гению Вольфганга Амадея Моцарта.",
+      "photoFolder": "/images/programs/mozart-gala/",
+      "cardPhotos": ["poster.jpg", "orchestra.jpg"],
+      "image": "/images/mozart-gala.jpg",
+      "program": [
+        "Моцарт: Увертюра к 'Свадьбе Фигаро'",
+        "Моцарт: Концерт для фортепиано с оркестром №21",
+        "Моцарт: Симфония №41 'Юпитер'"
+      ],
+      "ticketLink": "https://example.com/tickets/mozart-gala"
+    }
+  ],
+  "he": [
+    {
+      "id": "1",
+      "title": "סימפוניית האביב",
+      "date": "2023-05-15",
+      "time": "19:30",
+      "venue": "אולם הקונצרטים ירושלים",
+      "description": "חגיגה של האביב עם 'ארבע העונות' של ויוולדי והסימפוניה השישית של בטהובן.",
+      "photoFolder": "/images/programs/spring-symphony/",
+      "cardPhotos": ["main.jpg", "rehearsal1.jpg", "conductor.jpg"],
+      "image": "/images/spring-symphony.jpg",
+      "program": ["ויוולדי: ארבע העונות", "בטהובן: סימפוניה מס' 6 'הפסטורלית'"],
+      "ticketLink": "https://example.com/tickets/spring-symphony"
+    },
+    {
+      "id": "2",
+      "title": "גאלה מוצרט",
+      "date": "2023-07-10",
+      "time": "20:00",
+      "venue": "בית האופרה תל אביב",
+      "description": "ערב המוקדש לגאונותו של וולפגנג אמדאוס מוצרט.",
+      "photoFolder": "/images/programs/mozart-gala/",
+      "cardPhotos": ["poster.jpg", "orchestra.jpg"],
+      "image": "/images/mozart-gala.jpg",
+      "program": ["מוצרט: הפתיחה ל'נישואי פיגרו'", "מוצרט: קונצ'רטו לפסנתר מס' 21", "מוצרט: סימפוניה מס' 41 'יופיטר'"],
+      "ticketLink": "https://example.com/tickets/mozart-gala"
+    }
+  ]
+}
+

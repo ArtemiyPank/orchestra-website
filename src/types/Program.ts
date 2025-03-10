@@ -1,9 +1,12 @@
 export type Program = {
+  id: string;
   title: string;
+  date: string;
+  time: string;
+  venue: string;
   description: string;
-  songs: string[];
-  videoLink?: string;
   photoFolder: string;
-  photoGrid?: string; 
-  selectedPhotos?: string[]; 
+  cardPhotos: string[];
+  program: string[];
+  ticketLink: string;
 };

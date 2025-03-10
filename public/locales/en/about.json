@@ -1,9 +1,12 @@
 {
   "title": "About Atid Raziel Orchestra",
-  "conductorTitle": "Lev Arshtein - Conductor",
-  "conductorDescription": "Dr. Lev Arshtein, the founder and conductor of the Youth Aliyah Symphony Orchestra, has been leading the ensemble with passion and excellence for over a decade.",
-  "description1": "The Atid Raziel Orchestra, based in Herzliya, brings together young talented musicians to perform a variety of classical and contemporary works.",
-  "description2": "Our orchestra is renowned for its exceptional performances and community involvement, inspiring audiences of all ages.",
-  "description3": "Under the baton of Dr. Arshtein, the orchestra has embarked on numerous international tours, showcasing the musical prowess of our students on global stages.",
-  "description4": "In addition to performances, the orchestra plays a vital role in the cultural education of our students, offering them opportunities to develop their musical talents and gain invaluable experience in ensemble settings."
+  "subtitle": "Inspiring young musicians through orchestral excellence and cultural heritage",
+  "heroTitle": "Our Orchestra",
+  "heroDescription": "A community of talented young musicians dedicated to excellence",
+  "conductorTitle": "Our Conductor",
+  "conductorDescription": "Lev Arshtein has been leading the orchestra since its founding, bringing his passion and expertise to inspire young musicians.",
+  "description1": "The Atid Raziel Orchestra was founded with the mission to provide young musicians with professional orchestral experience while preserving our rich musical heritage.",
+  "description2": "Our performances blend classical masterpieces with contemporary works, creating a unique musical experience that resonates with audiences of all backgrounds.",
+  "achievementsTitle": "Orchestra Achievements"
 }
+

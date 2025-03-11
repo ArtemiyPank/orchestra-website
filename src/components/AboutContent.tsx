@@ -5,7 +5,7 @@ import Image from "next/image"
 import { useEffect, useState } from "react"
 import { motion } from "framer-motion"
 import { Separator } from "@/components/ui/separator"
-import AchievementsCarousel, { type Achievement } from "./achievements-carousel"
+import AchievementsCarousel, { type Achievement } from "./AchievementsСarousel"
 import achievementsData from "@/data/achievements.json"
 
 type AchievementsData = {

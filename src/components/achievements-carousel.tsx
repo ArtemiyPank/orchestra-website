@@ -97,21 +97,17 @@ const AchievementsCarousel = ({ achievements, title = "Orchestra Achievements" }
           <Card
             key={achievement.id}
             className={cn(
-              "achievement-card min-w-[300px] md:min-w-[350px] snap-start",
+              "achievement-card min-w-[250px] md:min-w-[300px] snap-start",
               "transition-all duration-300 hover:shadow-lg",
             )}
           >
-            <div className="relative h-48 overflow-hidden rounded-t-lg">
+            <div className="relative h-[400px] overflow-hidden rounded-t-lg">
               <Image
-                src={achievement.image || "/placeholder.svg?height=200&width=350"}
+                src={achievement.image || "/placeholder.svg?height=600&width=400"}
                 alt={achievement.title}
                 fill
                 className="object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-              <div className="absolute bottom-3 left-3 right-3">
-                <span className="text-white/80 text-sm">{achievement.date}</span>
-              </div>
             </div>
             <CardContent className="pt-4">
               <h3 className="text-lg font-semibold mb-1">{achievement.title}</h3>
@@ -120,6 +116,7 @@ const AchievementsCarousel = ({ achievements, title = "Orchestra Achievements" }
                 <Trophy className="h-4 w-4 text-primary" />
                 <span className="text-sm font-medium">{achievement.winner}</span>
               </div>
+              <div className="mt-2 text-xs text-muted-foreground">{achievement.date}</div>
             </CardContent>
           </Card>
         ))}

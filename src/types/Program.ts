@@ -8,5 +8,4 @@ export type Program = {
   photoFolder: string;
   cardPhotos: string[];
   program: string[];
-  ticketLink: string;
 };

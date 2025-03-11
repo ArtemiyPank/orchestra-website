@@ -1,31 +1,38 @@
-"use client";
+"use client"
 
-import { useTranslation } from "react-i18next";
-import CardAlumni from "@/components/CardAlumni";
-import type { Alumni } from "@/types/Alumni";
-import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next"
+import { useEffect, useState } from "react"
+import CardAlumni from "@/components/CardAlumni"
+import type { Alumni } from "@/types/Alumni"
+import { motion } from "framer-motion"
+import { fetchData } from "@/utils/fetchData"
 
-type AlumniClientProps = {
-  alumni: Alumni[];
-};
+const AlumniClient = () => {
+  const { t, i18n, ready } = useTranslation("alumni")
+  const [alumni, setAlumni] = useState<Alumni[]>([])
 
-const AlumniClient = ({ alumni }: AlumniClientProps) => {
-  const { t, ready } = useTranslation("alumni");
+  useEffect(() => {
+    const loadAlumni = async () => {
+      const data = await fetchData("alumni", i18n.language as "en" | "ru" | "he")
+      setAlumni(data)
+    }
+    loadAlumni()
+  }, [i18n.language])
 
   if (!ready) {
     return (
       <div className="flex justify-center items-center min-h-[60vh]">
         <div className="animate-pulse text-primary">Loading...</div>
       </div>
-    );
+    )
   }
 
-  if (!alumni || alumni.length === 0) {
+  if (alumni.length === 0) {
     return (
       <div className="text-center text-muted-foreground text-lg">
         {t("noAlumni", "No alumni available at the moment.")}
       </div>
-    );
+    )
   }
 
   return (
@@ -50,7 +57,8 @@ const AlumniClient = ({ alumni }: AlumniClientProps) => {
         ))}
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default AlumniClient;
+export default AlumniClient
+

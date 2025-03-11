@@ -8,6 +8,7 @@ import { motion } from 'framer-motion';
 import { Music, Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useState } from 'react';
+import { ThemeToggle } from "./ThemeToggle"
 
 const Navbar = () => {
   const { t, i18n, ready } = useTranslation('navbar');
@@ -60,20 +61,19 @@ const Navbar = () => {
             ))}
           </div>
           
-          {/* Language Switcher */}
-          <div className="hidden md:block">
+          {/* Theme Toggle and Language Switcher */}
+          <div className="hidden md:flex items-center gap-2">
+            <ThemeToggle />
             <LanguageSwitcher />
           </div>
           
           {/* Mobile Menu Button */}
-          <Button 
-            variant="ghost" 
-            size="icon" 
-            className="md:hidden" 
-            onClick={toggleMenu}
-          >
-            {isMenuOpen ? <X /> : <Menu />}
-          </Button>
+          <div className="flex items-center gap-2 md:hidden">
+            <ThemeToggle />
+            <Button variant="ghost" size="icon" onClick={toggleMenu}>
+              {isMenuOpen ? <X /> : <Menu />}
+            </Button>
+          </div>
         </div>
         
         {/* Mobile Menu */}

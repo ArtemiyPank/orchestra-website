@@ -7,6 +7,7 @@ import Footer from '@/components/Footer';
 import '@/styles/globals.css';
 import '@/i18n/i18n';
 import { useTranslation } from 'react-i18next';
+import { ThemeProvider } from 'next-themes';
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   const { i18n } = useTranslation();
@@ -28,11 +29,14 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   const isRTL = currentLang === 'he';
 
   return (
+
     <html lang={currentLang} dir={isRTL ? 'rtl' : 'ltr'}>
       <body className={`bg-light-color text-dark-color transition-colors min-h-screen overflow-auto ${isRTL ? 'rtl' : 'ltr'}`}>
-        <Navbar />
-        <main className="p-8 max-w-6xl mx-auto">{children}</main>
-        <Footer />
+        <ThemeProvider attribute="class">
+          <Navbar />
+          <main className="p-8 max-w-6xl mx-auto">{children}</main>
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );

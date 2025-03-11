@@ -20,9 +20,9 @@ const Navbar = () => {
   const isRTL = i18n.language === 'he';
   
   const navLinks = [
-    { href: "/about", label: t('about', { defaultValue: 'About' }) },
-    { href: "/programs", label: t('programs', { defaultValue: 'Programs' }) },
-    { href: "/alumni", label: t('alumni', { defaultValue: 'Alumni' }) },
+    { href: "/about", label: t("about") },
+    { href: "/performances", label: t("performances") },
+    { href: "/alumni", label: t("alumni") },
   ];
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);

@@ -14,7 +14,7 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           {/* Logo and About */}
-          <div className="space-y-4">
+          <div className="space-y-4 ">
             <div className="flex items-center gap-2">
               <div className="bg-primary rounded-full p-2">
                 <Music className="h-5 w-5 text-primary-foreground" />
@@ -27,7 +27,7 @@ const Footer = () => {
           </div>
 
           {/* Quick Links */}
-          <div className="space-y-4">
+          <div className="space-y-4" >
             <h3 className="font-semibold text-lg">Quick Links</h3>
             <div className="grid grid-cols-2 gap-2">
               <Button variant="link" className="justify-start p-0 h-auto" asChild>

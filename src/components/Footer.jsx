@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button"
 import { Separator } from "@/components/ui/separator"
 
 const Footer = () => {
-  const { t } = useTranslation()
+  const { t } = useTranslation("footer")
   const currentYear = new Date().getFullYear()
 
   return (
@@ -14,7 +14,7 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           {/* Logo and About */}
-          <div className="space-y-4 ">
+          <div className="space-y-4">
             <div className="flex items-center gap-2">
               <div className="bg-primary rounded-full p-2">
                 <Music className="h-5 w-5 text-primary-foreground" />
@@ -27,27 +27,27 @@ const Footer = () => {
           </div>
 
           {/* Quick Links */}
-          <div className="space-y-4" >
-            <h3 className="font-semibold text-lg">Quick Links</h3>
+          <div className="space-y-4">
+            <h3 className="font-semibold text-lg">{t("quickLinks")}</h3>
             <div className="grid grid-cols-2 gap-2">
               <Button variant="link" className="justify-start p-0 h-auto" asChild>
-                <a href="/about">About</a>
+                <a href="/about">{t("about")}</a>
               </Button>
               <Button variant="link" className="justify-start p-0 h-auto" asChild>
-                <a href="/programs">Programs</a>
+                <a href="/performances">{t("performances")}</a>
               </Button>
               <Button variant="link" className="justify-start p-0 h-auto" asChild>
-                <a href="/alumni">Alumni</a>
+                <a href="/alumni">{t("alumni")}</a>
               </Button>
               <Button variant="link" className="justify-start p-0 h-auto" asChild>
-                <a href="/contact">Contact</a>
+                <a href="/contact">{t("contact")}</a>
               </Button>
             </div>
           </div>
 
           {/* Contact */}
           <div className="space-y-4">
-            <h3 className="font-semibold text-lg">Contact Us</h3>
+            <h3 className="font-semibold text-lg">{t("contactUs")}</h3>
             <div className="space-y-2">
               <div className="flex items-center gap-2 text-muted-foreground">
                 <Mail className="h-4 w-4" />
@@ -60,7 +60,7 @@ const Footer = () => {
               <div className="flex items-center gap-2 text-muted-foreground">
                 <ExternalLink className="h-4 w-4" />
                 <a href="#" className="hover:text-primary transition-colors">
-                  Follow us on social media
+                  {t("followUs")}
                 </a>
               </div>
             </div>
@@ -69,9 +69,7 @@ const Footer = () => {
 
         <Separator />
 
-        <div className="pt-6 text-center text-muted-foreground text-sm">
-          &copy; {currentYear} Atid Raziel Orchestra. All rights reserved.
-        </div>
+        <div className="pt-6 text-center text-muted-foreground text-sm">{t("copyright", { year: currentYear })}</div>
       </div>
     </footer>
   )

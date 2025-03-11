@@ -5,24 +5,13 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Music, Calendar, MapPin } from "lucide-react"
 import { motion } from "framer-motion"
 import { cn } from "@/lib/utils"
+import type { Performance } from "@/types/Performance"
 
-export type Program = {
-  id: string
-  title: string
-  date: string
-  time: string
-  venue: string
-  description: string
-  photoFolder: string
-  cardPhotos: string[]
-  program: string[]
+interface CardPerformanceProps {
+  performance: Performance
 }
 
-interface CardProgramProps {
-  program: Program
-}
-
-const CardProgram = ({ program }: CardProgramProps) => {
+const CardPerformance = ({ performance }: CardPerformanceProps) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -36,18 +25,18 @@ const CardProgram = ({ program }: CardProgramProps) => {
             className={cn("flex-1 p-8 flex flex-col justify-between", "bg-gradient-to-br from-background to-muted/30")}
           >
             <div>
-              <h2 className="text-3xl font-bold mb-4 text-foreground">{program.title}</h2>
+              <h2 className="text-3xl font-bold mb-4 text-foreground">{performance.title}</h2>
               <div className="flex items-center gap-2 text-muted-foreground mb-2">
                 <Calendar className="h-4 w-4" />
                 <span>
-                  {program.date} at {program.time}
+                  {performance.date} at {performance.time}
                 </span>
               </div>
               <div className="flex items-center gap-2 text-muted-foreground mb-4">
                 <MapPin className="h-4 w-4" />
-                <span>{program.venue}</span>
+                <span>{performance.venue}</span>
               </div>
-              <p className="text-muted-foreground mb-6">{program.description}</p>
+              <p className="text-muted-foreground mb-6">{performance.description}</p>
 
               <div className="mb-6 space-y-3">
                 <div className="flex items-center gap-2 text-primary font-medium">
@@ -55,7 +44,7 @@ const CardProgram = ({ program }: CardProgramProps) => {
                   <h3>Program</h3>
                 </div>
                 <ul className="space-y-2 pl-7">
-                  {program.program.map((item, index) => (
+                  {performance.program.map((item, index) => (
                     <li key={index} className="text-foreground/80 list-disc">
                       {item}
                     </li>
@@ -67,11 +56,11 @@ const CardProgram = ({ program }: CardProgramProps) => {
 
           <div className="flex-1 bg-muted/10">
             <div className="grid grid-cols-2 gap-2 p-4">
-              {program.cardPhotos.map((photo, index) => (
+              {performance.cardPhotos.map((photo, index) => (
                 <div key={index} className="relative aspect-[4/3] cursor-pointer overflow-hidden rounded-lg">
                   <Image
-                    src={`${program.photoFolder}${photo}`}
-                    alt={`${program.title} - Photo ${index + 1}`}
+                    src={`${performance.photoFolder}${photo}`}
+                    alt={`${performance.title} - Photo ${index + 1}`}
                     fill
                     className="object-cover transition-transform duration-300 hover:scale-105"
                   />
@@ -85,5 +74,5 @@ const CardProgram = ({ program }: CardProgramProps) => {
   )
 }
 
-export default CardProgram
+export default CardPerformance
 

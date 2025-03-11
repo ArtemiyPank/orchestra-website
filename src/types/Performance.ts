@@ -1,4 +1,4 @@
-export type Program = {
+export type Performance = {
   id: string;
   title: string;
   date: string;

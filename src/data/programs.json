@@ -7,11 +7,9 @@
       "time": "19:30",
       "venue": "Jerusalem Concert Hall",
       "description": "A celebration of spring featuring Vivaldi's Four Seasons and Beethoven's 6th Symphony.",
-      "photoFolder": "/images/programs/spring-symphony/",
-      "cardPhotos": ["main.jpg", "rehearsal1.jpg", "conductor.jpg"],
-      "image": "/images/spring-symphony.jpg",
-      "program": ["Vivaldi: The Four Seasons", "Beethoven: Symphony No. 6 'Pastoral'"],
-      "ticketLink": "https://example.com/tickets/spring-symphony"
+      "photoFolder": "/images/programs/Beitan 2024/",
+      "cardPhotos": ["DSCF6309-Enhanced-NR.jpg", "DSCF6224.jpg", "DSCF6355.jpg" , "DSCF6530.jpg"],
+      "program": ["Vivaldi: The Four Seasons", "Beethoven: Symphony No. 6 'Pastoral'"]
     },
     {
       "id": "2",
@@ -22,13 +20,11 @@
       "description": "An evening dedicated to the genius of Wolfgang Amadeus Mozart.",
       "photoFolder": "/images/programs/mozart-gala/",
       "cardPhotos": ["poster.jpg", "orchestra.jpg"],
-      "image": "/images/mozart-gala.jpg",
       "program": [
         "Mozart: Overture to The Marriage of Figaro",
         "Mozart: Piano Concerto No. 21",
         "Mozart: Symphony No. 41 'Jupiter'"
-      ],
-      "ticketLink": "https://example.com/tickets/mozart-gala"
+      ]
     }
   ],
   "ru": [
@@ -39,11 +35,9 @@
       "time": "19:30",
       "venue": "Иерусалимский концертный зал",
       "description": "Празднование весны с исполнением 'Времен года' Вивальди и 6-й симфонии Бетховена.",
-      "photoFolder": "/images/programs/spring-symphony/",
-      "cardPhotos": ["main.jpg", "rehearsal1.jpg", "conductor.jpg"],
-      "image": "/images/spring-symphony.jpg",
-      "program": ["Вивальди: Времена года", "Бетховен: Симфония №6 'Пасторальная'"],
-      "ticketLink": "https://example.com/tickets/spring-symphony"
+      "photoFolder": "/images/programs/Beitan 2024/",
+      "cardPhotos": ["DSCF6309-Enhanced-NR.jpg", "DSCF6224.jpg", "DSCF6355.jpg" , "DSCF6530.jpg"],
+      "program": ["Вивальди: Времена года", "Бетховен: Симфония №6 'Пасторальная'"]
     },
     {
       "id": "2",
@@ -54,13 +48,11 @@
       "description": "Вечер, посвященный гению Вольфганга Амадея Моцарта.",
       "photoFolder": "/images/programs/mozart-gala/",
       "cardPhotos": ["poster.jpg", "orchestra.jpg"],
-      "image": "/images/mozart-gala.jpg",
       "program": [
         "Моцарт: Увертюра к 'Свадьбе Фигаро'",
         "Моцарт: Концерт для фортепиано с оркестром №21",
         "Моцарт: Симфония №41 'Юпитер'"
-      ],
-      "ticketLink": "https://example.com/tickets/mozart-gala"
+      ]
     }
   ],
   "he": [
@@ -71,11 +63,9 @@
       "time": "19:30",
       "venue": "אולם הקונצרטים ירושלים",
       "description": "חגיגה של האביב עם 'ארבע העונות' של ויוולדי והסימפוניה השישית של בטהובן.",
-      "photoFolder": "/images/programs/spring-symphony/",
-      "cardPhotos": ["main.jpg", "rehearsal1.jpg", "conductor.jpg"],
-      "image": "/images/spring-symphony.jpg",
-      "program": ["ויוולדי: ארבע העונות", "בטהובן: סימפוניה מס' 6 'הפסטורלית'"],
-      "ticketLink": "https://example.com/tickets/spring-symphony"
+      "photoFolder": "/images/programs/Beitan 2024/",
+      "cardPhotos": ["DSCF6309-Enhanced-NR.jpg", "DSCF6224.jpg", "DSCF6355.jpg" , "DSCF6530.jpg"],
+      "program": ["ויוולדי: ארבע העונות", "בטהובן: סימפוניה מס' 6 'הפסטורלית'"]
     },
     {
       "id": "2",
@@ -86,9 +76,7 @@
       "description": "ערב המוקדש לגאונותו של וולפגנג אמדאוס מוצרט.",
       "photoFolder": "/images/programs/mozart-gala/",
       "cardPhotos": ["poster.jpg", "orchestra.jpg"],
-      "image": "/images/mozart-gala.jpg",
-      "program": ["מוצרט: הפתיחה ל'נישואי פיגרו'", "מוצרט: קונצ'רטו לפסנתר מס' 21", "מוצרט: סימפוניה מס' 41 'יופיטר'"],
-      "ticketLink": "https://example.com/tickets/mozart-gala"
+      "program": ["מוצרט: הפתיחה ל'נישואי פיגרו'", "מוצרט: קונצ'רטו לפסנתר מס' 21", "מוצרט: סימפוניה מס' 41 'יופיטר'"]
     }
   ]
 }

@@ -1,38 +1,38 @@
-"use client";
+"use client"
 
-import { useTranslation } from "react-i18next";
-import { useEffect, useState } from "react";
-import CardProgram from "@/components/CardProgram";
-import type { Program } from "@/types/Program";
-import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next"
+import { useEffect, useState } from "react"
+import CardProgram from "@/components/CardProgram"
+import type { Program } from "@/types/Program"
+import { motion } from "framer-motion"
+import { fetchData } from "@/utils/fetchData"
 
-type ProgramsClientProps = {
-  initialPrograms: Program[];
-};
-
-const ProgramsClient = ({ initialPrograms }: ProgramsClientProps) => {
-  const { t, ready } = useTranslation("programs");
-  const [programs, setPrograms] = useState<Program[]>(initialPrograms);
+const ProgramsClient = () => {
+  const { t, i18n, ready } = useTranslation("programs")
+  const [programs, setPrograms] = useState<Program[]>([])
 
   useEffect(() => {
-    // Если потребуется, можно загрузить данные заново.
-    setPrograms(initialPrograms);
-  }, [initialPrograms]);
+    const loadPrograms = async () => {
+      const data = await fetchData("programs", i18n.language as "en" | "ru" | "he")
+      setPrograms(data)
+    }
+    loadPrograms()
+  }, [i18n.language])
 
   if (!ready) {
     return (
       <div className="flex justify-center items-center min-h-[60vh]">
         <div className="animate-pulse text-primary">Loading...</div>
       </div>
-    );
+    )
   }
 
-  if (!programs || programs.length === 0) {
+  if (programs.length === 0) {
     return (
       <div className="text-center text-muted-foreground text-lg">
         {t("noPrograms", "No programs available at the moment.")}
       </div>
-    );
+    )
   }
 
   return (
@@ -53,16 +53,12 @@ const ProgramsClient = ({ initialPrograms }: ProgramsClientProps) => {
 
       <div className="space-y-16">
         {programs.map((program) => (
-          <CardProgram
-            key={program.id}
-            program={program}
-            viewProgramText={t("viewProgram", "View Program")}
-            buyTicketsText={t("buyTickets", "Buy Tickets")}
-          />
+          <CardProgram key={program.id} program={program} />
         ))}
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default ProgramsClient;
+export default ProgramsClient
+

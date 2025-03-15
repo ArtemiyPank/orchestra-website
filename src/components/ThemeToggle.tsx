@@ -13,7 +13,7 @@ export function ThemeToggle() {
   useEffect(() => {
     setMounted(true);
     if (resolvedTheme) {
-      setIconTheme(resolvedTheme as "dark" | "light"); // 🔹 Устанавливаем начальную тему
+      setIconTheme(resolvedTheme as "dark" | "light"); // Устанавливаем начальную тему
     }
   }, [resolvedTheme]);
 
@@ -28,7 +28,7 @@ export function ThemeToggle() {
       onClick={() => {
         const newTheme = iconTheme === "dark" ? "light" : "dark";
         setTheme(newTheme);
-        setIconTheme(newTheme); // 🔹 Обновляем иконку мгновенно
+        setIconTheme(newTheme);
       }}
       aria-label="Toggle theme"
     >

@@ -30,30 +30,30 @@ const CardAlumni = ({ name, description, image, story }: Alumni) => {
       viewport={{ once: true }}
     >
       <Card className="overflow-hidden h-full flex flex-col">
-        <div className="relative h-48 overflow-hidden">
+        <div className="relative h-36 sm:h-48 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10" />
           <img
             src={image || "/placeholder.svg"}
             alt={name}
             className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
           />
-          <div className="absolute bottom-4 left-4 z-20 flex items-center gap-3">
-            <Avatar className="h-12 w-12 border-2 border-white">
+          <div className="absolute bottom-3 left-3 z-20 flex items-center gap-2 sm:gap-3">
+            <Avatar className="h-10 w-10 sm:h-12 sm:w-12 border-2 border-white">
               <AvatarImage src={image} alt={name} />
               <AvatarFallback>{initials}</AvatarFallback>
             </Avatar>
-            <h2 className="text-xl font-bold text-white">{name}</h2>
+            <h2 className="text-lg sm:text-xl font-bold text-white">{name}</h2>
           </div>
         </div>
 
-        <CardContent className="flex-grow pt-4">
-          <p className="text-foreground/80">{description}</p>
+        <CardContent className="flex-grow pt-3 sm:pt-4 px-3 sm:px-6">
+          <p className="text-sm sm:text-base text-foreground/80">{description}</p>
 
           {story && (
-            <div className="mt-4">
+            <div className="mt-3 sm:mt-4">
               <div
                 className={cn(
-                  "text-foreground/70 overflow-hidden transition-all duration-300",
+                  "text-sm text-foreground/70 overflow-hidden transition-all duration-300",
                   expanded ? "max-h-[500px]" : "max-h-[80px]",
                 )}
               >
@@ -64,12 +64,12 @@ const CardAlumni = ({ name, description, image, story }: Alumni) => {
         </CardContent>
 
         {story && (
-          <CardFooter className="pt-0">
+          <CardFooter className="pt-0 px-3 sm:px-6 pb-3 sm:pb-4">
             <Button
               variant="ghost"
               size="sm"
               onClick={toggleExpanded}
-              className="w-full flex items-center gap-2 text-primary"
+              className="w-full flex items-center gap-2 text-primary text-sm"
             >
               <span>{expanded ? "Show less" : "Read more"}</span>
               <ChevronDown className={cn("h-4 w-4 transition-transform", expanded ? "rotate-180" : "")} />

@@ -34,7 +34,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <body className={`bg-light-color text-dark-color transition-colors min-h-screen overflow-auto ${isRTL ? 'rtl' : 'ltr'}`}>
         <ThemeProvider attribute="class">
           <Navbar />
-          <main className="p-8 max-w-6xl mx-auto">{children}</main>
+          <main className="p-4 max-w-6xl mx-auto">{children}</main>
           <Footer />
         </ThemeProvider>
       </body>

@@ -11,8 +11,6 @@ const nextConfig = {
     },
   },
   images: {
-    domains: ['localhost'],
-    // Добавьте здесь другие домены, с которых вы загружаете изображения
     remotePatterns: [
       {
         protocol: 'https',

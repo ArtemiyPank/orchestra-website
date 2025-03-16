@@ -88,7 +88,8 @@ export default function ModernGallery({
     if (isOpen) {
       fetchAllPhotos()
     }
-  }, [isOpen, photoFolder])
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isOpen, photoFolder]) 
 
   // Сброс состояния при открытии галереи
   useEffect(() => {

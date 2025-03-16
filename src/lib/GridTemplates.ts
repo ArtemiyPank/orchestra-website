@@ -1,22 +1,7 @@
-"use client"
-
-import { useEffect, useState, useMemo } from "react"
-import Image from "next/image"
-import { cn } from "@/lib/utils"
-
-// Типы фотографий по соотношению сторон
-type PhotoType = "horizontal" | "vertical" | "square"
-
-// Интерфейс для фотографии
-export interface Photo {
-  src: string
-  alt: string
-  ratio?: number
-  type?: PhotoType
-}
+import type { Photo } from "@/types/photo"
 
 // Интерфейс для шаблона сетки
-interface GridTemplate {
+export interface GridTemplate {
   id: string
   name: string
   // Количество фотографий в шаблоне
@@ -25,21 +10,8 @@ interface GridTemplate {
   getScore: (photos: Photo[]) => number
 }
 
-interface DynamicPhotoGridProps {
-  photos: Photo[]
-  openGallery: (index: number) => void
-  className?: string
-}
-
-// Определяем тип фотографии на основе соотношения сторон
-const getPhotoType = (ratio: number): PhotoType => {
-  if (ratio > 1.2) return "horizontal"
-  if (ratio < 0.8) return "vertical"
-  return "square"
-}
-
 // Определяем шаблоны сеток для разного количества фотографий
-const gridTemplates: GridTemplate[] = [
+export const gridTemplates: GridTemplate[] = [
   // Шаблоны для 2 фотографий
   {
     id: "grid-2-a",
@@ -68,15 +40,25 @@ const gridTemplates: GridTemplate[] = [
       return photos[0]?.type !== photos[1]?.type ? 3 : 1
     },
   },
+  {
+    id: "grid-2-d",
+    name: "2 фото: диагональное расположение",
+    photoCount: 2,
+    getScore: (photos) => {
+      // Хорошо для квадратных фото
+      const squareCount = photos.filter((p) => p.type === "square").length
+      return squareCount * 1.5
+    },
+  },
 
   // Шаблоны для 3 фотографий
   {
     id: "grid-3-a",
-    name: "3 фото: вертикальные в ряд",
+    name: "3 фото: горизонтальные в ряд",
     photoCount: 3,
     getScore: (photos) => {
-      const verticalCount = photos.filter((p) => p.type === "vertical").length
-      return verticalCount * 1.5
+      const horizontalCount = photos.filter((p) => p.type === "horizontal").length
+      return horizontalCount * 1.5
     },
   },
   {
@@ -92,6 +74,24 @@ const gridTemplates: GridTemplate[] = [
   {
     id: "grid-3-c",
     name: "3 фото: большая горизонтальная + 2 маленьких",
+    photoCount: 3,
+    getScore: (photos) => {
+      const hasHorizontalFirst = photos[0]?.type === "horizontal" ? 3 : 0
+      return hasHorizontalFirst + 1
+    },
+  },
+  {
+    id: "grid-3-d",
+    name: "3 фото: вертикальная слева + 2 справа",
+    photoCount: 3,
+    getScore: (photos) => {
+      const hasVerticalFirst = photos[0]?.type === "vertical" ? 3 : 0
+      return hasVerticalFirst + 1
+    },
+  },
+  {
+    id: "grid-3-e",
+    name: "3 фото: горизонтальная сверху + 2 снизу",
     photoCount: 3,
     getScore: (photos) => {
       const hasHorizontalFirst = photos[0]?.type === "horizontal" ? 3 : 0
@@ -130,6 +130,33 @@ const gridTemplates: GridTemplate[] = [
       return alternating
     },
   },
+  {
+    id: "grid-4-d",
+    name: "4 фото: T-образная сетка",
+    photoCount: 4,
+    getScore: (photos) => {
+      const hasHorizontalFirst = photos[0]?.type === "horizontal" ? 2 : 0
+      return hasHorizontalFirst + 1
+    },
+  },
+  {
+    id: "grid-4-e",
+    name: "4 фото: перевернутая T-образная сетка",
+    photoCount: 4,
+    getScore: (photos) => {
+      const hasHorizontalLast = photos[3]?.type === "horizontal" ? 2 : 0
+      return hasHorizontalLast + 1
+    },
+  },
+  {
+    id: "grid-4-f",
+    name: "4 фото: L-образная сетка",
+    photoCount: 4,
+    getScore: (photos) => {
+      const hasVerticalFirst = photos[0]?.type === "vertical" ? 2 : 0
+      return hasVerticalFirst + 1
+    },
+  },
 
   // Шаблоны для 5 фотографий
   {
@@ -158,6 +185,25 @@ const gridTemplates: GridTemplate[] = [
     getScore: (photos) => {
       const horizontalCount = photos.slice(0, 2).filter((p) => p.type === "horizontal").length
       return horizontalCount * 2
+    },
+  },
+  {
+    id: "grid-5-d",
+    name: "5 фото: крест",
+    photoCount: 5,
+    getScore: (photos) => {
+      const squareCount = photos.filter((p) => p.type === "square").length
+      return squareCount * 1.5
+    },
+  },
+  {
+    id: "grid-5-e",
+    name: "5 фото: квинтет",
+    photoCount: 5,
+    getScore: (photos) => {
+      // Хорошо для смешанных типов
+      console.log(photos);
+      return 2
     },
   },
 
@@ -191,6 +237,25 @@ const gridTemplates: GridTemplate[] = [
       return Math.min(horizontalCount, verticalCount) * 1.5
     },
   },
+  {
+    id: "grid-6-d",
+    name: "6 фото: 2 большие + 4 маленьких",
+    photoCount: 6,
+    getScore: (photos) => {
+      const horizontalCount = photos.slice(0, 2).filter((p) => p.type === "horizontal").length
+      return horizontalCount * 2
+    },
+  },
+  {
+    id: "grid-6-e",
+    name: "6 фото: мозаика с акцентом",
+    photoCount: 6,
+    getScore: (photos) => {
+      const hasHorizontalFirst = photos[0]?.type === "horizontal" ? 2 : 0
+      const diversity = new Set(photos.map((p) => p.type)).size
+      return hasHorizontalFirst + diversity
+    },
+  },
 
   // Шаблоны для 7 фотографий
   {
@@ -221,128 +286,81 @@ const gridTemplates: GridTemplate[] = [
       return horizontalCount * 1.5
     },
   },
+  {
+    id: "grid-7-d",
+    name: "7 фото: сложная мозаика",
+    photoCount: 7,
+    getScore: (photos) => {
+      // Хорошо для смешанных типов
+      const diversity = new Set(photos.map((p) => p.type)).size * 1.5
+      return diversity
+    },
+  },
+  {
+    id: "grid-7-e",
+    name: "7 фото: галерея с акцентом",
+    photoCount: 7,
+    getScore: (photos) => {
+      const hasHorizontalFirst = photos[0]?.type === "horizontal" ? 2 : 0
+      const hasVerticalFirst = photos[0]?.type === "vertical" ? 2 : 0
+      return Math.max(hasHorizontalFirst, hasVerticalFirst) + 1
+    },
+  },
+
+  // Дополнительные шаблоны для большего количества фотографий
+  {
+    id: "grid-8-a",
+    name: "8 фото: сетка 4x2",
+    photoCount: 8,
+    getScore: (photos) => {
+      const squareCount = photos.filter((p) => p.type === "square").length
+      return squareCount
+    },
+  },
+  {
+    id: "grid-8-b",
+    name: "8 фото: мозаика с акцентами",
+    photoCount: 8,
+    getScore: (photos) => {
+      const diversity = new Set(photos.map((p) => p.type)).size * 2
+      return diversity
+    },
+  },
+  {
+    id: "grid-9-a",
+    name: "9 фото: сетка 3x3",
+    photoCount: 9,
+    getScore: (photos) => {
+      const squareCount = photos.filter((p) => p.type === "square").length
+      return squareCount * 1.5
+    },
+  },
+  {
+    id: "grid-9-b",
+    name: "9 фото: сложная композиция",
+    photoCount: 9,
+    getScore: (photos) => {
+      const diversity = new Set(photos.map((p) => p.type)).size * 2
+      return diversity
+    },
+  },
+  {
+    id: "grid-10-a",
+    name: "10 фото: мозаика",
+    photoCount: 10,
+    getScore: (photos) => {
+      const diversity = new Set(photos.map((p) => p.type)).size * 2
+      return diversity
+    },
+  },
+  {
+    id: "grid-12-a",
+    name: "12 фото: сетка 4x3",
+    photoCount: 12,
+    getScore: (photos) => {
+      const squareCount = photos.filter((p) => p.type === "square").length
+      return squareCount
+    },
+  },
 ]
-
-const DynamicPhotoGrid = ({ photos, openGallery, className }: DynamicPhotoGridProps) => {
-  const [processedPhotos, setProcessedPhotos] = useState<Photo[]>([])
-  const [isLoading, setIsLoading] = useState(true)
-
-  // Загружаем и анализируем фотографии
-  useEffect(() => {
-    const loadAndAnalyzePhotos = async () => {
-      setIsLoading(true)
-
-      try {
-        const photosWithDetails = await Promise.all(
-          photos.map(async (photo) => {
-            return new Promise<Photo>((resolve) => {
-              const img = new window.Image()
-              img.crossOrigin = "anonymous"
-              img.src = photo.src
-
-              img.onload = () => {
-                const ratio = img.naturalWidth / img.naturalHeight
-                const type = getPhotoType(ratio)
-                resolve({ ...photo, ratio, type })
-              }
-
-              img.onerror = () => {
-                // Если изображение не загрузилось, используем значения по умолчанию
-                resolve({ ...photo, ratio: 1, type: "square" })
-              }
-            })
-          }),
-        )
-
-        setProcessedPhotos(photosWithDetails)
-      } catch (error) {
-        console.error("Error analyzing photos:", error)
-        // В случае ошибки используем исходные фотографии с типом "square"
-        setProcessedPhotos(photos.map((photo) => ({ ...photo, type: "square" as PhotoType })))
-      }
-
-      setIsLoading(false)
-    }
-
-    loadAndAnalyzePhotos()
-  }, [photos])
-
-  // Выбираем наиболее подходящий шаблон сетки
-  const { selectedGrid, selectedPhotos } = useMemo(() => {
-    if (processedPhotos.length === 0) {
-      return { selectedGrid: null, selectedPhotos: [] }
-    }
-
-    // Фильтруем шаблоны, которые подходят по количеству фотографий
-    const suitableTemplates = gridTemplates.filter((template) => template.photoCount === processedPhotos.length)
-
-    if (suitableTemplates.length === 0) {
-      // Если нет шаблонов с точным совпадением, найдем ближайший подходящий
-      // Предпочитаем шаблоны, которые могут вместить все фотографии
-      const closestTemplate =
-        gridTemplates
-          .filter((t) => t.photoCount >= processedPhotos.length)
-          .sort((a, b) => a.photoCount - b.photoCount)[0] ||
-        gridTemplates.sort((a, b) => b.photoCount - a.photoCount)[0]
-
-      return {
-        selectedGrid: closestTemplate,
-        selectedPhotos: processedPhotos.slice(0, closestTemplate.photoCount),
-      }
-    }
-
-    // Вычисляем оценку для каждого подходящего шаблона
-    const scoredTemplates = suitableTemplates.map((template) => ({
-      template,
-      score: template.getScore(processedPhotos),
-    }))
-
-    // Выбираем шаблон с наивысшей оценкой
-    const bestTemplate = scoredTemplates.sort((a, b) => b.score - a.score)[0].template
-
-    return {
-      selectedGrid: bestTemplate,
-      selectedPhotos: processedPhotos,
-    }
-  }, [processedPhotos])
-
-  if (isLoading) {
-    return (
-      <div className="w-full h-full min-h-[300px] bg-muted/20 animate-pulse rounded-md flex items-center justify-center">
-        <p className="text-muted-foreground">Загрузка фотографий...</p>
-      </div>
-    )
-  }
-
-  return (
-    <div className={cn("w-full h-full", className)}>
-      {selectedGrid && (
-        <div className={cn("photo-grid", selectedGrid.id, "w-full h-full")}>
-          {selectedPhotos.map((photo, index) => (
-            <div
-              key={index}
-              className={cn(
-                "photo-item",
-                `photo-${index + 1}`,
-                "relative overflow-hidden rounded-md cursor-pointer group",
-              )}
-              onClick={() => openGallery(index)}
-            >
-              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors z-10" />
-              <Image
-                src={photo.src || "/placeholder.svg"}
-                alt={photo.alt}
-                fill
-                sizes="(max-width: 768px) 100vw, 50vw"
-                className="object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </div>
-          ))}
-        </div>
-      )}
-    </div>
-  )
-}
-
-export default DynamicPhotoGrid
 

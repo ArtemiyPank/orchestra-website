@@ -1,0 +1,22 @@
+{
+    "previous": "Previous",
+    "next": "Next",
+    "close": "Close",
+    "zoom": "Zoom",
+    "zoomIn": "Zoom In",
+    "zoomOut": "Zoom Out",
+    "download": "Download",
+    "share": "Share",
+    "info": "Info",
+    "photoInfo": "Photo Information",
+    "fileName": "File name",
+    "navigation": "Use arrow keys for navigation",
+    "zoomKeys": "Use + and - keys to zoom",
+    "escapeKey": "Press ESC to exit",
+    "loading": "Loading...",
+    "shareTitle": "Share Image",
+    "shareText": "Check out this image",
+    "linkCopied": "Link copied to clipboard",
+    "of": "of"
+  }
+  

@@ -1,0 +1,955 @@
+
+/* Базовые стили для сетки фотографий */
+
+.photo-item:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+
+.photo-grid {
+    display: grid;
+    gap: 0.5rem;
+    width: 100%;
+    height: 100%;
+    min-height: 300px;
+  }
+  
+  /* Стили для фотографий */
+  .photo-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.5rem;
+    min-height: 120px;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .photo-item img {
+    object-fit: cover;
+  }
+  
+  /* Шаблоны для 2 фотографий */
+  .grid-2-a {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
+  
+  .grid-2-b {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  
+  .grid-2-c {
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr;
+  }
+  
+  .grid-2-d {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
+  
+  .grid-2-d .photo-1 {
+    transform: translateY(-10px);
+  }
+  
+  .grid-2-d .photo-2 {
+    transform: translateY(10px);
+  }
+  
+  /* Шаблоны для 3 фотографий */
+  .grid-3-a {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
+  
+  @media (max-width: 640px) {
+    .grid-3-a {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+    }
+  
+    .grid-3-a .photo-3 {
+      grid-column: span 2;
+    }
+  }
+  
+  .grid-3-b {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      "main small1"
+      "main small2";
+  }
+  
+  .grid-3-b .photo-1 {
+    grid-area: main;
+  }
+  
+  .grid-3-b .photo-2 {
+    grid-area: small1;
+  }
+  
+  .grid-3-b .photo-3 {
+    grid-area: small2;
+  }
+  
+  .grid-3-c {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2fr 1fr;
+    grid-template-areas:
+      "main main"
+      "small1 small2";
+  }
+  
+  .grid-3-c .photo-1 {
+    grid-area: main;
+  }
+  
+  .grid-3-c .photo-2 {
+    grid-area: small1;
+  }
+  
+  .grid-3-c .photo-3 {
+    grid-area: small2;
+  }
+  
+  .grid-3-d {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      "main small1"
+      "main small2";
+  }
+  
+  .grid-3-d .photo-1 {
+    grid-area: main;
+  }
+  
+  .grid-3-d .photo-2 {
+    grid-area: small1;
+  }
+  
+  .grid-3-d .photo-3 {
+    grid-area: small2;
+  }
+  
+  .grid-3-e {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      "main main"
+      "small1 small2";
+  }
+  
+  .grid-3-e .photo-1 {
+    grid-area: main;
+  }
+  
+  .grid-3-e .photo-2 {
+    grid-area: small1;
+  }
+  
+  .grid-3-e .photo-3 {
+    grid-area: small2;
+  }
+  
+  /* Шаблоны для 4 фотографий */
+  .grid-4-a {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  
+  .grid-4-b {
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+      "main small1"
+      "main small2"
+      "main small3";
+  }
+  
+  .grid-4-b .photo-1 {
+    grid-area: main;
+  }
+  
+  .grid-4-b .photo-2 {
+    grid-area: small1;
+  }
+  
+  .grid-4-b .photo-3 {
+    grid-area: small2;
+  }
+  
+  .grid-4-b .photo-4 {
+    grid-area: small3;
+  }
+  
+  @media (max-width: 640px) {
+    .grid-4-b {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 2fr 1fr 1fr;
+      grid-template-areas:
+        "main main"
+        "small1 small2"
+        "small3 small3";
+    }
+  }
+  
+  .grid-4-c {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  
+  .grid-4-d {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      "left top top"
+      "left bottom1 bottom2";
+  }
+  
+  .grid-4-d .photo-1 {
+    grid-area: left;
+  }
+  
+  .grid-4-d .photo-2 {
+    grid-area: top;
+  }
+  
+  .grid-4-d .photo-3 {
+    grid-area: bottom1;
+  }
+  
+  .grid-4-d .photo-4 {
+    grid-area: bottom2;
+  }
+  
+  .grid-4-e {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      "top1 top2 right"
+      "bottom bottom right";
+  }
+  
+  .grid-4-e .photo-1 {
+    grid-area: top1;
+  }
+  
+  .grid-4-e .photo-2 {
+    grid-area: top2;
+  }
+  
+  .grid-4-e .photo-3 {
+    grid-area: bottom;
+  }
+  
+  .grid-4-e .photo-4 {
+    grid-area: right;
+  }
+  
+  .grid-4-f {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+      "left top"
+      "left middle"
+      "left bottom";
+  }
+  
+  .grid-4-f .photo-1 {
+    grid-area: left;
+  }
+  
+  .grid-4-f .photo-2 {
+    grid-area: top;
+  }
+  
+  .grid-4-f .photo-3 {
+    grid-area: middle;
+  }
+  
+  .grid-4-f .photo-4 {
+    grid-area: bottom;
+  }
+  
+  /* Шаблоны для 5 фотографий */
+  .grid-5-a {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      "photo1 photo2 photo3"
+      "photo4 photo4 photo5";
+  }
+  
+  .grid-5-a .photo-1 {
+    grid-area: photo1;
+  }
+  
+  .grid-5-a .photo-2 {
+    grid-area: photo2;
+  }
+  
+  .grid-5-a .photo-3 {
+    grid-area: photo3;
+  }
+  
+  .grid-5-a .photo-4 {
+    grid-area: photo4;
+  }
+  
+  .grid-5-a .photo-5 {
+    grid-area: photo5;
+  }
+  
+  @media (max-width: 640px) {
+    .grid-5-a {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+      grid-template-areas:
+        "photo1 photo2"
+        "photo3 photo4"
+        "photo5 photo5";
+    }
+  }
+  
+  .grid-5-b {
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      "main small1 small2"
+      "main small3 small4";
+  }
+  
+  .grid-5-b .photo-1 {
+    grid-area: main;
+  }
+  
+  .grid-5-b .photo-2 {
+    grid-area: small1;
+  }
+  
+  .grid-5-b .photo-3 {
+    grid-area: small2;
+  }
+  
+  .grid-5-b .photo-4 {
+    grid-area: small3;
+  }
+  
+  .grid-5-b .photo-5 {
+    grid-area: small4;
+  }
+  
+  @media (max-width: 640px) {
+    .grid-5-b {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 2fr 1fr 1fr;
+      grid-template-areas:
+        "main main"
+        "small1 small2"
+        "small3 small4";
+    }
+  }
+  
+  .grid-5-c {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2fr 1fr;
+    grid-template-areas:
+      "big1 big2"
+      "small1 small2 small3";
+  }
+  
+  .grid-5-c .photo-1 {
+    grid-area: big1;
+  }
+  
+  .grid-5-c .photo-2 {
+    grid-area: big2;
+  }
+  
+  .grid-5-c .photo-3 {
+    grid-area: small1;
+  }
+  
+  .grid-5-c .photo-4 {
+    grid-area: small2;
+  }
+  
+  .grid-5-c .photo-5 {
+    grid-area: small3;
+  }
+  
+  .grid-5-d {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+      "top1 center top2"
+      "left center right"
+      "bottom1 center bottom2";
+  }
+  
+  .grid-5-d .photo-1 {
+    grid-area: center;
+  }
+  
+  .grid-5-d .photo-2 {
+    grid-area: top1;
+  }
+  
+  .grid-5-d .photo-3 {
+    grid-area: right;
+  }
+  
+  .grid-5-d .photo-4 {
+    grid-area: bottom2;
+  }
+  
+  .grid-5-d .photo-5 {
+    grid-area: left;
+  }
+  
+  .grid-5-e {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
+  
+  @media (max-width: 768px) {
+    .grid-5-e {
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+    }
+  
+    .grid-5-e .photo-5 {
+      grid-column: span 3;
+    }
+  }
+  
+  @media (max-width: 640px) {
+    .grid-5-e {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+    }
+  
+    .grid-5-e .photo-5 {
+      grid-column: span 2;
+    }
+  }
+  
+  /* Шаблоны для 6 фотографий */
+  .grid-6-a {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  
+  @media (max-width: 640px) {
+    .grid-6-a {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+    }
+  }
+  
+  .grid-6-b {
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+      "main small1 small2"
+      "main small3 small4"
+      "main small5 small5";
+  }
+  
+  .grid-6-b .photo-1 {
+    grid-area: main;
+  }
+  
+  .grid-6-b .photo-2 {
+    grid-area: small1;
+  }
+  
+  .grid-6-b .photo-3 {
+    grid-area: small2;
+  }
+  
+  .grid-6-b .photo-4 {
+    grid-area: small3;
+  }
+  
+  .grid-6-b .photo-5 {
+    grid-area: small4;
+  }
+  
+  .grid-6-b .photo-6 {
+    grid-area: small5;
+  }
+  
+  @media (max-width: 640px) {
+    .grid-6-b {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 2fr 1fr 1fr 1fr;
+      grid-template-areas:
+        "main main"
+        "small1 small2"
+        "small3 small4"
+        "small5 small5";
+    }
+  }
+  
+  .grid-6-c {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+  
+  .grid-6-d {
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      "big1 small1 small2"
+      "big2 small3 small4";
+  }
+  
+  .grid-6-d .photo-1 {
+    grid-area: big1;
+  }
+  
+  .grid-6-d .photo-2 {
+    grid-area: big2;
+  }
+  
+  .grid-6-d .photo-3 {
+    grid-area: small1;
+  }
+  
+  .grid-6-d .photo-4 {
+    grid-area: small2;
+  }
+  
+  .grid-6-d .photo-5 {
+    grid-area: small3;
+  }
+  
+  .grid-6-d .photo-6 {
+    grid-area: small4;
+  }
+  
+  .grid-6-e {
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+      "big small1 small2"
+      "big small3 small4"
+      "small5 small5 small6";
+  }
+  
+  .grid-6-e .photo-1 {
+    grid-area: big;
+  }
+  
+  .grid-6-e .photo-2 {
+    grid-area: small1;
+  }
+  
+  .grid-6-e .photo-3 {
+    grid-area: small2;
+  }
+  
+  .grid-6-e .photo-4 {
+    grid-area: small3;
+  }
+  
+  .grid-6-e .photo-5 {
+    grid-area: small4;
+  }
+  
+  .grid-6-e .photo-6 {
+    grid-area: small5;
+  }
+  
+  /* Шаблоны для 7 фотографий */
+  .grid-7-a {
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+      "big small1 small2"
+      "big small3 small4"
+      "small5 small6 small7";
+  }
+  
+  .grid-7-a .photo-1 {
+    grid-area: big;
+  }
+  
+  .grid-7-a .photo-2 {
+    grid-area: small1;
+  }
+  
+  .grid-7-a .photo-3 {
+    grid-area: small2;
+  }
+  
+  .grid-7-a .photo-4 {
+    grid-area: small3;
+  }
+  
+  .grid-7-a .photo-5 {
+    grid-area: small4;
+  }
+  
+  .grid-7-a .photo-6 {
+    grid-area: small5;
+  }
+  
+  .grid-7-a .photo-7 {
+    grid-area: small6;
+  }
+  
+  @media (max-width: 640px) {
+    .grid-7-a {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 2fr 1fr 1fr 1fr 1fr;
+      grid-template-areas:
+        "big big"
+        "small1 small2"
+        "small3 small4"
+        "small5 small6"
+        "small7 small7";
+    }
+  }
+  
+  .grid-7-b {
+    grid-template-columns: 3fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+      "main small1 small2"
+      "main small3 small4"
+      "main small5 small6";
+  }
+  
+  .grid-7-b .photo-1 {
+    grid-area: main;
+  }
+  
+  .grid-7-b .photo-2 {
+    grid-area: small1;
+  }
+  
+  .grid-7-b .photo-3 {
+    grid-area: small2;
+  }
+  
+  .grid-7-b .photo-4 {
+    grid-area: small3;
+  }
+  
+  .grid-7-b .photo-5 {
+    grid-area: small4;
+  }
+  
+  .grid-7-b .photo-6 {
+    grid-area: small5;
+  }
+  
+  .grid-7-b .photo-7 {
+    grid-area: small6;
+  }
+  
+  @media (max-width: 640px) {
+    .grid-7-b {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 2fr 1fr 1fr 1fr;
+      grid-template-areas:
+        "main main"
+        "small1 small2"
+        "small3 small4"
+        "small5 small6";
+    }
+  }
+  
+  .grid-7-c {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 2fr 2fr 1fr;
+    grid-template-areas:
+      "big1 big2 big3"
+      "big1 big2 big3"
+      "small1 small2 small3 small4";
+  }
+  
+  .grid-7-c .photo-1 {
+    grid-area: big1;
+  }
+  
+  .grid-7-c .photo-2 {
+    grid-area: big2;
+  }
+  
+  .grid-7-c .photo-3 {
+    grid-area: big3;
+  }
+  
+  .grid-7-c .photo-4 {
+    grid-area: small1;
+  }
+  
+  .grid-7-c .photo-5 {
+    grid-area: small2;
+  }
+  
+  .grid-7-c .photo-6 {
+    grid-area: small3;
+  }
+  
+  .grid-7-c .photo-7 {
+    grid-area: small4;
+  }
+  
+  .grid-7-d {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+      "big1 big1 big2 big2"
+      "big3 small1 small2 small3"
+      "big3 small4 small5 small6";
+  }
+  
+  .grid-7-d .photo-1 {
+    grid-area: big1;
+  }
+  
+  .grid-7-d .photo-2 {
+    grid-area: big2;
+  }
+  
+  .grid-7-d .photo-3 {
+    grid-area: big3;
+  }
+  
+  .grid-7-d .photo-4 {
+    grid-area: small1;
+  }
+  
+  .grid-7-d .photo-5 {
+    grid-area: small2;
+  }
+  
+  .grid-7-d .photo-6 {
+    grid-area: small3;
+  }
+  
+  .grid-7-d .photo-7 {
+    grid-area: small4;
+  }
+  
+  .grid-7-e {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+      "big1 big1 small1"
+      "big2 small2 small3"
+      "big2 small4 small5";
+  }
+  
+  .grid-7-e .photo-1 {
+    grid-area: big1;
+  }
+  
+  .grid-7-e .photo-2 {
+    grid-area: big2;
+  }
+  
+  .grid-7-e .photo-3 {
+    grid-area: small1;
+  }
+  
+  .grid-7-e .photo-4 {
+    grid-area: small2;
+  }
+  
+  .grid-7-e .photo-5 {
+    grid-area: small3;
+  }
+  
+  .grid-7-e .photo-6 {
+    grid-area: small4;
+  }
+  
+  .grid-7-e .photo-7 {
+    grid-area: small5;
+  }
+  
+  /* Шаблоны для 8 фотографий */
+  .grid-8-a {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  
+  @media (max-width: 768px) {
+    .grid-8-a {
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+    }
+  
+    .grid-8-a .photo-8 {
+      grid-column: span 3;
+    }
+  }
+  
+  @media (max-width: 640px) {
+    .grid-8-a {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr;
+    }
+  
+    .grid-8-a .photo-8 {
+      grid-column: span 2;
+    }
+  }
+  
+  .grid-8-b {
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+      "big small1 small2 small3"
+      "big small4 small5 small6"
+      "big small7 small7 small7";
+  }
+  
+  .grid-8-b .photo-1 {
+    grid-area: big;
+  }
+  
+  .grid-8-b .photo-2 {
+    grid-area: small1;
+  }
+  
+  .grid-8-b .photo-3 {
+    grid-area: small2;
+  }
+  
+  .grid-8-b .photo-4 {
+    grid-area: small3;
+  }
+  
+  .grid-8-b .photo-5 {
+    grid-area: small4;
+  }
+  
+  .grid-8-b .photo-6 {
+    grid-area: small5;
+  }
+  
+  .grid-8-b .photo-7 {
+    grid-area: small6;
+  }
+  
+  .grid-8-b .photo-8 {
+    grid-area: small7;
+  }
+  
+  /* Шаблоны для 9 фотографий */
+  .grid-9-a {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+  
+  .grid-9-b {
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+      "big small1 small2 small3"
+      "big small4 small5 small6"
+      "big small7 small8 small8";
+  }
+  
+  .grid-9-b .photo-1 {
+    grid-area: big;
+  }
+  
+  .grid-9-b .photo-2 {
+    grid-area: small1;
+  }
+  
+  .grid-9-b .photo-3 {
+    grid-area: small2;
+  }
+  
+  .grid-9-b .photo-4 {
+    grid-area: small3;
+  }
+  
+  .grid-9-b .photo-5 {
+    grid-area: small4;
+  }
+  
+  .grid-9-b .photo-6 {
+    grid-area: small5;
+  }
+  
+  .grid-9-b .photo-7 {
+    grid-area: small6;
+  }
+  
+  .grid-9-b .photo-8 {
+    grid-area: small7;
+  }
+  
+  .grid-9-b .photo-9 {
+    grid-area: small8;
+  }
+  
+  /* Шаблоны для 10 фотографий */
+  .grid-10-a {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+      "big1 big1 big2 big2"
+      "small1 small2 small3 small4"
+      "small5 small6 small7 small8";
+  }
+  
+  .grid-10-a .photo-1 {
+    grid-area: big1;
+  }
+  
+  .grid-10-a .photo-2 {
+    grid-area: big2;
+  }
+  
+  .grid-10-a .photo-3 {
+    grid-area: small1;
+  }
+  
+  .grid-10-a .photo-4 {
+    grid-area: small2;
+  }
+  
+  .grid-10-a .photo-5 {
+    grid-area: small3;
+  }
+  
+  .grid-10-a .photo-6 {
+    grid-area: small4;
+  }
+  
+  .grid-10-a .photo-7 {
+    grid-area: small5;
+  }
+  
+  .grid-10-a .photo-8 {
+    grid-area: small6;
+  }
+  
+  .grid-10-a .photo-9 {
+    grid-area: small7;
+  }
+  
+  .grid-10-a .photo-10 {
+    grid-area: small8;
+  }
+  
+  /* Шаблоны для 12 фотографий */
+  .grid-12-a {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+  

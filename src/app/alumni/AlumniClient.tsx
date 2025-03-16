@@ -36,7 +36,7 @@ const AlumniClient = () => {
   }
 
   return (
-    <div className="container mx-auto py-8 sm:py-12 px-2 sm:px-4 space-y-8 sm:space-y-12">
+    <div className="container mx-auto py-8 sm:py-12 px-0 sm:px-4 space-y-8 sm:space-y-12">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}

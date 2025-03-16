@@ -11,18 +11,18 @@ i18n
     debug: true,
     fallbackLng: 'en',
     supportedLngs: ['en', 'ru', 'he'],
-    ns: ['translation', 'navbar'],
-    defaultNS: 'translation',
     interpolation: {
       escapeValue: false,
     },
     backend: {
       loadPath: '/locales/{{lng}}/{{ns}}.json',
-    },
+    },    
     detection: {
       order: ['path', 'cookie', 'localStorage', 'navigator'],
       caches: ['cookie'],
     },
+      ns: ['about', 'alumni', 'footer', 'gallery', 'navbar', 'performances'],
+      defaultNS: 'about'
   });
 
 export default i18n;

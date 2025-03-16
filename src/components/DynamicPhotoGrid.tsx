@@ -223,6 +223,11 @@ const gridTemplates: GridTemplate[] = [
   },
 ]
 
+// Максимальное количество фотографий для обработки
+const MAX_PHOTOS = 7
+// Таймаут для загрузки изображения (мс)
+const IMAGE_LOAD_TIMEOUT = 500
+
 const DynamicPhotoGrid = ({ photos, openGallery, className }: DynamicPhotoGridProps) => {
   const [processedPhotos, setProcessedPhotos] = useState<Photo[]>([])
   const [isLoading, setIsLoading] = useState(true)
@@ -233,21 +238,45 @@ const DynamicPhotoGrid = ({ photos, openGallery, className }: DynamicPhotoGridPr
       setIsLoading(true)
 
       try {
+        // Ограничиваем количество обрабатываемых фотографий
+        const limitedPhotos = photos.slice(0, MAX_PHOTOS)
+
         const photosWithDetails = await Promise.all(
-          photos.map(async (photo) => {
+          limitedPhotos.map(async (photo) => {
             return new Promise<Photo>((resolve) => {
+              // Если у фото уже есть ratio и type, используем их
+              if (photo.ratio && photo.type) {
+                resolve(photo)
+                return
+              }
+
               const img = new window.Image()
               img.crossOrigin = "anonymous"
               img.src = photo.src
 
+              // Устанавливаем таймаут для загрузки изображения
+              const timeout = setTimeout(() => {
+                // Если изображение не загрузилось за отведенное время,
+                // используем значения по умолчанию
+                console.log(`Image load timeout for ${photo.src}`)
+                resolve({
+                  ...photo,
+                  ratio: 1.33, // Стандартное соотношение 4:3
+                  type: "horizontal" as PhotoType,
+                })
+              }, IMAGE_LOAD_TIMEOUT)
+
               img.onload = () => {
+                clearTimeout(timeout)
                 const ratio = img.naturalWidth / img.naturalHeight
                 const type = getPhotoType(ratio)
                 resolve({ ...photo, ratio, type })
               }
 
               img.onerror = () => {
+                clearTimeout(timeout)
                 // Если изображение не загрузилось, используем значения по умолчанию
+                console.error(`Failed to load image: ${photo.src}`)
                 resolve({ ...photo, ratio: 1, type: "square" })
               }
             })
@@ -258,7 +287,13 @@ const DynamicPhotoGrid = ({ photos, openGallery, className }: DynamicPhotoGridPr
       } catch (error) {
         console.error("Error analyzing photos:", error)
         // В случае ошибки используем исходные фотографии с типом "square"
-        setProcessedPhotos(photos.map((photo) => ({ ...photo, type: "square" as PhotoType })))
+        setProcessedPhotos(
+          photos.slice(0, MAX_PHOTOS).map((photo) => ({
+            ...photo,
+            ratio: 1,
+            type: "square" as PhotoType,
+          })),
+        )
       }
 
       setIsLoading(false)
@@ -315,7 +350,7 @@ const DynamicPhotoGrid = ({ photos, openGallery, className }: DynamicPhotoGridPr
   }
 
   return (
-    <div className={cn("w-full h-full", className)}>
+    <div className={cn("w-full h-full min-h-[300px]", className)}>
       {selectedGrid && (
         <div className={cn("photo-grid", selectedGrid.id, "w-full h-full")}>
           {selectedPhotos.map((photo, index) => (
@@ -335,6 +370,7 @@ const DynamicPhotoGrid = ({ photos, openGallery, className }: DynamicPhotoGridPr
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"
                 className="object-cover transition-transform duration-300 group-hover:scale-105"
+                priority={index < 2} // Приоритетная загрузка только для первых двух изображений
               />
             </div>
           ))}

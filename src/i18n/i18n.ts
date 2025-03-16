@@ -1,28 +1,44 @@
-import i18n from 'i18next';
-import { initReactI18next } from 'react-i18next';
-import HttpBackend from 'i18next-http-backend';
-import LanguageDetector from 'i18next-browser-languagedetector';
+import i18n from 'i18next'
+import { initReactI18next } from 'react-i18next'
 
-i18n
-  .use(HttpBackend)
-  .use(LanguageDetector)
-  .use(initReactI18next)
-  .init({
-    debug: true,
-    fallbackLng: 'en',
-    supportedLngs: ['en', 'ru', 'he'],
-    interpolation: {
-      escapeValue: false,
-    },
-    backend: {
-      loadPath: '/locales/{{lng}}/{{ns}}.json',
-    },    
-    detection: {
-      order: ['path', 'cookie', 'localStorage', 'navigator'],
-      caches: ['cookie'],
-    },
+if (typeof window !== 'undefined') {
+  // Только в браузере
+  // eslint-disable-next-line @typescript-eslint/no-require-imports
+  const HttpBackend = require('i18next-http-backend').default
+  // eslint-disable-next-line @typescript-eslint/no-require-imports
+  const LanguageDetector = require('i18next-browser-languagedetector').default
+
+  i18n
+    .use(HttpBackend)
+    .use(LanguageDetector)
+    .use(initReactI18next)
+    .init({
+      debug: false,
+      fallbackLng: 'en',
+      supportedLngs: ['en', 'ru', 'he'],
       ns: ['about', 'alumni', 'footer', 'gallery', 'navbar', 'performances'],
-      defaultNS: 'about'
-  });
+      defaultNS: 'about',
+      interpolation: { escapeValue: false },
+      backend: {
+        loadPath: '/locales/{{lng}}/{{ns}}.json',
+      },
+      detection: {
+        order: ['path', 'cookie', 'localStorage', 'navigator'],
+        caches: ['cookie'],
+      },
+    })
+} else {
+  // Сервер: без backend, просто инициализация
+  i18n
+    .use(initReactI18next)
+    .init({
+      debug: false,
+      fallbackLng: 'en',
+      supportedLngs: ['en', 'ru', 'he'],
+      ns: ['about', 'alumni', 'footer', 'gallery', 'navbar', 'performances'],
+      defaultNS: 'about',
+      interpolation: { escapeValue: false },
+    })
+}
 
-export default i18n;
+export default i18n

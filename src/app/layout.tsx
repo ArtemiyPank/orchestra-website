@@ -1,43 +1,28 @@
-// src/app/layout.tsx
-'use client';
-
-import { ReactNode, useEffect, useState } from 'react';
-import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
-import '@/styles/globals.css';
-import '@/i18n/i18n';
-import { useTranslation } from 'react-i18next';
+import type { ReactNode } from "react"
+import Navbar from "@/components/Navbar"
+import Footer from "@/components/Footer"
+import "@/styles/globals.css"
 import { ThemeProvider } from 'next-themes';
+import ClientLanguageWrapper from "@/components/ClientLanguageWrapper"
+
+export const metadata = {
+  title: "Atid Raziel Orchestra",
+  description: "Official website of the Atid Raziel Orchestra",
+}
 
 export default function RootLayout({ children }: { children: ReactNode }) {
-  const { i18n } = useTranslation();
-  const [isClient, setIsClient] = useState(false);
-
-  useEffect(() => {
-    setIsClient(true);
-
-    document.body.style.overflow = 'auto';
-    document.documentElement.style.overflow = 'auto';
-  }, []);
-
-  if (!isClient) {
-    return <div className="text-center p-4">Loading interface...</div>;
-  }
-  
-
-  const currentLang = i18n.language || 'en';
-  const isRTL = currentLang === 'he';
-
   return (
-
-    <html lang={currentLang} dir={isRTL ? 'rtl' : 'ltr'}>
-      <body className={`bg-light-color text-dark-color transition-colors min-h-screen overflow-auto ${isRTL ? 'rtl' : 'ltr'}`}>
-        <ThemeProvider attribute="class">
-          <Navbar />
-          <main className="p-4 max-w-6xl mx-auto">{children}</main>
-          <Footer />
+    <html suppressHydrationWarning>
+      <body className="bg-background text-foreground min-h-screen overflow-auto">
+        <ThemeProvider attribute="class" defaultTheme="light">
+          <ClientLanguageWrapper>
+            <Navbar />
+            <main className="p-4 max-w-6xl mx-auto">{children}</main>
+            <Footer />
+          </ClientLanguageWrapper>
         </ThemeProvider>
       </body>
     </html>
-  );
+  )
 }
+

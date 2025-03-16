@@ -1,17 +1,41 @@
 "use client"
 
-import Image from "next/image"
+import { useState } from "react"
 import { Card, CardContent } from "@/components/ui/card"
 import { Music, Calendar, MapPin } from "lucide-react"
 import { motion } from "framer-motion"
 import { cn } from "@/lib/utils"
 import type { Performance } from "@/types/Performance"
+import DynamicPhotoGrid from "@/components/DynamicPhotoGrid"
+import ModernGallery from "@/components/ModernGallery"
+import "@/styles/GridTemplates.css"
 
 interface CardPerformanceProps {
   performance: Performance
+  locale?: string
 }
 
-const CardPerformance = ({ performance }: CardPerformanceProps) => {
+const CardPerformance = ({ performance, locale }: CardPerformanceProps) => {
+  const [isGalleryOpen, setIsGalleryOpen] = useState(false)
+  const [activeImageIndex, setActiveImageIndex] = useState(0)
+  const currentLocale = locale || document.documentElement.lang
+
+  // Преобразуем cardPhotos в формат, необходимый для DynamicPhotoGrid
+  const gridPhotos = performance.cardPhotos.map((photo) => ({
+    src: `${performance.photoFolder}${photo}`,
+    alt: `${performance.title} - Photo`,
+  }))
+
+  // Функция для открытия галереи
+  const openGallery = (index: number) => {
+    setActiveImageIndex(index)
+    setIsGalleryOpen(true)
+  }
+
+  const closeGallery = () => {
+    setIsGalleryOpen(false)
+  }
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -59,22 +83,25 @@ const CardPerformance = ({ performance }: CardPerformanceProps) => {
             </div>
           </CardContent>
 
-          <div className="flex-1 bg-muted/10">
-            <div className="grid grid-cols-2 gap-2 p-2 sm:p-4">
-              {performance.cardPhotos.map((photo, index) => (
-                <div key={index} className="relative aspect-[4/3] overflow-hidden rounded-lg">
-                  <Image
-                    src={`${performance.photoFolder}${photo}`}
-                    alt={`${performance.title} - Photo ${index + 1}`}
-                    fill
-                    className="object-cover transition-transform duration-300 hover:scale-105"
-                  />
-                </div>
-              ))}
+          {/* Обновленная часть с сеткой фотографий */}
+          <div className="flex-1 bg-muted/10 p-2 sm:p-4 min-h-[200px]">
+            <div className="h-full w-full cursor-pointer">
+              <DynamicPhotoGrid photos={gridPhotos} openGallery={openGallery} />
             </div>
           </div>
         </div>
       </Card>
+
+      {/* Современная галерея фотографий с поддержкой локализации */}
+      <ModernGallery
+        isOpen={isGalleryOpen}
+        onClose={closeGallery}
+        initialIndex={activeImageIndex}
+        photoFolder={performance.photoFolder}
+        photos={performance.cardPhotos}
+        title={performance.title}
+        locale={currentLocale}
+      />
     </motion.div>
   )
 }

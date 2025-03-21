@@ -22,6 +22,7 @@ const Navbar = () => {
   
   const navLinks = [
     { href: "/about", label: t("about") },
+    { href: "/vocal-group", label: t("vocalGroup") },
     { href: "/performances", label: t("performances") },
     { href: "/alumni", label: t("alumni") },
   ];

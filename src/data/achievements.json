@@ -1,128 +1,152 @@
 {
   "en": [
     {
-      "id": "1",
-      "title": "First Prize - International Orchestra Competition",
-      "description": "The orchestra won first place at the prestigious International Orchestra Competition in Vienna",
-      "winner": "Atid Raziel Orchestra",
+      "id": "6",
+      "title": "3rd place - International Wind Instrument Competition",
+      "description": "Andrey Talisman won 3rd place in the woodwind instrument category at the international competition 'WIND STARS 2024' in Latvia",
+      "winner": "Andrey Talisman",
       "image": "/images/achievements/WhatsApp Image 2024-04-02 at 17.19.41_94d00b1f.jpg",
-      "date": "June 2023"
+      "date": "March 2024"
     },
     {
-      "id": "2",
-      "title": "Best String Section Award",
-      "description": "Our string section was recognized for exceptional performance at the National Music Festival",
-      "winner": "String Section",
+      "id": "7",
+      "title": "1st place - Golden Time Talent (Orchestra)",
+      "description": "The Youth Orchestra Atid won 1st place in the orchestra category at the international festival 'Golden Time Talent' in London",
+      "winner": "Youth Orchestra Atid",
       "image": "/images/achievements/WhatsApp Image 2025-02-28 at 15.10.55_ef9f0681.jpg",
-      "date": "March 2023"
+      "date": "February 2025"
     },
     {
-      "id": "3",
-      "title": "Young Talent Award",
-      "description": "Sarah Cohen won the Young Talent Award for her outstanding violin performance",
-      "winner": "Sarah Cohen",
+      "id": "8",
+      "title": "1st place - Golden Time Talent (Wind Instruments)",
+      "description": "Lydia Goikhburg won 1st place in the wind instruments category (ages 15–17) at the 'Golden Time Talent' competition in London",
+      "winner": "Lydia Goikhburg",
       "image": "/images/achievements/WhatsApp Image 2025-02-28 at 15.10.56_54d8a681.jpg",
-      "date": "November 2022"
+      "date": "February 2025"
     },
     {
-      "id": "4",
-      "title": "Excellence in Classical Performance",
-      "description": "The orchestra received recognition for its interpretation of Mozart's Symphony No. 40",
-      "winner": "Atid Raziel Orchestra",
+      "id": "9",
+      "title": "2nd place - Golden Time Talent (Pop Vocals)",
+      "description": "Polina Gibadullina won 2nd place in the pop vocals category (ages 15–17) at the 'Golden Time Talent' competition in London",
+      "winner": "Polina Gibadullina",
       "image": "/images/achievements/WhatsApp Image 2025-02-28 at 15.10.56_82416b8a.jpg",
-      "date": "September 2022"
+      "date": "February 2025"
     },
     {
-      "id": "5",
-      "title": "Conductor's Award",
-      "description": "Our conductor received special recognition for innovative programming",
-      "winner": "Lev Arshtein",
+      "id": "10",
+      "title": "2nd place - International Orchestra Competition",
+      "description": "Youth Orchestra Atid won 2nd place in the orchestra category at the international competition 'WIND STARS 2024' in Latvia",
+      "winner": "Youth Orchestra Atid",
       "image": "/images/achievements/WhatsApp Image 2025-02-28 at 21.31.34_9a768035.jpg",
-      "date": "May 2022"
+      "date": "March 2024"
+    },
+    {
+      "id": "11",
+      "title": "1st Degree Laureate - Gates of Hope Festival",
+      "description": "Youth Orchestra Atid received the 1st degree laureate award at the VI International Virtual Festival 'Gates of Hope'",
+      "winner": "Youth Orchestra Atid",
+      "image": "/images/achievements/WhatsApp Image 2025-02-28 at 21.32.14_98992aa0.jpg",
+      "date": "2024"
     }
   ],
   "ru": [
     {
-      "id": "1",
-      "title": "Первая премия - Международный конкурс оркестров",
-      "description": "Оркестр занял первое место на престижном Международном конкурсе оркестров в Вене",
-      "winner": "Оркестр Атид Разиэль",
+      "id": "6",
+      "title": "3-е место - Международный конкурс духовых инструментов",
+      "description": "Андрей Талисман занял 3-е место в категории деревянных духовых инструментов на международном конкурсе 'WIND STARS 2024' в Латвии",
+      "winner": "Андрей Талисман",
       "image": "/images/achievements/WhatsApp Image 2024-04-02 at 17.19.41_94d00b1f.jpg",
-      "date": "Июнь 2023"
+      "date": "Март 2024"
     },
     {
-      "id": "2",
-      "title": "Награда за лучшую струнную секцию",
-      "description": "Наша струнная секция была отмечена за исключительное исполнение на Национальном музыкальном фестивале",
-      "winner": "Струнная секция",
+      "id": "7",
+      "title": "1-е место - Golden Time Talent (Оркестр)",
+      "description": "Молодёжный оркестр 'Атид' занял 1-е место в категории оркестров на международном фестивале 'Golden Time Talent' в Лондоне",
+      "winner": "Оркестр Атид",
       "image": "/images/achievements/WhatsApp Image 2025-02-28 at 15.10.55_ef9f0681.jpg",
-      "date": "Март 2023"
+      "date": "Февраль 2025"
     },
     {
-      "id": "3",
-      "title": "Награда молодого таланта",
-      "description": "Сара Коэн получила награду молодого таланта за выдающееся исполнение на скрипке",
-      "winner": "Сара Коэн",
+      "id": "8",
+      "title": "1-е место - Golden Time Talent (Духовые инструменты)",
+      "description": "Лидия Гойхбург заняла 1-е место в категории духовых инструментов (15–17 лет) на конкурсе 'Golden Time Talent' в Лондоне",
+      "winner": "Лидия Гойхбург",
       "image": "/images/achievements/WhatsApp Image 2025-02-28 at 15.10.56_54d8a681.jpg",
-      "date": "Ноябрь 2022"
+      "date": "Февраль 2025"
     },
     {
-      "id": "4",
-      "title": "Превосходство в классическом исполнении",
-      "description": "Оркестр получил признание за интерпретацию 40-й симфонии Моцарта",
-      "winner": "Оркестр Атид Разиэль",
+      "id": "9",
+      "title": "2-е место - Golden Time Talent (Поп-вокал)",
+      "description": "Полина Гибадуллина заняла 2-е место в категории поп-вокала (15–17 лет) на конкурсе 'Golden Time Talent' в Лондоне",
+      "winner": "Полина Гибадуллина",
       "image": "/images/achievements/WhatsApp Image 2025-02-28 at 15.10.56_82416b8a.jpg",
-      "date": "Сентябрь 2022"
+      "date": "Февраль 2025"
     },
     {
-      "id": "5",
-      "title": "Награда дирижера",
-      "description": "Наш дирижер получил особое признание за инновационную программу",
-      "winner": "Лев Арштейн",
+      "id": "10",
+      "title": "2-е место - Международный конкурс оркестров",
+      "description": "Молодёжный оркестр 'Атид' занял 2-е место в категории оркестров на международном конкурсе 'WIND STARS 2024' в Латвии",
+      "winner": "Оркестр Атид",
       "image": "/images/achievements/WhatsApp Image 2025-02-28 at 21.31.34_9a768035.jpg",
-      "date": "Май 2022"
+      "date": "Март 2024"
+    },
+    {
+      "id": "11",
+      "title": "Лауреат I степени - Фестиваль Gates of Hope",
+      "description": "Молодёжный оркестр 'Атид' получил диплом лауреата I степени на VI Международном виртуальном фестивале 'Gates of Hope'",
+      "winner": "Оркестр Атид",
+      "image": "/images/achievements/WhatsApp Image 2025-02-28 at 21.32.14_98992aa0.jpg",
+      "date": "2024"
     }
   ],
   "he": [
     {
-      "id": "1",
-      "title": "פרס ראשון - תחרות תזמורות בינלאומית",
-      "description": "התזמורת זכתה במקום הראשון בתחרות התזמורות הבינלאומית היוקרתית בווינה",
-      "winner": "תזמורת עתיד רזיאל",
-      "image": "/images/achievements/WhatsApp Image 2024-04-02 at 17.19.41_94d00b1f.jpg",
-      "date": "יוני 2023"
-    },
-    {
-      "id": "2",
-      "title": "פרס מחלקת המיתרים הטובה ביותר",
-      "description": "מחלקת המיתרים שלנו זכתה להכרה על ביצוע יוצא דופן בפסטיבל המוזיקה הלאומי",
-      "winner": "מחלקת המיתרים",
+      "id": "6",
+      "title": "פרס שלישי - תחרות בינלאומית לכלי נשיפה",
+      "description": "אנדריי תליסמן זכה במקום השלישי בקטגוריית כלי נשיפה מעץ בתחרות הבינלאומית 'WIND STARS 2024' בלטביה",
+      "winner": "אנדריי תליסמן",
       "image": "/images/achievements/WhatsApp Image 2025-02-28 at 15.10.55_ef9f0681.jpg",
-      "date": "מרץ 2023"
+      "date": "מרץ 2024"
     },
     {
-      "id": "3",
-      "title": "פרס הכישרון הצעיר",
-      "description": "שרה כהן זכתה בפרס הכישרון הצעיר על ביצוע הכינור המצוין שלה",
-      "winner": "שרה כהן",
+      "id": "7",
+      "title": "פרס ראשון - Golden Time Talent (תזמורת)",
+      "description": "תזמורת הנוער עתיד זכתה במקום הראשון בקטגוריית תזמורות בפסטיבל הבינלאומי 'Golden Time Talent' בלונדון",
+      "winner": "תזמורת עתיד",
+      "image": "/images/achievements/WhatsApp Image 2025-02-28 at 21.32.14_98992aa0.jpg",
+      "date": "פברואר 2025"
+    },
+    {
+      "id": "8",
+      "title": "פרס ראשון - Golden Time Talent (כלי נשיפה)",
+      "description": "לידיה גוייחבורג זכתה במקום הראשון בקטגוריית כלי נשיפה (גיל 15–17) בתחרות 'Golden Time Talent' בלונדון",
+      "winner": "לידיה גוייחבורג",
       "image": "/images/achievements/WhatsApp Image 2025-02-28 at 15.10.56_54d8a681.jpg",
-      "date": "נובמבר 2022"
+      "date": "פברואר 2025"
     },
     {
-      "id": "4",
-      "title": "מצוינות בביצוע קלאסי",
-      "description": "התזמורת זכתה להכרה על הפרשנות שלה לסימפוניה מס' 40 של מוצרט",
-      "winner": "תזמורת עתיד רזיאל",
+      "id": "9",
+      "title": "פרס שני - Golden Time Talent (שירה פופולרית)",
+      "description": "פולינה גיבאדולינה זכתה במקום השני בקטגוריית שירה פופולרית (גיל 15–17) בתחרות 'Golden Time Talent' בלונדון",
+      "winner": "פולינה גיבאדולינה",
       "image": "/images/achievements/WhatsApp Image 2025-02-28 at 15.10.56_82416b8a.jpg",
-      "date": "ספטמבר 2022"
+      "date": "פברואר 2025"
     },
     {
-      "id": "5",
-      "title": "פרס המנצח",
-      "description": "המנצח שלנו זכה להכרה מיוחדת על תכנות חדשני",
-      "winner": "לב ארשטיין",
+      "id": "10",
+      "title": "פרס שני - תחרות תזמורות בינלאומית",
+      "description": "תזמורת הנוער עתיד זכתה במקום השני בקטגוריית תזמורות בתחרות הבינלאומית 'WIND STARS 2024' בלטביה",
+      "winner": "תזמורת עתיד",
       "image": "/images/achievements/WhatsApp Image 2025-02-28 at 21.31.34_9a768035.jpg",
-      "date": "מאי 2022"
+      "date": "מרץ 2024"
+    },
+    {
+      "id": "11",
+      "title": "דיפלומת דרגה ראשונה - פסטיבל שערי תקווה",
+      "description": "תזמורת הנוער עתיד קיבלה דיפלומה של דרגה ראשונה בפסטיבל הבינלאומי הווירטואלי 'שערי תקווה'",
+      "winner": "תזמורת עתיד",
+      "image": "/images/achievements/WhatsApp Image 2025-02-28 at 21.32.14_98992aa0.jpg",
+      "date": "2024"
     }
   ]
 }

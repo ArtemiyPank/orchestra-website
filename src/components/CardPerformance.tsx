@@ -58,7 +58,7 @@ const CardPerformance = ({ performance, locale }: CardPerformanceProps) => {
               <div className="flex items-center gap-2 text-muted-foreground mb-2">
                 <Calendar className="h-4 w-4 flex-shrink-0" />
                 <span className="text-sm sm:text-base">
-                  {performance.date} at {performance.time}
+                  {performance.date}
                 </span>
               </div>
               <div className="flex items-center gap-2 text-muted-foreground mb-3 sm:mb-4">

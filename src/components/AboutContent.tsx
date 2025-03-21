@@ -42,9 +42,6 @@ const AboutContent = () => {
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/70">
           {t("title")}
         </h1>
-        <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
-          {t("subtitle", "Inspiring young musicians through orchestral excellence and cultural heritage")}
-        </p>
       </motion.div>
 
       <motion.div
@@ -68,6 +65,17 @@ const AboutContent = () => {
           </p>
         </div>
       </motion.div>
+
+      {/*описание оркестра */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.1 }}
+        className="text-sm sm:text-base text-muted-foreground text-center max-w-4xl mx-auto mb-8 sm:mb-12 leading-relaxed"
+      >
+        {t("orchestraDescription", "Atid Raziel Orchestra brings together young talents from across the region, fostering musical growth, cultural appreciation, and community through powerful performances and artistic collaboration.")}
+      </motion.div>
+
 
       {/* Achievements Carousel */}
       <motion.div

@@ -1,0 +1,174 @@
+{
+  "en": [
+    {
+      "id": 1,
+      "name": "Anna Petrova",
+      "voice": "Soprano",
+      "photo": "/images/soloists/soloist1.jpg",
+      "featuredSongs": [
+        "Mozart: \"Queen of the Night\" aria",
+        "Verdi: \"La traviata\" - Violetta's aria",
+        "Puccini: \"O mio babbino caro\""
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Mikhail Ivanov",
+      "voice": "Tenor",
+      "photo": "/images/soloists/soloist2.jpg",
+      "featuredSongs": [
+        "Puccini: \"Nessun Dorma\"",
+        "Tchaikovsky: \"Eugene Onegin\" - Lensky's aria",
+        "Traditional: \"Kalinka\""
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Elena Sokolova",
+      "voice": "Mezzo-soprano",
+      "photo": "/images/soloists/soloist3.jpg",
+      "featuredSongs": [
+        "Bizet: \"Carmen\" - Habanera",
+        "Saint-Saëns: \"Samson et Dalila\" - Mon cœur s'ouvre à ta voix",
+        "Russian Romance: \"Dark Eyes\""
+      ]
+    },
+    {
+      "id": 4,
+      "name": "David Cohen",
+      "voice": "Baritone",
+      "photo": "/images/soloists/soloist4.jpg",
+      "featuredSongs": [
+        "Verdi: \"Rigoletto\" - Cortigiani, vil razza dannata",
+        "Mozart: \"Don Giovanni\" - Fin ch'han dal vino",
+        "Jewish Folk: \"Hava Nagila\" (arrangement)"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Sarah Goldstein",
+      "voice": "Soprano",
+      "photo": "/images/soloists/soloist5.jpg",
+      "featuredSongs": [
+        "Handel: \"Messiah\" - Rejoice greatly",
+        "Gershwin: \"Porgy and Bess\" - Summertime",
+        "Hebrew Prayer: \"Avinu Malkeinu\""
+      ]
+    }
+  ],
+  "ru": [
+    {
+      "id": 1,
+      "name": "Анна Петрова",
+      "voice": "Сопрано",
+      "photo": "/images/soloists/soloist1.jpg",
+      "featuredSongs": [
+        "Моцарт: Ария Царицы ночи",
+        "Верди: \"Травиата\" - ария Виолетты",
+        "Пуччини: \"O mio babbino caro\""
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Михаил Иванов",
+      "voice": "Тенор",
+      "photo": "/images/soloists/soloist2.jpg",
+      "featuredSongs": [
+        "Пуччини: \"Nessun Dorma\"",
+        "Чайковский: \"Евгений Онегин\" - ария Ленского",
+        "Народная: \"Калинка\""
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Елена Соколова",
+      "voice": "Меццо-сопрано",
+      "photo": "/images/soloists/soloist3.jpg",
+      "featuredSongs": [
+        "Бизе: \"Кармен\" - Хабанера",
+        "Сен-Санс: \"Самсон и Далила\" - Mon cœur s'ouvre à ta voix",
+        "Русский романс: \"Очи черные\""
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Давид Коэн",
+      "voice": "Баритон",
+      "photo": "/images/soloists/soloist4.jpg",
+      "featuredSongs": [
+        "Верди: \"Риголетто\" - Cortigiani, vil razza dannata",
+        "Моцарт: \"Дон Жуан\" - Fin ch'han dal vino",
+        "Еврейская народная: \"Хава Нагила\" (аранжировка)"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Сара Гольдштейн",
+      "voice": "Сопрано",
+      "photo": "/images/soloists/soloist5.jpg",
+      "featuredSongs": [
+        "Гендель: \"Мессия\" - Rejoice greatly",
+        "Гершвин: \"Порги и Бесс\" - Колыбельная",
+        "Еврейская молитва: \"Авину Малкейну\""
+      ]
+    }
+  ],
+  "he": [
+    {
+      "id": 1,
+      "name": "אנה פטרובה",
+      "voice": "סופרן",
+      "photo": "/images/soloists/soloist1.jpg",
+      "featuredSongs": [
+        "מוצרט: אריה של מלכת הלילה",
+        "ורדי: \"לה טרוויאטה\" - אריה של ויולטה",
+        "פוצ'יני: \"או מיו באבינו קארו\""
+      ]
+    },
+    {
+      "id": 2,
+      "name": "מיכאיל איבנוב",
+      "voice": "טנור",
+      "photo": "/images/soloists/soloist2.jpg",
+      "featuredSongs": [
+        "פוצ'יני: \"נסון דורמה\"",
+        "צ'ייקובסקי: \"יבגני אונייגין\" - אריה של לנסקי",
+        "מסורתי: \"קלינקה\""
+      ]
+    },
+    {
+      "id": 3,
+      "name": "ילנה סוקולובה",
+      "voice": "מצו-סופרן",
+      "photo": "/images/soloists/soloist3.jpg",
+      "featuredSongs": [
+        "ביזה: \"כרמן\" - הבנרה",
+        "סן-סנס: \"שמשון ודלילה\" - מון קר סובר א טה ווא",
+        "רומנס רוסי: \"עיניים שחורות\""
+      ]
+    },
+    {
+      "id": 4,
+      "name": "דוד כהן",
+      "voice": "בריטון",
+      "photo": "/images/soloists/soloist4.jpg",
+      "featuredSongs": [
+        "ורדי: \"ריגולטו\" - קורטיג'יאני, ויל ראצה דנאטה",
+        "מוצרט: \"דון ג'ובאני\" - פין צ'האן דל וינו",
+        "פולקלור יהודי: \"הבה נגילה\" (עיבוד)"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "שרה גולדשטיין",
+      "voice": "סופרן",
+      "photo": "/images/soloists/soloist5.jpg",
+      "featuredSongs": [
+        "הנדל: \"המשיח\" - רג'ויס גרייטלי",
+        "גרשווין: \"פורגי ובס\" - סאמרטיים",
+        "תפילה עברית: \"אבינו מלכנו\""
+      ]
+    }
+  ]
+}
+

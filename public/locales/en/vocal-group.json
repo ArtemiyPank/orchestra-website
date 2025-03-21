@@ -1,0 +1,30 @@
+{
+    "title": "Vocal Group",
+    "subtitle": "The heart and soul of our orchestra's vocal performances",
+    "bannerAlt": "Vocal Group performing",
+    "bannerTitle": "Atid Raziel Vocal Ensemble",
+    "bannerDescription": "Bringing musical stories to life through the power of voice",
+  
+    "aboutTitle": "About Our Vocal Group",
+    "aboutParagraph1": "The Atid Raziel Vocal Group was established in 2015 as an integral part of our orchestra, bringing a new dimension to our performances through the power of the human voice. Comprising professional vocalists with diverse backgrounds in classical, contemporary, and traditional music, our vocal ensemble enriches the orchestral experience with their exceptional talent and versatility.",
+    "aboutParagraph2": "The vocal group regularly performs with the full orchestra but also presents specialized vocal concerts and participates in community outreach programs, sharing the joy of vocal music with audiences of all ages and backgrounds.",
+  
+    "leaderTitle": "Vocal Group Director",
+    "leader": {
+      "name": "Sophia Goldberg",
+      "position": "Vocal Director & Conductor",
+      "bio": "Sophia Goldberg is an internationally acclaimed vocal coach and conductor with over 20 years of experience in choral and operatic direction. Since joining Atid Raziel Orchestra in 2015, she has transformed our vocal group into a versatile ensemble capable of performing everything from Renaissance madrigals to contemporary compositions.",
+      "specialization": {
+        "title": "Specialization",
+        "description": "Choral conducting, operatic direction, and vocal technique with expertise in both Western classical traditions and Eastern European folk styles."
+      }
+    },
+  
+    "soloistsTitle": "Our Soloists",
+    "soloistsDescription": "Meet the talented vocalists who bring our musical stories to life",
+  
+    "soloistProgramTitle": "Soloist program"
+
+  }
+  
+  

@@ -34,15 +34,16 @@ const Footer = () => {
                 <a href="/about">{t("about")}</a>
               </Button>
               <Button variant="link" className="justify-start p-0 h-auto text-sm sm:text-base" asChild>
+                <a href="/vocal-group">{t("vocalGroup")}</a>
+              </Button>
+              <Button variant="link" className="justify-start p-0 h-auto text-sm sm:text-base" asChild>
                 <a href="/performances">{t("performances")}</a>
               </Button>
               <Button variant="link" className="justify-start p-0 h-auto text-sm sm:text-base" asChild>
                 <a href="/alumni">{t("alumni")}</a>
               </Button>
-              <Button variant="link" className="justify-start p-0 h-auto text-sm sm:text-base" asChild>
-                <a href="/contact">{t("contact")}</a>
-              </Button>
             </div>
+
           </div>
 
           {/* Contact */}

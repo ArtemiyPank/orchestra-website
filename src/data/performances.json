@@ -2,76 +2,114 @@
   "en": [
     {
       "id": "1",
-      "title": "Spring Symphony",
-      "date": "2023-05-15",
-      "venue": "Jerusalem Concert Hall",
-      "description": "A celebration of spring featuring Vivaldi's Four Seasons and Beethoven's 6th Symphony.",
-      "photoFolder": "/images/programs/Beitan 2024/",
-      "cardPhotos": ["DSCF6309-Enhanced-NR.jpg", "DSCF6224.jpg", "DSCF6355.jpg" , "DSCF6530.jpg"],
-      "program": ["Vivaldi: The Four Seasons", "Beethoven: Symphony No. 6 'Pastoral'"]
+      "title": "Big Light",
+      "date": "2023-12-20",
+      "venue": "David Roziel Youth Village",
+      "description": "A musical journey of life featuring songs by young Israeli creators Amir Dadon, Ishay Ribo, Hanan Ben Ari, and Natan Goshen.",
+      "photoFolder": "/images/programs/Big_Light_2023/",
+      "cardPhotos": ["DSCF7818.jpg", "DSCF8154.jpg", "DSCF8021.jpg"],
+      "program": [
+        "Amir Dadon – 'Kol Shel Mishpacha'",
+        "Natan Goshen – 'Acharei HaChalom'",
+        "Amir Dadon – 'Livchor Nachon'",
+        "Amir Dadon – 'Or Gadol'",
+        "Ishay Ribo – 'Comme Les Oiseaux'",
+        "Hanan Ben Ari – 'Svivot HaOlam'",
+        "Hanan Ben Ari – 'Tsidkadia'",
+        "Ishay Ribo – 'Tzilem'",
+        "Ishay Ribo – 'Siba Tova'",
+        "Hanan Ben Ari – 'Chayim Shelanu Matana'"
+      ]
     },
     {
       "id": "2",
-      "title": "Mozart Gala",
-      "date": "2023-07-10",
-      "venue": "Tel Aviv Opera House",
-      "description": "An evening dedicated to the genius of Wolfgang Amadeus Mozart.",
-      "photoFolder": "/images/programs/Knesset/",
-      "cardPhotos": ["IMG_2033-Enhanced-NR.jpg", "IMG_1579-Enhanced-NR.jpg", "IMG_1618-Enhanced-NR.jpg"],
+      "title": "Naale Conference Concert – 'Iron Swords' War",
+      "date": "2024-12-10",
+      "venue": "Knesset, Jerusalem",
+      "description": "Performance at the Naale Conference in the Knesset dedicated to the 'Iron Swords' War.",
+      "photoFolder": "/images/programs/Knesset_2024/",
+      "cardPhotos": ["DSCF4886-Enhanced-NR.jpg", "IMG_1618-Enhanced-NR.jpg", "IMG_1601-Enhanced-NR.jpg"],
       "program": [
-        "Mozart: Overture to The Marriage of Figaro",
-        "Mozart: Piano Concerto No. 21",
-        "Mozart: Symphony No. 41 'Jupiter'"
+        "Barbra Streisand – Love Will Survive",
+        "Shlomo Carlebach - Am Yisrael Hai",
+        "HaTikva (Israeli National Anthem)"
       ]
     }
   ],
   "ru": [
+  
     {
       "id": "1",
-      "title": "Весенняя симфония",
-      "date": "2023-05-15",
-      "venue": "Иерусалимский концертный зал",
-      "description": "Празднование весны с исполнением 'Времен года' Вивальди и 6-й симфонии Бетховена.",
-      "photoFolder": "/images/programs/Beitan 2024/",
-      "cardPhotos": ["DSCF6309-Enhanced-NR.jpg", "DSCF6224.jpg", "DSCF6355.jpg" , "DSCF6530.jpg"],
-      "program": ["Вивальди: Времена года", "Бетховен: Симфония №6 'Пасторальная'"]
+      "title": "Большой свет",
+      "date": "2023-12-20",
+      "venue": "Молодёжная деревня имени Давида Розайеля",
+      "description": "Музыкальное путешествие по следам жизни с песнями Амир Дадона, Йишая Рибо, Ханана Бен Ари и Натана Гошена.",
+      "photoFolder": "/images/programs/Big_Light_2023/",
+      "cardPhotos": ["DSCF7818.jpg", "DSCF8154.jpg", "DSCF8021.jpg"],
+      "program": [
+        "Амир Дадон – 'Голос семьи'",
+        "Натан Гошен – 'После мечты'",
+        "Амир Дадон – 'Выбери правильно'",
+        "Амир Дадон – 'Большой свет'",
+        "Йишай Рибо – 'Comme Les Oiseaux'",
+        "Ханан Бен Ари – 'Петля мира'",
+        "Ханан Бен Ари – 'Сидурия'",
+        "Йишай Рибо – 'Тсилим'",
+        "Йишай Рибо – 'Сиба това'",
+        "Ханан Бен Ари – 'Наша жизнь — дар'"
+      ]
     },
     {
       "id": "2",
-      "title": "Гала-концерт Моцарта",
-      "date": "2023-07-10",
-      "venue": "Тель-Авивский оперный театр",
-      "description": "Вечер, посвященный гению Вольфганга Амадея Моцарта.",
-      "photoFolder": "/images/programs/mozart-gala/",
-      "cardPhotos": ["poster.jpg", "orchestra.jpg"],
+      "title": "Концерт на конференции Наале – Война железных мечей",
+      "date": "2024-12-10",
+      "venue": "Кнессет, Иерусалим",
+      "description": "Выступление на конференции Наале, посвящённой войне железных мечей, в Кнессете.",
+      "photoFolder": "/images/programs/Knesset_2024/",
+      "cardPhotos": ["DSCF4886-Enhanced-NR.jpg", "IMG_1618-Enhanced-NR.jpg", "IMG_1601-Enhanced-NR.jpg"],
       "program": [
-        "Моцарт: Увертюра к 'Свадьбе Фигаро'",
-        "Моцарт: Концерт для фортепиано с оркестром №21",
-        "Моцарт: Симфония №41 'Юпитер'"
+        "Барбра Стрейзанд – Love Will Survive",
+        "Шломо Карлебах - Ам Исраэль Хай",
+        "Гимн 'Атиква'"
       ]
     }
   ],
   "he": [
+  
     {
       "id": "1",
-      "title": "סימפוניית האביב",
-      "date": "2023-05-15",
-      "venue": "אולם הקונצרטים ירושלים",
-      "description": "חגיגה של האביב עם 'ארבע העונות' של ויוולדי והסימפוניה השישית של בטהובן.",
-      "photoFolder": "/images/programs/Beitan 2024/",
-      "cardPhotos": ["DSCF6309-Enhanced-NR.jpg", "DSCF6224.jpg", "DSCF6355.jpg" , "DSCF6530.jpg"],
-      "program": ["ויוולדי: ארבע העונות", "בטהובן: סימפוניה מס' 6 'הפסטורלית'"]
+      "title": "אור גדול",
+      "date": "2023-12-20",
+      "venue": "כפר הנוער ע\"ש דוד רוזיאל",
+      "description": "מסע מוזיקלי בשביל החיים עם יוצרים ישראלים צעירים: אמיר דדון, ישי ריבו, חנן בן ארי ונתן גושן.",
+      "photoFolder": "/images/programs/Big_Light_2023/",
+      "cardPhotos": ["DSCF7818.jpg", "DSCF8154.jpg", "DSCF8021.jpg"],
+      "program": [
+        "אמיר דדון – קול של משפחה",
+        "נתן גושן – אחרי החלום",
+        "אמיר דדון – לבחור נכון",
+        "אמיר דדון – אור גדול",
+        "ישי ריבו – Comme Les Oiseaux",
+        "חנן בן ארי – סביבות העולם",
+        "חנן בן ארי – צדקיה",
+        "ישי ריבו – צילם",
+        "ישי ריבו – סיבה טובה",
+        "חנן בן ארי – החיים שלנו מתנה"
+      ]
     },
     {
       "id": "2",
-      "title": "גאלה מוצרט",
-      "date": "2023-07-10",
-      "venue": "בית האופרה תל אביב",
-      "description": "ערב המוקדש לגאונותו של וולפגנג אמדאוס מוצרט.",
-      "photoFolder": "/images/programs/mozart-gala/",
-      "cardPhotos": ["poster.jpg", "orchestra.jpg"],
-      "program": ["מוצרט: הפתיחה ל'נישואי פיגרו'", "מוצרט: קונצ'רטו לפסנתר מס' 21", "מוצרט: סימפוניה מס' 41 'יופיטר'"]
+      "title": "קונצרט בכנס נעלה – מלחמת חרבות ברזל",
+      "date": "2024-12-10",
+      "venue": "הכנסת, ירושלים",
+      "description": "הופעה בכנס נעלה בכנסת המוקדשת למלחמת חרבות ברזל.",
+      "photoFolder": "/images/programs/Knesset_2024/",
+      "cardPhotos": ["DSCF4886-Enhanced-NR.jpg", "IMG_1618-Enhanced-NR.jpg", "IMG_1601-Enhanced-NR.jpg"],
+      "program": [
+        "ברברה סטרייסנד – Love Will Survive",
+        "שלמה קרליבך - עם ישראל חי",
+        "המנון התקווה"
+      ]
     }
   ]
 }
-

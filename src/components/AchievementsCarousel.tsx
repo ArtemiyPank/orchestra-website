@@ -90,7 +90,7 @@ const AchievementsCarousel = ({ achievements, title = "Orchestra Achievements" }
   const atRightEnd = Math.abs(scrollLeft + clientWidth - scrollWidth) < 1;
 
   if (atRightEnd) {
-    setActiveIndex(totalPages - 1); // 🔹 Устанавливаем последнюю точку
+    setActiveIndex(totalPages - 1); // Устанавливаем последнюю точку
   } else if (newIndex !== activeIndex) {
     setActiveIndex(newIndex);
   }

@@ -24,7 +24,7 @@ const Navbar = () => {
     { href: "/about", label: t("about") },
     { href: "/vocal-group", label: t("vocalGroup") },
     { href: "/performances", label: t("performances") },
-    { href: "/alumni", label: t("alumni") },
+    // { href: "/alumni", label: t("alumni") },
   ];
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);

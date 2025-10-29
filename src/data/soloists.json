@@ -2,173 +2,76 @@
   "en": [
     {
       "id": 1,
-      "name": "Anna Petrova",
+      "name": "Maria Bentsion",
       "voice": "Soprano",
-      "photo": "/images/soloists/soloist1.jpg",
+      "photo": "/images/soloists/Maria_Bentsion.jpg",
       "featuredSongs": [
-        "Mozart: \"Queen of the Night\" aria",
-        "Verdi: \"La traviata\" - Violetta's aria",
-        "Puccini: \"O mio babbino caro\""
+        "Barbara Streisand - Love Will Survive",
+        "Andrew Lloyd Webber - The Phantom of the Opera"
       ]
     },
     {
       "id": 2,
-      "name": "Mikhail Ivanov",
-      "voice": "Tenor",
-      "photo": "/images/soloists/soloist2.jpg",
-      "featuredSongs": [
-        "Puccini: \"Nessun Dorma\"",
-        "Tchaikovsky: \"Eugene Onegin\" - Lensky's aria",
-        "Traditional: \"Kalinka\""
-      ]
-    },
-    {
-      "id": 3,
-      "name": "Elena Sokolova",
-      "voice": "Mezzo-soprano",
-      "photo": "/images/soloists/soloist3.jpg",
-      "featuredSongs": [
-        "Bizet: \"Carmen\" - Habanera",
-        "Saint-Saëns: \"Samson et Dalila\" - Mon cœur s'ouvre à ta voix",
-        "Russian Romance: \"Dark Eyes\""
-      ]
-    },
-    {
-      "id": 4,
-      "name": "David Cohen",
-      "voice": "Baritone",
-      "photo": "/images/soloists/soloist4.jpg",
-      "featuredSongs": [
-        "Verdi: \"Rigoletto\" - Cortigiani, vil razza dannata",
-        "Mozart: \"Don Giovanni\" - Fin ch'han dal vino",
-        "Jewish Folk: \"Hava Nagila\" (arrangement)"
-      ]
-    },
-    {
-      "id": 5,
-      "name": "Sarah Goldstein",
+      "name": "Akulina Andreeva",
       "voice": "Soprano",
-      "photo": "/images/soloists/soloist5.jpg",
+      "photo": "/images/soloists/Akulina_Andreeva.jpg",
       "featuredSongs": [
-        "Handel: \"Messiah\" - Rejoice greatly",
-        "Gershwin: \"Porgy and Bess\" - Summertime",
-        "Hebrew Prayer: \"Avinu Malkeinu\""
+        "Ishay Ribo - Leyaam",
+        "Shlomo Kalo - Kallat haMelech",
+        "Tzvika Pik - Yad Beyad",
+        "Shalom Hanoch - Yeladim Shel aHayim",
+        "Yankele Rotblit & Izhar Ashdot - Darkeinu"
       ]
     }
   ],
   "ru": [
     {
       "id": 1,
-      "name": "Анна Петрова",
+      "name": "Мария Бенцион",
       "voice": "Сопрано",
-      "photo": "/images/soloists/soloist1.jpg",
+      "photo": "/images/soloists/Maria_Bentsion.jpg",
       "featuredSongs": [
-        "Моцарт: Ария Царицы ночи",
-        "Верди: \"Травиата\" - ария Виолетты",
-        "Пуччини: \"O mio babbino caro\""
+        "Барбара Стрейзанд - Love Will Survive",
+        "Эндрю Ллойд Уэббер - Призрак оперы"
       ]
     },
     {
       "id": 2,
-      "name": "Михаил Иванов",
-      "voice": "Тенор",
-      "photo": "/images/soloists/soloist2.jpg",
-      "featuredSongs": [
-        "Пуччини: \"Nessun Dorma\"",
-        "Чайковский: \"Евгений Онегин\" - ария Ленского",
-        "Народная: \"Калинка\""
-      ]
-    },
-    {
-      "id": 3,
-      "name": "Елена Соколова",
-      "voice": "Меццо-сопрано",
-      "photo": "/images/soloists/soloist3.jpg",
-      "featuredSongs": [
-        "Бизе: \"Кармен\" - Хабанера",
-        "Сен-Санс: \"Самсон и Далила\" - Mon cœur s'ouvre à ta voix",
-        "Русский романс: \"Очи черные\""
-      ]
-    },
-    {
-      "id": 4,
-      "name": "Давид Коэн",
-      "voice": "Баритон",
-      "photo": "/images/soloists/soloist4.jpg",
-      "featuredSongs": [
-        "Верди: \"Риголетто\" - Cortigiani, vil razza dannata",
-        "Моцарт: \"Дон Жуан\" - Fin ch'han dal vino",
-        "Еврейская народная: \"Хава Нагила\" (аранжировка)"
-      ]
-    },
-    {
-      "id": 5,
-      "name": "Сара Гольдштейн",
+      "name": "Акуліна Андреева",
       "voice": "Сопрано",
-      "photo": "/images/soloists/soloist5.jpg",
+      "photo": "/images/soloists/Akulina_Andreeva.jpg",
       "featuredSongs": [
-        "Гендель: \"Мессия\" - Rejoice greatly",
-        "Гершвин: \"Порги и Бесс\" - Колыбельная",
-        "Еврейская молитва: \"Авину Малкейну\""
+        "Ишай Рибо — Лeям",
+        "Шломо Кало — Калат аМелех",
+        "Цвика Пик — Яд Бэяд",
+        "Шалом Ханох — Еладим шель аХаим",
+        "Янкеле Ротблит и Изхар Ашдот — Даркейну"
       ]
     }
   ],
   "he": [
     {
       "id": 1,
-      "name": "אנה פטרובה",
+      "name": "מריה בנציון",
       "voice": "סופרן",
-      "photo": "/images/soloists/soloist1.jpg",
+      "photo": "/images/soloists/Maria_Bentsion.jpg",
       "featuredSongs": [
-        "מוצרט: אריה של מלכת הלילה",
-        "ורדי: \"לה טרוויאטה\" - אריה של ויולטה",
-        "פוצ'יני: \"או מיו באבינו קארו\""
+        "ברברה סטרייסנד - Love Will Survive",
+        "אנדרו לויד ובר - פנטום האופרה"
       ]
     },
     {
       "id": 2,
-      "name": "מיכאיל איבנוב",
-      "voice": "טנור",
-      "photo": "/images/soloists/soloist2.jpg",
-      "featuredSongs": [
-        "פוצ'יני: \"נסון דורמה\"",
-        "צ'ייקובסקי: \"יבגני אונייגין\" - אריה של לנסקי",
-        "מסורתי: \"קלינקה\""
-      ]
-    },
-    {
-      "id": 3,
-      "name": "ילנה סוקולובה",
-      "voice": "מצו-סופרן",
-      "photo": "/images/soloists/soloist3.jpg",
-      "featuredSongs": [
-        "ביזה: \"כרמן\" - הבנרה",
-        "סן-סנס: \"שמשון ודלילה\" - מון קר סובר א טה ווא",
-        "רומנס רוסי: \"עיניים שחורות\""
-      ]
-    },
-    {
-      "id": 4,
-      "name": "דוד כהן",
-      "voice": "בריטון",
-      "photo": "/images/soloists/soloist4.jpg",
-      "featuredSongs": [
-        "ורדי: \"ריגולטו\" - קורטיג'יאני, ויל ראצה דנאטה",
-        "מוצרט: \"דון ג'ובאני\" - פין צ'האן דל וינו",
-        "פולקלור יהודי: \"הבה נגילה\" (עיבוד)"
-      ]
-    },
-    {
-      "id": 5,
-      "name": "שרה גולדשטיין",
+      "name": "אקולינה אנדריבה",
       "voice": "סופרן",
-      "photo": "/images/soloists/soloist5.jpg",
+      "photo": "/images/soloists/Akulina_Andreeva.jpg",
       "featuredSongs": [
-        "הנדל: \"המשיח\" - רג'ויס גרייטלי",
-        "גרשווין: \"פורגי ובס\" - סאמרטיים",
-        "תפילה עברית: \"אבינו מלכנו\""
+        "ישי ריבו - לים",
+        "שלמה קאלו - כלת מלך",
+        "צביקה פיק - יד ביד",
+        "שלום חנוך - ילדים של החיים",
+        "יענקל'ה רוטבליט ויזהר אשדות - דרכנו"
       ]
     }
   ]
 }
-

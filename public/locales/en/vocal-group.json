@@ -7,18 +7,19 @@
   
     "aboutTitle": "About Our Vocal Group",
     "aboutParagraph1": "The Atid Raziel Vocal Group was established in 2015 as an integral part of our orchestra, bringing a new dimension to our performances through the power of the human voice. Comprising professional vocalists with diverse backgrounds in classical, contemporary, and traditional music, our vocal ensemble enriches the orchestral experience with their exceptional talent and versatility.",
-    "aboutParagraph2": "The vocal group regularly performs with the full orchestra but also presents specialized vocal concerts and participates in community outreach programs, sharing the joy of vocal music with audiences of all ages and backgrounds.",
+    "aboutParagraph2": "The vocal group regularly performs with the full orchestra but also presents specialized vocal concerts.",
   
     "leaderTitle": "Vocal Group Director",
     "leader": {
-      "name": "Sophia Goldberg",
-      "position": "Vocal Director & Conductor",
-      "bio": "Sophia Goldberg is an internationally acclaimed vocal coach and conductor with over 20 years of experience in choral and operatic direction. Since joining Atid Raziel Orchestra in 2015, she has transformed our vocal group into a versatile ensemble capable of performing everything from Renaissance madrigals to contemporary compositions.",
+      "name": "Nina Mukomel",
+      "position": "Head of Vocal Ensemble",
+      "bio": "Nina Mukomel was born and educated in Leningrad (now St. Petersburg), where she graduated from the Leningrad Conservatory with a degree in music theory and history teaching. From an early age, she actively participated in vocal ensembles and soon became their leader. After immigrating to Israel in 1990, she devoted herself to music education, teaching at the music departments of the Galili School in Kfar Saba and the Atid-Raziel School in Herzliya. Today, Nina leads the orchestra’s vocal group, combining high professionalism with a warm and inspiring approach to music and people.",
       "specialization": {
         "title": "Specialization",
-        "description": "Choral conducting, operatic direction, and vocal technique with expertise in both Western classical traditions and Eastern European folk styles."
+        "description": "Music education, music theory and history, choral and ensemble singing, vocal ensemble development."
       }
     },
+
   
     "soloistsTitle": "Our Soloists",
     "soloistsDescription": "Meet the talented vocalists who bring our musical stories to life",

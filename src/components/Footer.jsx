@@ -39,9 +39,9 @@ const Footer = () => {
               <Button variant="link" className="justify-start p-0 h-auto text-sm sm:text-base" asChild>
                 <a href="/performances">{t("performances")}</a>
               </Button>
-              <Button variant="link" className="justify-start p-0 h-auto text-sm sm:text-base" asChild>
-                <a href="/alumni">{t("alumni")}</a>
-              </Button>
+              {/*<Button variant="link" className="justify-start p-0 h-auto text-sm sm:text-base" asChild>*/}
+              {/*  <a href="/alumni">{t("alumni")}</a>*/}
+              {/*</Button>*/}
             </div>
 
           </div>
@@ -56,7 +56,10 @@ const Footer = () => {
               </div>
               <div className="flex items-center gap-2 text-muted-foreground text-sm sm:text-base">
                 <MapPin className="h-4 w-4 flex-shrink-0" />
-                <span>Jerusalem, Israel</span>
+                <a href="https://maps.app.goo.gl/sktbTV7734kBb56a6" className="hover:text-primary transition-colors">
+                  {t("Raziel David 24, Herzliya, Israel")}
+                </a>
+                {/*<span>Raziel David 24, Herzliya, Israel</span>*/}
               </div>
               <div className="flex items-center gap-2 text-muted-foreground text-sm sm:text-base">
                 <ExternalLink className="h-4 w-4 flex-shrink-0" />

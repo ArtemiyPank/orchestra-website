@@ -53,7 +53,7 @@ export default function VocalGroupPage() {
 
         {/* Баннер вокальной группы */}
         <motion.div variants={itemVariants} className="relative w-full h-64 md:h-80 lg:h-96 rounded-xl overflow-hidden">
-          <Image src="/images/vocal-group-banner.jpg" alt={t("bannerAlt")} fill className="object-cover" priority />
+          <Image src="/images/vocal-group.jpg" alt={t("bannerAlt")} fill className="object-cover" priority />
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
             <div className="p-6 text-white">
               <h2 className="text-2xl md:text-3xl font-bold">{t("bannerTitle")}</h2>

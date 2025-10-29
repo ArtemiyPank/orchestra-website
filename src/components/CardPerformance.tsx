@@ -43,7 +43,8 @@ const CardPerformance = ({ performance, locale }: CardPerformanceProps) => {
       transition={{ duration: 0.5 }}
       viewport={{ once: true }}
     >
-      <Card className="overflow-hidden border-none shadow-lg">
+      <Card className="overflow-hidden border-none shadow-xl bg-muted/30 backdrop-blur-sm">
+
         <div className="flex flex-col lg:flex-row">
           <CardContent
             className={cn(

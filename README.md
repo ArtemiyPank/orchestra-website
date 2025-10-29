@@ -1,36 +1,70 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Atid Raziel Orchestra Website
 
-## Getting Started
+This repository contains the source code for the official website of the **Atid Raziel School Orchestra**. The project is built with [Next.js](https://nextjs.org) and provides information about performances, achievements, and alumni of the orchestra. It supports English, Russian, and Hebrew and is optimized for both desktop and mobile browsers.
 
-First, run the development server:
+## Table of Contents
+- [Features](#features)
+- [Technology Stack](#technology-stack)
+- [Project Structure](#project-structure)
+- [Getting Started](#getting-started)
+- [Scripts](#scripts)
+- [Internationalization](#internationalization)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Features
+- **Modern Next.js 15 application** using the app router and TypeScript
+- **Responsive design** with [Tailwind CSS](https://tailwindcss.com)
+- **Dynamic gallery and photo grid** with swipe, zoom, and share capabilities
+- **Achievements carousel** and pages for alumni and performances
+- **Theme switching** (light and dark) powered by `next-themes`
+- **Multilingual content** managed by `next-i18next`
+- **Serverless API routes** for serving images from the `public` directory
+
+## Technology Stack
+- **Next.js** – React framework with server and client components
+- **TypeScript** – Static typing for safer code
+- **Tailwind CSS** – Utility‑first styling
+- **Framer Motion** – Animations
+- **next-i18next** – Internationalization
+- **next-themes** – Theme management
+
+## Project Structure
+```
+src/
+├── app/                # Application routes and pages
+├── components/         # Reusable UI components
+├── data/               # JSON data for performances, alumni, achievements
+├── i18n/               # i18n initialization
+├── styles/             # Global styles
+├── hooks/              # Custom React hooks
+├── lib/                # Utility functions
+└── utils/              # Helpers for data and images
+public/
+└── locales/            # Translation files (en, ru, he)
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Getting Started
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/your-user/orchestra-website.git
+   cd orchestra-website
+   ```
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+3. **Start the development server**
+   ```bash
+   npm run dev
+   ```
+   The site will be available at `http://localhost:3000`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Scripts
+- `npm run dev` – Start the development server
+- `npm run build` – Create an optimized production build
+- `npm run start` – Start the production server
+- `npm run lint` – Run ESLint checks
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Internationalization
+Content is available in English (`en`), Russian (`ru`), and Hebrew (`he`). Language files live in `public/locales`. The language is detected automatically but can also be changed using the language switcher in the navigation bar.
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+To add or update translations, edit the JSON files in `public/locales/<lang>` and restart the development server.

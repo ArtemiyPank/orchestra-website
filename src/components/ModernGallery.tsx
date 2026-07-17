@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useCallback } from "react"
 import Image from "next/image"
-import { motion, AnimatePresence } from "framer-motion"
+import { m, AnimatePresence } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { X, ChevronLeft, ChevronRight, Download, Share, ZoomIn, ZoomOut, Info } from 'lucide-react'
 import { cn } from "@/lib/utils"
@@ -188,7 +188,7 @@ export default function ModernGallery({
   return (
     <AnimatePresence>
       {isOpen && (
-        <motion.div
+        <m.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
@@ -197,7 +197,7 @@ export default function ModernGallery({
           dir={isRTL ? "rtl" : "ltr"}
         >
           {/* Верхняя панель */}
-          <motion.div
+          <m.div
             initial={{ y: -50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.2 }}
@@ -278,12 +278,12 @@ export default function ModernGallery({
                 <span className="sr-only">{t("close")}</span>
               </Button>
             </div>
-          </motion.div>
+          </m.div>
 
           {/* Основной контент галереи */}
           <div className="flex-1 flex items-center justify-center overflow-hidden" {...handlers}>
             <AnimatePresence mode="wait">
-              <motion.div
+              <m.div
                 key={activeIndex}
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{
@@ -323,12 +323,12 @@ export default function ModernGallery({
                     </div>
                   )}
                 </div>
-              </motion.div>
+              </m.div>
             </AnimatePresence>
           </div>
 
           {/* Нижняя панель с навигацией */}
-          <motion.div
+          <m.div
             initial={{ y: 50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.2 }}
@@ -390,12 +390,12 @@ export default function ModernGallery({
               {isRTL ? <ChevronLeft className="h-5 w-5 mr-2" /> : <ChevronRight className="h-5 w-5 ml-2" />}
               {/* <ChevronRight className="h-5 w-5 ml-2" /> */}
             </Button>
-          </motion.div>
+          </m.div>
 
           {/* Информационная панель */}
           <AnimatePresence>
             {isInfoVisible && (
-              <motion.div
+              <m.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: 20 }}
@@ -411,10 +411,10 @@ export default function ModernGallery({
                   <p>{t("zoomKeys")}</p>
                   <p>{t("escapeKey")}</p>
                 </div>
-              </motion.div>
+              </m.div>
             )}
           </AnimatePresence>
-        </motion.div>
+        </m.div>
       )}
     </AnimatePresence>
   )

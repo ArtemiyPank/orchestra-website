@@ -2,7 +2,7 @@
 
 import { useTranslation } from "react-i18next"
 import Image from "next/image"
-import { motion } from "framer-motion"
+import { m } from "framer-motion"
 import { Separator } from "@/components/ui/separator"
 import AchievementsCarousel, { type Achievement } from "./AchievementsCarousel"
 import achievementsData from "@/data/achievements.json"
@@ -20,7 +20,7 @@ const AboutContent = () => {
 
   return (
     <section className="container mx-auto px-2 sm:px-4 py-8 sm:py-12">
-      <motion.div
+      <m.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
@@ -29,9 +29,9 @@ const AboutContent = () => {
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/70">
           {t("title")}
         </h1>
-      </motion.div>
+      </m.div>
 
-      <motion.div
+      <m.div
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8, delay: 0.2 }}
@@ -52,32 +52,32 @@ const AboutContent = () => {
             {t("heroDescription", "A community of talented young musicians dedicated to excellence")}
           </p>
         </div>
-      </motion.div>
+      </m.div>
 
       {/*описание оркестра */}
-      <motion.div
+      <m.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.1 }}
         className="text-sm sm:text-base text-muted-foreground text-center max-w-4xl mx-auto mb-8 sm:mb-12 leading-relaxed"
       >
         {t("orchestraDescription", "Atid Raziel Orchestra brings together young talents from across the region, fostering musical growth, cultural appreciation, and community through powerful performances and artistic collaboration.")}
-      </motion.div>
+      </m.div>
 
 
       {/* Achievements Carousel */}
-      <motion.div
+      <m.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.3 }}
         className="mb-6 sm:mb-10"
       >
         <AchievementsCarousel achievements={achievements} title={t("achievementsTitle", "Orchestra Achievements")} />
-      </motion.div>
+      </m.div>
 
       <Separator className="my-6 sm:my-10" />
 
-      <motion.div
+      <m.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
@@ -101,7 +101,7 @@ const AboutContent = () => {
             <p className="text-sm sm:text-base">{t("description2")}</p>
           </div>
         </div>
-      </motion.div>
+      </m.div>
     </section>
   )
 }

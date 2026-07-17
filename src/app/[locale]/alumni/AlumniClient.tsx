@@ -2,7 +2,7 @@
 
 import { useTranslation } from "react-i18next"
 import CardAlumni from "@/components/CardAlumni"
-import { motion } from "framer-motion"
+import { m } from "framer-motion"
 import { fetchData } from "@/utils/fetchData"
 import type { Locale } from "@/i18n/settings"
 
@@ -26,7 +26,7 @@ const AlumniClient = ({ locale }: AlumniClientProps) => {
 
   return (
     <div className="container mx-auto py-8 sm:py-12 px-0 sm:px-4 space-y-8 sm:space-y-12">
-      <motion.div
+      <m.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
@@ -38,7 +38,7 @@ const AlumniClient = ({ locale }: AlumniClientProps) => {
         <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
           {t("subtitle", "Meet the talented musicians who have been part of our orchestra")}
         </p>
-      </motion.div>
+      </m.div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
         {alumni.map((person) => (

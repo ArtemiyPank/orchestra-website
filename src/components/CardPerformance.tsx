@@ -4,7 +4,7 @@ import { useState } from "react"
 import { useTranslation } from "react-i18next"
 import { Card, CardContent } from "@/components/ui/card"
 import { Music, Calendar, MapPin } from "lucide-react"
-import { motion } from "framer-motion"
+import { m } from "framer-motion"
 import { cn } from "@/lib/utils"
 import type { Performance } from "@/types/Performance"
 import DynamicPhotoGrid from "@/components/DynamicPhotoGrid"
@@ -40,7 +40,7 @@ const CardPerformance = ({ performance, locale = "en" }: CardPerformanceProps) =
   }
 
   return (
-    <motion.div
+    <m.div
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
@@ -106,7 +106,7 @@ const CardPerformance = ({ performance, locale = "en" }: CardPerformanceProps) =
         title={performance.title}
         locale={currentLocale}
       />
-    </motion.div>
+    </m.div>
   )
 }
 

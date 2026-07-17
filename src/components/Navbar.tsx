@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { useTranslation } from 'react-i18next';
 import LanguageSwitcher from './LanguageSwitcher';
 import { cn } from '@/lib/utils';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import { Music, Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useState } from 'react';
@@ -28,7 +28,7 @@ const Navbar = () => {
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   return (
-    <motion.nav 
+    <m.nav 
       initial={{ y: -20, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5 }}
@@ -77,7 +77,7 @@ const Navbar = () => {
         
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <motion.div 
+          <m.div 
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
@@ -98,10 +98,10 @@ const Navbar = () => {
                 <LanguageSwitcher />
               </div>
             </div>
-          </motion.div>
+          </m.div>
         )}
       </div>
-    </motion.nav>
+    </m.nav>
   );
 };
 

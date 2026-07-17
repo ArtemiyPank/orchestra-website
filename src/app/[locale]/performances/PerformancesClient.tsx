@@ -2,7 +2,7 @@
 
 import { useTranslation } from "react-i18next"
 import CardPerformance from "@/components/CardPerformance"
-import { motion } from "framer-motion"
+import { m } from "framer-motion"
 import { fetchData } from "@/utils/fetchData"
 import type { Locale } from "@/i18n/settings"
 
@@ -26,7 +26,7 @@ const PerformancesClient = ({ locale }: PerformancesClientProps) => {
 
   return (
     <div className="container mx-auto py-8 sm:py-12 px-0 sm:px-4 space-y-8 sm:space-y-12">
-      <motion.div
+      <m.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
@@ -38,7 +38,7 @@ const PerformancesClient = ({ locale }: PerformancesClientProps) => {
         <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
           {t("subtitle", "Explore our diverse musical performances")}
         </p>
-      </motion.div>
+      </m.div>
 
       <div className="space-y-8 sm:space-y-16">
         {performances.map((performance) => (

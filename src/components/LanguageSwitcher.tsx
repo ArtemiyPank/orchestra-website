@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next"
 import { usePathname, useRouter } from "next/navigation"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
-import { motion } from "framer-motion"
+import { m } from "framer-motion"
 import { isLocale, type Locale } from "@/i18n/settings"
 
 const LanguageSwitcher = () => {
@@ -37,7 +37,7 @@ const LanguageSwitcher = () => {
   ]
 
   return (
-    <motion.div
+    <m.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       className={cn("flex gap-1", isRTL ? "flex-row-reverse" : "")}
@@ -56,7 +56,7 @@ const LanguageSwitcher = () => {
           {lang.label}
         </Button>
       ))}
-    </motion.div>
+    </m.div>
   )
 }
 

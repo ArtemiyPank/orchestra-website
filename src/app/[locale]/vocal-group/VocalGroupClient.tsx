@@ -1,7 +1,7 @@
 "use client"
 
 import { useTranslation } from "react-i18next"
-import { motion } from "framer-motion"
+import { m } from "framer-motion"
 import Image from "next/image"
 import { Card, CardContent } from "@/components/ui/card"
 import VocalGroupLeader from "@/components/VocalGroupLeader"
@@ -44,15 +44,15 @@ export default function VocalGroupClient({ locale }: VocalGroupClientProps) {
 
   return (
     <div className="py-8">
-      <motion.div initial="hidden" animate="visible" variants={containerVariants} className="space-y-12">
+      <m.div initial="hidden" animate="visible" variants={containerVariants} className="space-y-12">
         {/* Заголовок страницы */}
-        <motion.div variants={itemVariants} className="text-center">
+        <m.div variants={itemVariants} className="text-center">
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">{t("title")}</h1>
           <p className="text-muted-foreground max-w-3xl mx-auto">{t("subtitle")}</p>
-        </motion.div>
+        </m.div>
 
         {/* Баннер вокальной группы */}
-        <motion.div variants={itemVariants} className="relative w-full h-64 md:h-80 lg:h-96 rounded-xl overflow-hidden">
+        <m.div variants={itemVariants} className="relative w-full h-64 md:h-80 lg:h-96 rounded-xl overflow-hidden">
           <Image src="/images/vocal-group.jpg" alt={t("bannerAlt")} fill sizes="(max-width: 1024px) 100vw, 1024px" className="object-cover" priority />
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
             <div className="p-6 text-white">
@@ -60,10 +60,10 @@ export default function VocalGroupClient({ locale }: VocalGroupClientProps) {
               <p className="text-white/80 max-w-2xl">{t("bannerDescription")}</p>
             </div>
           </div>
-        </motion.div>
+        </m.div>
 
         {/* Описание вокальной группы */}
-        <motion.div variants={itemVariants}>
+        <m.div variants={itemVariants}>
           <Card>
             <CardContent className="p-6 md:p-8">
               <h2 className="text-2xl font-bold mb-4">{t("aboutTitle")}</h2>
@@ -73,28 +73,28 @@ export default function VocalGroupClient({ locale }: VocalGroupClientProps) {
               </div>
             </CardContent>
           </Card>
-        </motion.div>
+        </m.div>
 
         {/* Руководитель вокальной группы */}
-        <motion.div variants={itemVariants}>
+        <m.div variants={itemVariants}>
           <h2 className="text-2xl font-bold mb-6">{t("leaderTitle")}</h2>
           <VocalGroupLeader />
-        </motion.div>
+        </m.div>
 
         {/* Солисты */}
-        <motion.div variants={itemVariants} className="space-y-6">
+        <m.div variants={itemVariants} className="space-y-6">
           <h2 className="text-2xl font-bold mb-2">{t("soloistsTitle")}</h2>
           <p className="text-muted-foreground mb-6">{t("soloistsDescription")}</p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {soloists.map((soloist) => (
-              <motion.div key={soloist.id} variants={itemVariants}>
+              <m.div key={soloist.id} variants={itemVariants}>
                 <SoloistCard soloist={soloist} locale={locale} />
-              </motion.div>
+              </m.div>
             ))}
           </div>
-        </motion.div>
-      </motion.div>
+        </m.div>
+      </m.div>
     </div>
   )
 }

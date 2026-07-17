@@ -8,6 +8,10 @@ const nextConfig = {
   // Все изображения раздаются локально из /public, поэтому внешние источники
   // для оптимизатора не разрешаем (иначе /_next/image работает как open-proxy).
   reactStrictMode: true,
+  experimental: {
+    // Автономная глобальная 404-страница (см. src/app/global-not-found.tsx)
+    globalNotFound: true,
+  },
 }
 
 export default nextConfig

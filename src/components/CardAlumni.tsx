@@ -7,7 +7,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Button } from "@/components/ui/button"
 import { ChevronDown } from "lucide-react"
 import { useState } from "react"
-import { motion } from "framer-motion"
+import { m } from "framer-motion"
 import { cn } from "@/lib/utils"
 
 const CardAlumni = ({ name, description, image, story }: Alumni) => {
@@ -24,7 +24,7 @@ const CardAlumni = ({ name, description, image, story }: Alumni) => {
     .slice(0, 2)
 
   return (
-    <motion.div
+    <m.div
       initial={{ opacity: 0, scale: 0.95 }}
       whileInView={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.5 }}
@@ -80,7 +80,7 @@ const CardAlumni = ({ name, description, image, story }: Alumni) => {
           </CardFooter>
         )}
       </Card>
-    </motion.div>
+    </m.div>
   )
 }
 

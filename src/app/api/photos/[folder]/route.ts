@@ -60,7 +60,10 @@ export async function GET(request: Request) {
       .filter((entry) => entry.isFile() && IMAGE_EXTENSIONS.has(path.extname(entry.name).toLowerCase()))
       .map((entry) => entry.name)
 
-    return NextResponse.json(images)
+    // Список фото меняется только при деплое — разрешаем кэширование
+    return NextResponse.json(images, {
+      headers: { "Cache-Control": "public, max-age=300, s-maxage=3600, stale-while-revalidate=86400" },
+    })
   } catch {
     // Никаких деталей ошибки наружу
     return NextResponse.json({ error: "Failed to load images" }, { status: 500 })

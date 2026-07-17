@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button"
 import { X, ChevronLeft, ChevronRight, Download, Share, ZoomIn, ZoomOut, Info } from 'lucide-react'
 import { cn } from "@/lib/utils"
 import { useSwipeable } from "react-swipeable"
-import { useTranslation } from "next-i18next"
+import { useTranslation } from "react-i18next"
 import { useParams } from "next/navigation"
 
 interface ModernGalleryProps {

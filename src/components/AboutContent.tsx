@@ -54,6 +54,7 @@ const AboutContent = () => {
           src="/images/orchestra.jpg"
           alt="Atid Raziel Orchestra"
           fill
+          priority
           className="object-cover object-center"
           sizes="(max-width: 640px) 100vw, (max-width: 768px) 100vw, 1200px"
         />

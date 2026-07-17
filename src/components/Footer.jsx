@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import { useTranslation } from "react-i18next"
-import { Music, Mail, MapPin, ExternalLink } from "lucide-react"
+import { Music, Mail, MapPin } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Separator } from "@/components/ui/separator"
 
@@ -62,12 +62,6 @@ const Footer = () => {
                   {t("address")}
                 </a>
                 {/*<span>Raziel David 24, Herzliya, Israel</span>*/}
-              </div>
-              <div className="flex items-center gap-2 text-muted-foreground text-sm sm:text-base">
-                <ExternalLink className="h-4 w-4 flex-shrink-0" />
-                <a href="#" className="hover:text-primary transition-colors">
-                  {t("followUs")}
-                </a>
               </div>
             </div>
           </div>

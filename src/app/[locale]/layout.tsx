@@ -5,6 +5,7 @@ import "@/styles/globals.css"
 import { ThemeProvider } from "next-themes"
 import TranslationsProvider from "@/i18n/TranslationsProvider"
 import { locales, getDirection, type Locale } from "@/i18n/settings"
+import { siteUrl, siteName } from "@/lib/site"
 
 // Пререндерим все локали на сборке; неизвестный префикс (/fr/...) -> 404
 export const dynamicParams = false
@@ -14,7 +15,8 @@ export function generateStaticParams() {
 }
 
 export const metadata = {
-  title: "Atid Raziel Orchestra",
+  metadataBase: new URL(siteUrl),
+  title: siteName,
   description: "Official website of the Atid Raziel Orchestra",
 }
 

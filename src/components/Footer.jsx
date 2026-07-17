@@ -1,5 +1,6 @@
 "use client"
 
+import Link from "next/link"
 import { useTranslation } from "react-i18next"
 import { Music, Mail, MapPin, ExternalLink } from "lucide-react"
 import { Button } from "@/components/ui/button"
@@ -31,13 +32,13 @@ const Footer = () => {
             <h3 className="font-semibold text-base sm:text-lg">{t("quickLinks")}</h3>
             <div className="grid grid-cols-2 gap-1 sm:gap-2">
               <Button variant="link" className="justify-start p-0 h-auto text-sm sm:text-base" asChild>
-                <a href="/about">{t("about")}</a>
+                <Link href="/about">{t("about")}</Link>
               </Button>
               <Button variant="link" className="justify-start p-0 h-auto text-sm sm:text-base" asChild>
-                <a href="/vocal-group">{t("vocalGroup")}</a>
+                <Link href="/vocal-group">{t("vocalGroup")}</Link>
               </Button>
               <Button variant="link" className="justify-start p-0 h-auto text-sm sm:text-base" asChild>
-                <a href="/performances">{t("performances")}</a>
+                <Link href="/performances">{t("performances")}</Link>
               </Button>
               {/*<Button variant="link" className="justify-start p-0 h-auto text-sm sm:text-base" asChild>*/}
               {/*  <a href="/alumni">{t("alumni")}</a>*/}
@@ -57,7 +58,7 @@ const Footer = () => {
               <div className="flex items-center gap-2 text-muted-foreground text-sm sm:text-base">
                 <MapPin className="h-4 w-4 flex-shrink-0" />
                 <a href="https://maps.app.goo.gl/sktbTV7734kBb56a6" className="hover:text-primary transition-colors">
-                  {t("Raziel David 24, Herzliya, Israel")}
+                  {t("address")}
                 </a>
                 {/*<span>Raziel David 24, Herzliya, Israel</span>*/}
               </div>

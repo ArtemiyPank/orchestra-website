@@ -14,14 +14,13 @@ interface SoloistCardProps {
 
 export default function SoloistCard({ soloist, locale = "en" }: SoloistCardProps) {
   const isRTL = locale === "he"
-console.log("locale - ", locale)
-    const { t } = useTranslation("vocal-group")
-    
+  const { t } = useTranslation("vocal-group")
+
   return (
     <Card className="overflow-hidden h-full flex flex-col">
       <div className="relative aspect-square">
         <Image
-          src={soloist.photo || "/placeholder.svg?height=400&width=400"}
+          src={soloist.photo || "/images/placeholder.jpg"}
           alt={soloist.name}
           fill
           className="object-cover"

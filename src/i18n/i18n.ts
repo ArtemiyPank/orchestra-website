@@ -16,7 +16,7 @@ if (typeof window !== 'undefined') {
       debug: false,
       fallbackLng: 'en',
       supportedLngs: ['en', 'ru', 'he'],
-      ns: ['about', 'alumni', 'footer', 'gallery', 'navbar', 'performances'],
+      ns: ['about', 'alumni', 'footer', 'gallery', 'navbar', 'performances', 'vocal-group'],
       defaultNS: 'about',
       interpolation: { escapeValue: false },
       backend: {
@@ -35,7 +35,7 @@ if (typeof window !== 'undefined') {
       debug: false,
       fallbackLng: 'en',
       supportedLngs: ['en', 'ru', 'he'],
-      ns: ['about', 'alumni', 'footer', 'gallery', 'navbar', 'performances'],
+      ns: ['about', 'alumni', 'footer', 'gallery', 'navbar', 'performances', 'vocal-group'],
       defaultNS: 'about',
       interpolation: { escapeValue: false },
     })

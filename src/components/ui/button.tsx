@@ -29,10 +29,16 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 
     const combinedClassName = `${baseStyles} ${variantStyles[variant]} ${sizeStyles[size]} ${className}`
 
-    if (asChild) {
-      // If asChild is true, we would normally use Slot from radix-ui
-      // Since we're simplifying, we'll just render a button with the props
-      console.warn("asChild prop is not supported in this simplified version")
+    if (asChild && React.isValidElement(props.children)) {
+      // Вместо Slot из radix-ui клонируем единственного ребёнка,
+      // передавая ему стили и остальные пропсы — <a> остаётся <a>,
+      // без невалидной вложенности в <button>
+      const { children, ...rest } = props
+      const child = children as React.ReactElement<{ className?: string }>
+      return React.cloneElement(child, {
+        ...rest,
+        className: `${combinedClassName} ${child.props.className ?? ""}`.trim(),
+      })
     }
 
     return <button className={combinedClassName} ref={ref} {...props} />

@@ -12,7 +12,10 @@ const LanguageSwitcher = () => {
     i18n.changeLanguage(lng)
   }
 
-  const isRTL = i18n.language === "he"
+  // resolvedLanguage нормализует региональные коды ("he-IL" -> "he"),
+  // иначе подсветка активного языка и RTL не срабатывают
+  const currentLang = i18n.resolvedLanguage || i18n.language
+  const isRTL = currentLang === "he"
 
   const languages = [
     { code: "en", label: "EN" },
@@ -30,11 +33,11 @@ const LanguageSwitcher = () => {
         <Button
           key={lang.code}
           onClick={() => changeLanguage(lang.code)}
-          variant={i18n.language === lang.code ? "default" : "outline"}
+          variant={currentLang === lang.code ? "default" : "outline"}
           size="sm"
           className={cn(
             "rounded-full px-3 font-medium transition-all",
-            i18n.language === lang.code ? "shadow-sm" : "text-foreground/70 hover:text-foreground",
+            currentLang === lang.code ? "shadow-sm" : "text-foreground/70 hover:text-foreground",
           )}
         >
           {lang.label}

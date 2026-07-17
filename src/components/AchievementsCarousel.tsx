@@ -165,9 +165,10 @@ const AchievementsCarousel = ({ achievements, title = "Orchestra Achievements" }
             <div className={cn("relative overflow-hidden rounded-t-lg", isMobile ? "h-[200px]" : "h-[400px]")}>
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent z-10" />
               <Image
-                src={achievement.image || "/placeholder.svg?height=400&width=300"}
+                src={achievement.image || "/images/placeholder.jpg"}
                 alt={achievement.title}
                 fill
+                sizes="(max-width: 768px) 220px, 300px"
                 className={cn(isMobile ? "object-contain bg-muted/30" : "object-cover")}
               />
               {isMobile ? (

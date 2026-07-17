@@ -225,8 +225,10 @@ const gridTemplates: GridTemplate[] = [
 
 // Максимальное количество фотографий для обработки
 const MAX_PHOTOS = 7
-// Таймаут для загрузки изображения (мс)
-const IMAGE_LOAD_TIMEOUT = 500
+// Таймаут для загрузки превью-изображения (мс).
+// Меряем маленький thumbnail, но при первом (холодном) обращении оптимизатор
+// может отвечать не мгновенно, поэтому даём запас.
+const IMAGE_LOAD_TIMEOUT = 2000
 
 const DynamicPhotoGrid = ({ photos, openGallery, className }: DynamicPhotoGridProps) => {
   const [processedPhotos, setProcessedPhotos] = useState<Photo[]>([])
@@ -251,14 +253,15 @@ const DynamicPhotoGrid = ({ photos, openGallery, className }: DynamicPhotoGridPr
               }
 
               const img = new window.Image()
-              img.crossOrigin = "anonymous"
-              img.src = photo.src
+              // Пропорции меряем по крошечному оптимизированному превью (~64px),
+              // а не по полноразмерному оригиналу — это экономит мегабайты трафика,
+              // так как для сетки нужно только соотношение сторон.
+              img.src = `/_next/image?url=${encodeURIComponent(photo.src)}&w=64&q=40`
 
               // Устанавливаем таймаут для загрузки изображения
               const timeout = setTimeout(() => {
                 // Если изображение не загрузилось за отведенное время,
                 // используем значения по умолчанию
-                console.log(`Image load timeout for ${photo.src}`)
                 resolve({
                   ...photo,
                   ratio: 1.33, // Стандартное соотношение 4:3
@@ -365,7 +368,7 @@ const DynamicPhotoGrid = ({ photos, openGallery, className }: DynamicPhotoGridPr
             >
               <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors z-10" />
               <Image
-                src={photo.src || "/placeholder.svg"}
+                src={photo.src || "/images/placeholder.jpg"}
                 alt={photo.alt}
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"

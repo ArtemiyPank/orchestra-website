@@ -1,6 +1,7 @@
 "use client"
 
 import type { Alumni } from "@/types/Alumni"
+import Image from "next/image"
 import { Card, CardContent, CardFooter } from "@/components/ui/card"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Button } from "@/components/ui/button"
@@ -32,10 +33,12 @@ const CardAlumni = ({ name, description, image, story }: Alumni) => {
       <Card className="overflow-hidden h-full flex flex-col">
         <div className="relative h-36 sm:h-48 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10" />
-          <img
-            src={image || "/placeholder.svg"}
+          <Image
+            src={image || "/images/placeholder.jpg"}
             alt={name}
-            className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+            fill
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+            className="object-cover transition-transform duration-500 hover:scale-105"
           />
           <div className="absolute bottom-3 left-3 z-20 flex items-center gap-2 sm:gap-3">
             <Avatar className="h-10 w-10 sm:h-12 sm:w-12 border-2 border-white">

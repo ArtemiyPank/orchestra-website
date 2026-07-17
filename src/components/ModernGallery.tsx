@@ -369,6 +369,7 @@ export default function ModernGallery({
                       src={`${photoFolder}${photo}`}
                       alt={`${t("thumbnail")} ${index + 1}`}
                       fill
+                      sizes="48px"
                       className="object-cover"
                     />
                   </button>

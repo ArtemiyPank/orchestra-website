@@ -6,6 +6,6 @@
     "alumni": "Alumni",
     "contactUs": "Contact Us",
     "followUs": "Follow us on social media",
-    "copyright": "© 2025 Atid Raziel Orchestra. All rights reserved."
-  }
-  
+    "copyright": "© {{year}} Atid Raziel Orchestra. All rights reserved.",
+    "address": "Raziel David 24, Herzliya, Israel"
+}

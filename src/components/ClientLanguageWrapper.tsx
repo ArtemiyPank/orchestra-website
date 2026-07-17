@@ -22,7 +22,8 @@ export default function ClientLanguageWrapper({ children }: ClientLanguageWrappe
 
   useEffect(() => {
     if (isClient) {
-      const currentLang = i18n.language || "en"
+      // resolvedLanguage нормализует региональные коды ("he-IL" -> "he")
+      const currentLang = i18n.resolvedLanguage || i18n.language || "en"
       const isRTL = currentLang === "he"
 
       // Устанавливаем атрибуты для HTML

@@ -6,6 +6,7 @@ export const defaultLocale: Locale = "en"
 export const namespaces = [
   "about",
   "alumni",
+  "common",
   "footer",
   "gallery",
   "navbar",

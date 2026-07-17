@@ -53,33 +53,26 @@ export default function ModernGallery({
         // Удаляем начальный слеш, если он есть
         const folderPath = photoFolder.startsWith("/") ? photoFolder.substring(1) : photoFolder
 
-        console.log("Fetching photos from folder:", folderPath)
-
         const response = await fetch(`/api/photos/${encodeURIComponent(folderPath)}`)
 
         if (!response.ok) {
-          const errorData = await response.json()
-          console.error("API error:", errorData)
-          throw new Error(`HTTP error! status: ${response.status}, message: ${JSON.stringify(errorData)}`)
+          throw new Error(`HTTP error! status: ${response.status}`)
         }
 
         const data = await response.json()
-        console.log("API response:", data)
 
         if (Array.isArray(data) && data.length > 0) {
-          console.log("Setting all photos:", data)
           setAllPhotos(data)
 
           // Если текущий индекс выходит за пределы нового массива, сбрасываем его
           if (activeIndex >= data.length) {
             setActiveIndex(0)
           }
-        } else {
-          console.warn("No photos found or invalid response format, using provided photos")
         }
+        // Иначе оставляем фотографии, переданные пропсом
       } catch (error) {
-        console.error("Error fetching photos:", error)
-        // Если не удалось загрузить все фотографии, используем те, что уже есть
+        // Не удалось загрузить полный список — используем те, что уже есть
+        console.error("Error fetching gallery photos:", error)
       } finally {
         setIsLoadingPhotos(false)
       }

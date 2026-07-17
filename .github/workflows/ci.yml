@@ -1,0 +1,44 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Typecheck
+        run: npx tsc --noEmit
+
+      - name: Lint
+        run: npx next lint
+
+      - name: Build
+        run: npx next build
+
+      - name: Start server
+        run: |
+          npx next start -p 3000 &
+          for i in $(seq 1 60); do
+            curl -sf http://localhost:3000/en/about > /dev/null && break
+            sleep 1
+          done
+          curl -sf http://localhost:3000/en/about > /dev/null
+
+      - name: E2E (real browser)
+        run: node e2e/e2e.mjs
+        env:
+          BASE_URL: http://localhost:3000
+          CHROME_PATH: /usr/bin/google-chrome

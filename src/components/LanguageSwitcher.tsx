@@ -1,23 +1,36 @@
 "use client"
 
 import { useTranslation } from "react-i18next"
+import { usePathname, useRouter } from "next/navigation"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 import { motion } from "framer-motion"
+import { isLocale, type Locale } from "@/i18n/settings"
 
 const LanguageSwitcher = () => {
   const { i18n } = useTranslation()
+  const pathname = usePathname()
+  const router = useRouter()
 
-  const changeLanguage = (lng: string) => {
-    i18n.changeLanguage(lng)
-  }
-
-  // resolvedLanguage нормализует региональные коды ("he-IL" -> "he"),
-  // иначе подсветка активного языка и RTL не срабатывают
-  const currentLang = i18n.resolvedLanguage || i18n.language
+  const currentLang = i18n.language
   const isRTL = currentLang === "he"
 
-  const languages = [
+  // Язык живёт в URL: /en/about -> /he/about. Cookie запоминает выбор
+  // для редиректа со старых ссылок без префикса (см. middleware).
+  const changeLanguage = (lng: Locale) => {
+    if (lng === currentLang) return
+    document.cookie = `NEXT_LOCALE=${lng}; path=/; max-age=31536000; samesite=lax`
+
+    const segments = pathname.split("/")
+    if (isLocale(segments[1])) {
+      segments[1] = lng
+    } else {
+      segments.splice(1, 0, lng)
+    }
+    router.push(segments.join("/") || `/${lng}/about`)
+  }
+
+  const languages: { code: Locale; label: string }[] = [
     { code: "en", label: "EN" },
     { code: "ru", label: "RU" },
     { code: "he", label: "HE" },
@@ -48,4 +61,3 @@ const LanguageSwitcher = () => {
 }
 
 export default LanguageSwitcher
-

@@ -8,17 +8,17 @@ import VocalGroupLeader from "@/components/VocalGroupLeader"
 import SoloistCard from "@/components/SoloistCard"
 import type { Soloist } from "@/types/Soloist"
 import soloistsData from "@/data/soloists.json"
+import type { Locale } from "@/i18n/settings"
 
-export default function VocalGroupPage() {
-  const { t, i18n } = useTranslation("vocal-group")
+interface VocalGroupClientProps {
+  locale: Locale
+}
 
-  // Получаем данные о солистах из JSON файла в соответствии с текущим языком
-  const currentLanguage = i18n.language || "en"
-  // Используем язык из списка доступных или английский по умолчанию
-  const language = ["en", "ru", "he"].includes(currentLanguage) ? currentLanguage : "en"
-  const soloists: Soloist[] = soloistsData[language as keyof typeof soloistsData]
+export default function VocalGroupClient({ locale }: VocalGroupClientProps) {
+  const { t } = useTranslation("vocal-group")
 
-  console.log("currentLanguage - ", currentLanguage)
+  // Данные о солистах — синхронно из бандла по локали маршрута
+  const soloists: Soloist[] = soloistsData[locale]
 
   // Анимация для элементов страницы
   const containerVariants = {
@@ -89,7 +89,7 @@ export default function VocalGroupPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {soloists.map((soloist) => (
               <motion.div key={soloist.id} variants={itemVariants}>
-                <SoloistCard soloist={soloist} locale={currentLanguage}/>
+                <SoloistCard soloist={soloist} locale={locale} />
               </motion.div>
             ))}
           </div>

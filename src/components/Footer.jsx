@@ -7,7 +7,8 @@ import { Button } from "@/components/ui/button"
 import { Separator } from "@/components/ui/separator"
 
 const Footer = () => {
-  const { t } = useTranslation("footer")
+  const { t, i18n } = useTranslation("footer")
+  const locale = i18n.language
   const currentYear = new Date().getFullYear()
 
   return (
@@ -32,13 +33,13 @@ const Footer = () => {
             <h3 className="font-semibold text-base sm:text-lg">{t("quickLinks")}</h3>
             <div className="grid grid-cols-2 gap-1 sm:gap-2">
               <Button variant="link" className="justify-start p-0 h-auto text-sm sm:text-base" asChild>
-                <Link href="/about">{t("about")}</Link>
+                <Link href={`/${locale}/about`}>{t("about")}</Link>
               </Button>
               <Button variant="link" className="justify-start p-0 h-auto text-sm sm:text-base" asChild>
-                <Link href="/vocal-group">{t("vocalGroup")}</Link>
+                <Link href={`/${locale}/vocal-group`}>{t("vocalGroup")}</Link>
               </Button>
               <Button variant="link" className="justify-start p-0 h-auto text-sm sm:text-base" asChild>
-                <Link href="/performances">{t("performances")}</Link>
+                <Link href={`/${locale}/performances`}>{t("performances")}</Link>
               </Button>
               {/*<Button variant="link" className="justify-start p-0 h-auto text-sm sm:text-base" asChild>*/}
               {/*  <a href="/alumni">{t("alumni")}</a>*/}

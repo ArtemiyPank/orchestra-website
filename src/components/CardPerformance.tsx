@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+import { useTranslation } from "react-i18next"
 import { Card, CardContent } from "@/components/ui/card"
 import { Music, Calendar, MapPin } from "lucide-react"
 import { motion } from "framer-motion"
@@ -15,10 +16,12 @@ interface CardPerformanceProps {
   locale?: string
 }
 
-const CardPerformance = ({ performance, locale }: CardPerformanceProps) => {
+const CardPerformance = ({ performance, locale = "en" }: CardPerformanceProps) => {
+  const { t } = useTranslation("performances")
   const [isGalleryOpen, setIsGalleryOpen] = useState(false)
   const [activeImageIndex, setActiveImageIndex] = useState(0)
-  const currentLocale = locale || document.documentElement.lang
+  // Локаль приходит пропом с сервера — обращение к document ломало SSR
+  const currentLocale = locale
 
   // Преобразуем cardPhotos в формат, необходимый для DynamicPhotoGrid
   const gridPhotos = performance.cardPhotos.map((photo) => ({
@@ -71,7 +74,7 @@ const CardPerformance = ({ performance, locale }: CardPerformanceProps) => {
               <div className="mb-4 sm:mb-6 space-y-2 sm:space-y-3">
                 <div className="flex items-center gap-2 text-primary font-medium">
                   <Music className="h-4 w-4 sm:h-5 sm:w-5 flex-shrink-0" />
-                  <h3 className="text-sm sm:text-base">Program</h3>
+                  <h3 className="text-sm sm:text-base">{t("program", "Program")}</h3>
                 </div>
                 <ul className="space-y-1 sm:space-y-2 pl-5 sm:pl-7">
                   {performance.program.map((item, index) => (

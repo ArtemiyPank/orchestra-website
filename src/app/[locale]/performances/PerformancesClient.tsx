@@ -1,31 +1,20 @@
 "use client"
 
 import { useTranslation } from "react-i18next"
-import { useEffect, useState } from "react"
 import CardPerformance from "@/components/CardPerformance"
-import type { Performance } from "@/types/Performance"
 import { motion } from "framer-motion"
 import { fetchData } from "@/utils/fetchData"
+import type { Locale } from "@/i18n/settings"
 
-const PerformancesClient = () => {
-  const { t, i18n, ready } = useTranslation("performances")
-  const [performances, setPerformances] = useState<Performance[]>([])
+interface PerformancesClientProps {
+  locale: Locale
+}
 
-  useEffect(() => {
-    const loadPerformances = async () => {
-      const data = await fetchData("performances", i18n.language as "en" | "ru" | "he")
-      setPerformances(data)
-    }
-    loadPerformances()
-  }, [i18n.language])
-
-  if (!ready) {
-    return (
-      <div className="flex justify-center items-center min-h-[60vh]">
-        <div className="animate-pulse text-primary">Loading...</div>
-      </div>
-    )
-  }
+const PerformancesClient = ({ locale }: PerformancesClientProps) => {
+  const { t } = useTranslation("performances")
+  // Данные — статически импортированный JSON, читаем синхронно:
+  // контент попадает в SSR-HTML без промежуточных состояний загрузки
+  const performances = fetchData("performances", locale)
 
   if (performances.length === 0) {
     return (
@@ -53,7 +42,7 @@ const PerformancesClient = () => {
 
       <div className="space-y-8 sm:space-y-16">
         {performances.map((performance) => (
-          <CardPerformance key={performance.id} performance={performance} />
+          <CardPerformance key={performance.id} performance={performance} locale={locale} />
         ))}
       </div>
     </div>
@@ -61,4 +50,3 @@ const PerformancesClient = () => {
 }
 
 export default PerformancesClient
-

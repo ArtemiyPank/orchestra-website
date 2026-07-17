@@ -11,20 +11,18 @@ import { useState } from 'react';
 import { ThemeToggle } from "./ThemeToggle"
 
 const Navbar = () => {
-  const { t, i18n, ready } = useTranslation('navbar');
+  const { t, i18n } = useTranslation('navbar');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  
-  if (!ready) {
-    return null;
-  }
 
-  const isRTL = i18n.language === 'he';
-  
+  // Локаль синхронна с URL (см. TranslationsProvider) — используем её как префикс ссылок
+  const locale = i18n.language;
+  const isRTL = locale === 'he';
+
   const navLinks = [
-    { href: "/about", label: t("about") },
-    { href: "/vocal-group", label: t("vocalGroup") },
-    { href: "/performances", label: t("performances") },
-    // { href: "/alumni", label: t("alumni") },
+    { href: `/${locale}/about`, label: t("about") },
+    { href: `/${locale}/vocal-group`, label: t("vocalGroup") },
+    { href: `/${locale}/performances`, label: t("performances") },
+    // { href: `/${locale}/alumni`, label: t("alumni") },
   ];
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
@@ -39,7 +37,7 @@ const Navbar = () => {
       <div className="container mx-auto px-2 sm:px-4 py-3">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2">
+          <Link href={`/${locale}/about`} className="flex items-center gap-2">
             <div className="bg-primary rounded-full p-2">
               <Music className="h-5 w-5 text-primary-foreground" />
             </div>

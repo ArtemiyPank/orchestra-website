@@ -1,6 +1,6 @@
 {
-  "title": "Our Performances",
-  "subtitle": "Explore our diverse musical performances",
-  "noPerformances": "No performances available at the moment."
+    "title": "Our Performances",
+    "subtitle": "Explore our diverse musical performances",
+    "noPerformances": "No performances available at the moment.",
+    "program": "Program"
 }
-

@@ -2,7 +2,6 @@
 
 import { useTranslation } from "react-i18next"
 import Image from "next/image"
-import { useEffect, useState } from "react"
 import { motion } from "framer-motion"
 import { Separator } from "@/components/ui/separator"
 import AchievementsCarousel, { type Achievement } from "./AchievementsCarousel"
@@ -13,21 +12,9 @@ type AchievementsData = {
 }
 
 const AboutContent = () => {
+  // Язык синхронно совпадает с локалью маршрута (см. TranslationsProvider),
+  // поэтому контент рендерится сразу — и на сервере, и на клиенте
   const { t, i18n } = useTranslation("about")
-  const [isMounted, setIsMounted] = useState(false)
-
-  useEffect(() => {
-    setIsMounted(true)
-  }, [])
-
-  if (!isMounted) {
-    return (
-      <div className="flex justify-center items-center min-h-[60vh]">
-        <div className="animate-pulse text-primary">Loading...</div>
-      </div>
-    )
-  }
-
   const currentLanguage = i18n.language || "en"
   const achievements = (achievementsData as AchievementsData)[currentLanguage] || achievementsData.en
 

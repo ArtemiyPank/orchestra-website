@@ -1,31 +1,20 @@
 "use client"
 
 import { useTranslation } from "react-i18next"
-import { useEffect, useState } from "react"
 import CardAlumni from "@/components/CardAlumni"
-import type { Alumni } from "@/types/Alumni"
 import { motion } from "framer-motion"
 import { fetchData } from "@/utils/fetchData"
+import type { Locale } from "@/i18n/settings"
 
-const AlumniClient = () => {
-  const { t, i18n, ready } = useTranslation("alumni")
-  const [alumni, setAlumni] = useState<Alumni[]>([])
+interface AlumniClientProps {
+  locale: Locale
+}
 
-  useEffect(() => {
-    const loadAlumni = async () => {
-      const data = await fetchData("alumni", i18n.language as "en" | "ru" | "he")
-      setAlumni(data)
-    }
-    loadAlumni()
-  }, [i18n.language])
-
-  if (!ready) {
-    return (
-      <div className="flex justify-center items-center min-h-[60vh]">
-        <div className="animate-pulse text-primary">Loading...</div>
-      </div>
-    )
-  }
+const AlumniClient = ({ locale }: AlumniClientProps) => {
+  const { t } = useTranslation("alumni")
+  // Данные — статически импортированный JSON, читаем синхронно:
+  // контент попадает в SSR-HTML без промежуточных состояний загрузки
+  const alumni = fetchData("alumni", locale)
 
   if (alumni.length === 0) {
     return (
@@ -61,4 +50,3 @@ const AlumniClient = () => {
 }
 
 export default AlumniClient
-

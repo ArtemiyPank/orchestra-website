@@ -39,7 +39,7 @@ const AboutContent = () => {
       >
         <Image
           src="/images/orchestra.jpg"
-          alt="Ord Raziel Orchestra"
+          alt="Ort Raziel Orchestra"
           fill
           priority
           className="object-cover object-center"
@@ -61,7 +61,7 @@ const AboutContent = () => {
         transition={{ duration: 0.8, delay: 0.1 }}
         className="text-sm sm:text-base text-muted-foreground text-center max-w-4xl mx-auto mb-8 sm:mb-12 leading-relaxed"
       >
-        {t("orchestraDescription", "Ord Raziel Orchestra brings together young talents from across the region, fostering musical growth, cultural appreciation, and community through powerful performances and artistic collaboration.")}
+        {t("orchestraDescription", "Ort Raziel Orchestra brings together young talents from across the region, fostering musical growth, cultural appreciation, and community through powerful performances and artistic collaboration.")}
       </m.div>
 
 

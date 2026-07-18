@@ -45,6 +45,10 @@ const config: Config = {
           DEFAULT: "hsl(var(--accent))",
           foreground: "hsl(var(--accent-foreground))",
         },
+        // Тёплый красный акцент — вторичный цвет к латуни
+        brand: {
+          red: "hsl(var(--brand-red))",
+        },
         popover: {
           DEFAULT: "hsl(var(--popover))",
           foreground: "hsl(var(--popover-foreground))",

@@ -21,7 +21,7 @@ const Footer = () => {
               <div className="bg-primary rounded-full p-2">
                 <Music className="h-4 w-4 sm:h-5 sm:w-5 text-primary-foreground" />
               </div>
-              <span className="font-bold text-lg sm:text-xl">Ord Raziel</span>
+              <span className="font-bold text-lg sm:text-xl">Ort Raziel</span>
             </div>
             <p className="text-sm sm:text-base text-muted-foreground">
               {t("tagline")}
@@ -54,7 +54,7 @@ const Footer = () => {
             <div className="space-y-2">
               <div className="flex items-center gap-2 text-muted-foreground text-sm sm:text-base">
                 <Mail className="h-4 w-4 flex-shrink-0" />
-                <span>contact@ordraziel.org</span>
+                <span>contact@ortraziel.org</span>
               </div>
               <div className="flex items-center gap-2 text-muted-foreground text-sm sm:text-base">
                 <MapPin className="h-4 w-4 flex-shrink-0" />

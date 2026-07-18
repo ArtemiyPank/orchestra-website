@@ -12,7 +12,7 @@ export const buildPageMetadata = (locale: Locale, ns: Namespace, path: string): 
 
   const title = `${dict.title} | ${siteName}`
   const description =
-    dict.subtitle ?? dict.orchestraDescription ?? "Official website of the Ord Raziel Orchestra"
+    dict.subtitle ?? dict.orchestraDescription ?? "Official website of the Ort Raziel Orchestra"
 
   return {
     metadataBase: new URL(siteUrl),

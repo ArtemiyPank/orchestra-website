@@ -73,7 +73,7 @@ const CardPerformance = ({ performance, locale = "en" }: CardPerformanceProps) =
 
               <div className="mb-4 sm:mb-6 space-y-2 sm:space-y-3">
                 <div className="flex items-center gap-2 text-primary font-medium">
-                  <Music className="h-4 w-4 sm:h-5 sm:w-5 flex-shrink-0" />
+                  <Music className="h-4 w-4 sm:h-5 sm:w-5 flex-shrink-0 text-brand-red" />
                   <h3 className="text-sm sm:text-base">{t("program", "Program")}</h3>
                 </div>
                 <ul className="space-y-1 sm:space-y-2 pl-5 sm:pl-7">

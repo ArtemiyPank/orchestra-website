@@ -1,6 +1,6 @@
-# Ord Raziel Orchestra Website
+# Ort Raziel Orchestra Website
 
-This repository contains the source code for the official website of the **Ord Raziel School Orchestra**. The project is built with [Next.js](https://nextjs.org) and provides information about performances, achievements, and alumni of the orchestra. It supports English, Russian, and Hebrew and is optimized for both desktop and mobile browsers.
+This repository contains the source code for the official website of the **Ort Raziel School Orchestra**. The project is built with [Next.js](https://nextjs.org) and provides information about performances, achievements, and alumni of the orchestra. It supports English, Russian, and Hebrew and is optimized for both desktop and mobile browsers.
 
 ## Table of Contents
 - [Features](#features)

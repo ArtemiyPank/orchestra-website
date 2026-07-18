@@ -37,7 +37,7 @@ export default function SoloistCard({ soloist, locale = "en" }: SoloistCardProps
         {soloist.featuredSongs && soloist.featuredSongs.length > 0 && (
           <div className="mt-2">
             <h4 className="text-sm font-medium flex items-center gap-1.5 mb-2">
-              <Music className="h-4 w-4 text-primary" />
+              <Music className="h-4 w-4 text-brand-red" />
               {t("soloistProgramTitle")}
             </h4>
             <ul className="text-sm text-muted-foreground space-y-1">

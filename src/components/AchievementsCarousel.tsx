@@ -4,10 +4,11 @@ import { useState, useRef, useEffect } from "react"
 import { useTranslation } from "react-i18next"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { ChevronLeft, ChevronRight, Trophy } from "lucide-react"
+import { ChevronLeft, ChevronRight, Trophy, Maximize2 } from "lucide-react"
 import Image from "next/image"
 import { cn } from "@/lib/utils"
 import { useMediaQuery } from "@/hooks/use-mobile"
+import ImageLightbox from "@/components/ImageLightbox"
 
 export type Achievement = {
   id: string
@@ -27,8 +28,10 @@ const AchievementsCarousel = ({ achievements, title = "Orchestra Achievements" }
   const [activeIndex, setActiveIndex] = useState(0)
   const [visibleCards, setVisibleCards] = useState(1)
   const [isScrolling, setIsScrolling] = useState(false)
+  // Открытый в лайтбоксе диплом (null — закрыт)
+  const [lightbox, setLightbox] = useState<Achievement | null>(null)
   const carouselRef = useRef<HTMLDivElement>(null)
-  const { i18n } = useTranslation()
+  const { t, i18n } = useTranslation("gallery")
   const isRTL = i18n.language === "he"
   const isMobile = useMediaQuery("(max-width: 768px)")
 
@@ -162,21 +165,36 @@ const AchievementsCarousel = ({ achievements, title = "Orchestra Achievements" }
               isMobile ? "min-w-[180px] hover:shadow-md" : "min-w-[300px] hover:shadow-lg",
             )}
           >
-            <div className={cn("relative overflow-hidden rounded-t-lg", isMobile ? "h-[200px]" : "h-[400px]")}>
+            <button
+              type="button"
+              onClick={() => setLightbox(achievement)}
+              title={t("expand", "Open full screen")}
+              className={cn(
+                "group relative block w-full overflow-hidden rounded-t-lg cursor-zoom-in",
+                isMobile ? "h-[200px]" : "h-[400px]",
+              )}
+            >
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent z-10" />
               <Image
                 src={achievement.image || "/images/placeholder.jpg"}
                 alt={achievement.title}
                 fill
                 sizes="(max-width: 768px) 220px, 300px"
-                className={cn(isMobile ? "object-contain bg-muted/30" : "object-cover")}
+                className={cn(
+                  "transition-transform duration-300 group-hover:scale-105",
+                  isMobile ? "object-contain bg-muted/30" : "object-cover",
+                )}
               />
+              {/* Индикатор «развернуть» */}
+              <span className="absolute top-2 right-2 z-20 rounded-full bg-black/50 p-1.5 text-white opacity-0 transition-opacity group-hover:opacity-100">
+                <Maximize2 className="h-4 w-4" />
+              </span>
               {isMobile ? (
-                <div className="absolute bottom-2 left-2 right-2 z-20">
+                <div className="absolute bottom-2 left-2 right-2 z-20 text-left">
                   <span className="text-white/90 text-xs bg-black/40 px-1.5 py-0.5 rounded">{achievement.date}</span>
                 </div>
               ) : null}
-            </div>
+            </button>
             <CardContent className={cn(isMobile ? "p-3" : "pt-4")}>
               <h3 className={cn("font-semibold mb-1", isMobile ? "text-sm line-clamp-2" : "text-lg")}>
                 {achievement.title}
@@ -212,6 +230,12 @@ const AchievementsCarousel = ({ achievements, title = "Orchestra Achievements" }
           />
         ))}
       </div>
+
+      <ImageLightbox
+        src={lightbox ? lightbox.image || "/images/placeholder.jpg" : null}
+        alt={lightbox?.title ?? ""}
+        onClose={() => setLightbox(null)}
+      />
     </div>
   )
 }

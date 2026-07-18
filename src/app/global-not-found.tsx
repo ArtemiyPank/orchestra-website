@@ -6,7 +6,7 @@ import "@/styles/globals.css"
 import Link from "next/link"
 
 export const metadata = {
-  title: "404 — Atid Raziel Orchestra",
+  title: "404 — Ord Raziel Orchestra",
 }
 
 export default function GlobalNotFound() {

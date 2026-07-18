@@ -17,7 +17,7 @@ export function generateStaticParams() {
 export const metadata = {
   metadataBase: new URL(siteUrl),
   title: siteName,
-  description: "Official website of the Atid Raziel Orchestra",
+  description: "Official website of the Ord Raziel Orchestra",
 }
 
 interface LocaleLayoutProps {

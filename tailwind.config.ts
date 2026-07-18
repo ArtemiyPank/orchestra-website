@@ -76,7 +76,7 @@ const config: Config = {
       },
     },
   },
-  // Remove the plugins array or make it empty
+  // Remove the plugin array or make it empty
   plugins: [],
 }
 

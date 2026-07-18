@@ -21,7 +21,7 @@ const Footer = () => {
               <div className="bg-primary rounded-full p-2">
                 <Music className="h-4 w-4 sm:h-5 sm:w-5 text-primary-foreground" />
               </div>
-              <span className="font-bold text-lg sm:text-xl">Atid Raziel</span>
+              <span className="font-bold text-lg sm:text-xl">Ord Raziel</span>
             </div>
             <p className="text-sm sm:text-base text-muted-foreground">
               {t("tagline")}
@@ -31,7 +31,7 @@ const Footer = () => {
           {/* Quick Links */}
           <div className="space-y-3 sm:space-y-4">
             <h3 className="font-semibold text-base sm:text-lg">{t("quickLinks")}</h3>
-            <div className="grid grid-cols-2 gap-1 sm:gap-2">
+            <div className="flex flex-col items-start gap-1 sm:gap-2">
               <Button variant="link" className="justify-start p-0 h-auto text-sm sm:text-base" asChild>
                 <Link href={`/${locale}/about`}>{t("about")}</Link>
               </Button>

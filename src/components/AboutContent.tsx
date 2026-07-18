@@ -39,7 +39,7 @@ const AboutContent = () => {
       >
         <Image
           src="/images/orchestra.jpg"
-          alt="Atid Raziel Orchestra"
+          alt="Ord Raziel Orchestra"
           fill
           priority
           className="object-cover object-center"
@@ -61,22 +61,11 @@ const AboutContent = () => {
         transition={{ duration: 0.8, delay: 0.1 }}
         className="text-sm sm:text-base text-muted-foreground text-center max-w-4xl mx-auto mb-8 sm:mb-12 leading-relaxed"
       >
-        {t("orchestraDescription", "Atid Raziel Orchestra brings together young talents from across the region, fostering musical growth, cultural appreciation, and community through powerful performances and artistic collaboration.")}
+        {t("orchestraDescription", "Ord Raziel Orchestra brings together young talents from across the region, fostering musical growth, cultural appreciation, and community through powerful performances and artistic collaboration.")}
       </m.div>
 
 
-      {/* Achievements Carousel */}
-      <m.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 0.3 }}
-        className="mb-6 sm:mb-10"
-      >
-        <AchievementsCarousel achievements={achievements} title={t("achievementsTitle", "Orchestra Achievements")} />
-      </m.div>
-
-      <Separator className="my-6 sm:my-10" />
-
+      {/* Дирижёр */}
       <m.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -101,6 +90,19 @@ const AboutContent = () => {
             <p className="text-sm sm:text-base">{t("description2")}</p>
           </div>
         </div>
+      </m.div>
+
+      <Separator className="my-6 sm:my-10" />
+
+      {/* Achievements Carousel */}
+      <m.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
+        className="mb-6 sm:mb-10"
+      >
+        <AchievementsCarousel achievements={achievements} title={t("achievementsTitle", "Orchestra Achievements")} />
       </m.div>
     </section>
   )

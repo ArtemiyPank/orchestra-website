@@ -41,7 +41,7 @@ const Navbar = () => {
             <div className="bg-primary rounded-full p-2">
               <Music className="h-5 w-5 text-primary-foreground" />
             </div>
-            <span className="font-bold text-xl hidden md:block">Atid Raziel</span>
+            <span className="font-bold text-xl hidden md:block">Ord Raziel</span>
           </Link>
           
           {/* Desktop Navigation */}

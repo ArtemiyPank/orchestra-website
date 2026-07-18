@@ -47,7 +47,9 @@ export default function VocalGroupClient({ locale }: VocalGroupClientProps) {
       <m.div initial="hidden" animate="visible" variants={containerVariants} className="space-y-12">
         {/* Заголовок страницы */}
         <m.div variants={itemVariants} className="text-center">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">{t("title")}</h1>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/70">
+            {t("title")}
+          </h1>
           <p className="text-muted-foreground max-w-3xl mx-auto">{t("subtitle")}</p>
         </m.div>
 

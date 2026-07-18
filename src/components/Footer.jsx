@@ -24,7 +24,7 @@ const Footer = () => {
               <span className="font-bold text-lg sm:text-xl">Atid Raziel</span>
             </div>
             <p className="text-sm sm:text-base text-muted-foreground">
-              Inspiring young musicians through orchestral excellence and cultural heritage.
+              {t("tagline")}
             </p>
           </div>
 

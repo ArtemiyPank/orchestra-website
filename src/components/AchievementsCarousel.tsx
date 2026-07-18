@@ -178,7 +178,7 @@ const AchievementsCarousel = ({ achievements, title = "Orchestra Achievements" }
               ) : null}
             </div>
             <CardContent className={cn(isMobile ? "p-3" : "pt-4")}>
-              <h3 className={cn("font-semibold mb-1", isMobile ? "text-sm line-clamp-1" : "text-lg")}>
+              <h3 className={cn("font-semibold mb-1", isMobile ? "text-sm line-clamp-2" : "text-lg")}>
                 {achievement.title}
               </h3>
               <p className={cn("text-muted-foreground mb-3", isMobile ? "text-xs line-clamp-2" : "text-sm")}>

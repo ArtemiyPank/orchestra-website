@@ -53,7 +53,7 @@ const Navbar = () => {
               <Link 
                 key={link.href} 
                 href={link.href} 
-                className="text-foreground/80 hover:text-primary transition-colors font-medium"
+                className="text-foreground/80 hover:text-brand-red transition-colors font-medium"
               >
                 {link.label}
               </Link>
@@ -88,7 +88,7 @@ const Navbar = () => {
                 <Link 
                   key={link.href} 
                   href={link.href} 
-                  className="text-foreground/80 hover:text-primary transition-colors font-medium px-2 py-1"
+                  className="text-foreground/80 hover:text-brand-red transition-colors font-medium px-2 py-1"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {link.label}

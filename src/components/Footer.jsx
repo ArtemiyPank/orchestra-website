@@ -58,7 +58,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center gap-2 text-muted-foreground text-sm sm:text-base">
                 <MapPin className="h-4 w-4 flex-shrink-0" />
-                <a href="https://maps.app.goo.gl/sktbTV7734kBb56a6" className="hover:text-primary transition-colors">
+                <a href="https://maps.app.goo.gl/sktbTV7734kBb56a6" className="hover:text-brand-red transition-colors">
                   {t("address")}
                 </a>
                 {/*<span>Raziel David 24, Herzliya, Israel</span>*/}

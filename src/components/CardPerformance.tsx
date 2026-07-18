@@ -60,20 +60,20 @@ const CardPerformance = ({ performance, locale = "en" }: CardPerformanceProps) =
                 {performance.title}
               </h2>
               <div className="flex items-center gap-2 text-muted-foreground mb-2">
-                <Calendar className="h-4 w-4 flex-shrink-0" />
+                <Calendar className="h-4 w-4 flex-shrink-0 text-brand-red" />
                 <span className="text-sm sm:text-base">
                   {performance.date}
                 </span>
               </div>
               <div className="flex items-center gap-2 text-muted-foreground mb-3 sm:mb-4">
-                <MapPin className="h-4 w-4 flex-shrink-0" />
+                <MapPin className="h-4 w-4 flex-shrink-0 text-brand-red" />
                 <span className="text-sm sm:text-base">{performance.venue}</span>
               </div>
               <p className="text-sm sm:text-base text-muted-foreground mb-4 sm:mb-6">{performance.description}</p>
 
               <div className="mb-4 sm:mb-6 space-y-2 sm:space-y-3">
                 <div className="flex items-center gap-2 text-primary font-medium">
-                  <Music className="h-4 w-4 sm:h-5 sm:w-5 flex-shrink-0 text-brand-red" />
+                  <Music className="h-4 w-4 sm:h-5 sm:w-5 flex-shrink-0" />
                   <h3 className="text-sm sm:text-base">{t("program", "Program")}</h3>
                 </div>
                 <ul className="space-y-1 sm:space-y-2 pl-5 sm:pl-7">

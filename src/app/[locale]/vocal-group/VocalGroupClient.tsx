@@ -43,7 +43,7 @@ export default function VocalGroupClient({ locale }: VocalGroupClientProps) {
   }
 
   return (
-    <div className="py-8">
+    <div className="pt-2 pb-8 sm:py-8">
       <m.div initial="hidden" animate="visible" variants={containerVariants} className="space-y-12">
         {/* Заголовок страницы */}
         <m.div variants={itemVariants} className="text-center">

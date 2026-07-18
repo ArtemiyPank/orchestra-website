@@ -25,7 +25,7 @@ const PerformancesClient = ({ locale }: PerformancesClientProps) => {
   }
 
   return (
-    <div className="container mx-auto py-8 sm:py-12 px-0 sm:px-4 space-y-8 sm:space-y-12">
+    <div className="container mx-auto pt-2 pb-8 sm:py-12 px-0 sm:px-4 space-y-8 sm:space-y-12">
       <m.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}

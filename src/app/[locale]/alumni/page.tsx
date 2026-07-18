@@ -14,7 +14,7 @@ export async function generateMetadata({ params }: PageProps) {
 const AlumniPage = async ({ params }: PageProps) => {
   const locale = (await params).locale as Locale
   return (
-    <div className="p-8">
+    <div className="p-4 sm:p-8">
       <AlumniClient locale={locale} />
     </div>
   )

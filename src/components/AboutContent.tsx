@@ -19,7 +19,7 @@ const AboutContent = () => {
   const achievements = (achievementsData as AchievementsData)[currentLanguage] || achievementsData.en
 
   return (
-    <section className="container mx-auto px-2 sm:px-4 py-8 sm:py-12">
+    <section className="container mx-auto px-2 sm:px-4 pt-2 pb-8 sm:py-12">
       <m.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}

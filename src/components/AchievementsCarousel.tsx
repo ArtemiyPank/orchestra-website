@@ -192,7 +192,7 @@ const AchievementsCarousel = ({ achievements, title = "Orchestra Achievements" }
               </span>
               {isMobile ? (
                 <div className="absolute bottom-2 left-2 right-2 z-20 text-left">
-                  <span className="text-white text-xs bg-brand-red px-1.5 py-0.5 rounded">{achievement.date}</span>
+                  <span className="text-white/90 text-xs bg-black/40 px-1.5 py-0.5 rounded">{achievement.date}</span>
                 </div>
               ) : null}
             </button>

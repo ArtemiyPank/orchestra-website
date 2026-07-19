@@ -78,7 +78,8 @@ const AboutContent = () => {
             src="/images/conductor.jpg"
             alt="Lev Arshtein"
             fill
-            className="object-cover"
+            // Фото портретное, контейнер альбомный: смещаем кадр к лицу
+            className="object-cover object-[center_22%]"
             sizes="(max-width: 768px) 100vw, 600px"
           />
         </div>

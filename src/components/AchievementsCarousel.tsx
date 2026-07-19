@@ -106,7 +106,9 @@ const AchievementsCarousel = ({ achievements, title = "Orchestra Achievements" }
     <div className="relative" dir={isRTL ? "rtl" : "ltr"}>
       <div className={cn("flex items-center justify-between", isMobile ? "mb-3" : "mb-6")}>
         <div className="flex items-center gap-2 text-primary">
-          <h2 className={cn("font-bold", isMobile ? "text-lg" : "text-2xl")}>{title}</h2>
+          <h2 className={cn("font-bold border-s-4 border-brand-red ps-3", isMobile ? "text-lg" : "text-2xl")}>
+            {title}
+          </h2>
         </div>
 
         <div className={cn("flex gap-2", isMobile ? "hidden" : "")}>

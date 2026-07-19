@@ -14,7 +14,7 @@ export default function GlobalNotFound() {
     <html lang="en">
       <body className="bg-background text-foreground min-h-screen">
         <div className="flex flex-col items-center justify-center min-h-screen text-center px-4">
-          <p className="text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/60 mb-6">
+          <p className="text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-brand-red mb-6">
             404
           </p>
           <div className="space-y-1 mb-8 text-muted-foreground">

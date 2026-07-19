@@ -56,7 +56,7 @@ const CardPerformance = ({ performance, locale = "en" }: CardPerformanceProps) =
             )}
           >
             <div>
-              <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-2 sm:mb-4 text-foreground">
+              <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-2 sm:mb-4 text-foreground border-s-4 border-brand-red ps-3">
                 {performance.title}
               </h2>
               <div className="flex items-center gap-2 text-muted-foreground mb-2">

@@ -47,7 +47,7 @@ export default function VocalGroupClient({ locale }: VocalGroupClientProps) {
       <m.div initial="hidden" animate="visible" variants={containerVariants} className="space-y-12">
         {/* Заголовок страницы */}
         <m.div variants={itemVariants} className="text-center">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/70">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 bg-clip-text text-transparent bg-gradient-to-r from-primary to-brand-red">
             {t("title")}
           </h1>
           <p className="text-muted-foreground max-w-3xl mx-auto">{t("subtitle")}</p>
@@ -79,13 +79,13 @@ export default function VocalGroupClient({ locale }: VocalGroupClientProps) {
 
         {/* Руководитель вокальной группы */}
         <m.div variants={itemVariants}>
-          <h2 className="text-2xl font-bold mb-6">{t("leaderTitle")}</h2>
+          <h2 className="text-2xl font-bold mb-6 border-s-4 border-brand-red ps-3">{t("leaderTitle")}</h2>
           <VocalGroupLeader />
         </m.div>
 
         {/* Солисты */}
         <m.div variants={itemVariants} className="space-y-6">
-          <h2 className="text-2xl font-bold mb-2">{t("soloistsTitle")}</h2>
+          <h2 className="text-2xl font-bold mb-2 border-s-4 border-brand-red ps-3">{t("soloistsTitle")}</h2>
           <p className="text-muted-foreground mb-6">{t("soloistsDescription")}</p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

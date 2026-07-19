@@ -26,7 +26,7 @@ const AboutContent = () => {
         transition={{ duration: 0.8 }}
         className="text-center mb-8 sm:mb-16"
       >
-        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/70">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 bg-clip-text text-transparent bg-gradient-to-r from-primary to-brand-red">
           {t("title")}
         </h1>
       </m.div>
@@ -83,7 +83,7 @@ const AboutContent = () => {
           />
         </div>
         <div className="md:w-1/2 space-y-3 sm:space-y-4">
-          <h2 className="text-2xl sm:text-3xl font-bold">{t("conductorTitle")}</h2>
+          <h2 className="text-2xl sm:text-3xl font-bold border-s-4 border-brand-red ps-3">{t("conductorTitle")}</h2>
           <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">{t("conductorDescription")}</p>
           <div className="space-y-3 sm:space-y-4 pt-2 sm:pt-4">
             <p className="text-sm sm:text-base">{t("description1")}</p>

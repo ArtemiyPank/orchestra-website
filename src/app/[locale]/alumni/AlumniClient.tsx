@@ -32,7 +32,7 @@ const AlumniClient = ({ locale }: AlumniClientProps) => {
         transition={{ duration: 0.8 }}
         className="text-center mb-8 sm:mb-16"
       >
-        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/70">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 bg-clip-text text-transparent bg-gradient-to-r from-primary to-brand-red">
           {t("title", { defaultValue: "Our Alumni" })}
         </h1>
         <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
